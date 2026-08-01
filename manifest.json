@@ -496,26 +496,34 @@
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
-        "Version": "1.0.13-1",
-        "Date": "2024-11-01",
+        "Version": "1.1.2",
+        "Date": "2026-07-01",
         "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"Romain\", \"Francois\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0002-2444-4226\")),\n             person(\"JJ\", \"Allaire\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-0174-9868\")),\n             person(\"Kevin\", \"Ushey\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-2880-7407\")),\n             person(\"Qiang\", \"Kou\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-6786-5453\")),\n             person(\"Nathan\", \"Russell\", role = \"aut\"),\n             person(\"Iñaki\", \"Ucar\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-6403-5550\")),\n             person(\"Doug\", \"Bates\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-8316-9503\")),\n             person(\"John\", \"Chambers\", role = \"aut\"))",
         "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+        "Depends": "R (>= 3.5.0)",
         "Imports": "methods, utils",
         "Suggests": "tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)",
         "URL": "https://www.rcpp.org,\nhttps://dirk.eddelbuettel.com/code/rcpp.html,\nhttps://github.com/RcppCore/Rcpp",
         "License": "GPL (>= 2)",
         "BugReports": "https://github.com/RcppCore/Rcpp/issues",
-        "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
         "RoxygenNote": "6.1.1",
         "Encoding": "UTF-8",
+        "VignetteBuilder": "Rcpp",
         "NeedsCompilation": "yes",
-        "Packaged": "2024-11-01 13:27:07 UTC; edd",
-        "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>),\n  JJ Allaire [aut] (<https://orcid.org/0000-0003-0174-9868>),\n  Kevin Ushey [aut] (<https://orcid.org/0000-0003-2880-7407>),\n  Qiang Kou [aut] (<https://orcid.org/0000-0001-6786-5453>),\n  Nathan Russell [aut],\n  Iñaki Ucar [aut] (<https://orcid.org/0000-0001-6403-5550>),\n  Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>),\n  John Chambers [aut]",
+        "Packaged": "2026-07-01 11:00:56 UTC; edd",
+        "Author": "Dirk Eddelbuettel [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-6419-907X>),\n  Romain Francois [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>),\n  JJ Allaire [aut] (ORCID: <https://orcid.org/0000-0003-0174-9868>),\n  Kevin Ushey [aut] (ORCID: <https://orcid.org/0000-0003-2880-7407>),\n  Qiang Kou [aut] (ORCID: <https://orcid.org/0000-0001-6786-5453>),\n  Nathan Russell [aut],\n  Iñaki Ucar [aut] (ORCID: <https://orcid.org/0000-0001-6403-5550>),\n  Doug Bates [aut] (ORCID: <https://orcid.org/0000-0001-8316-9503>),\n  John Chambers [aut]",
         "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-11-02 20:10:02 UTC",
-        "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-11-04 00:50:31 UTC; windows",
-        "Archs": "x64"
+        "Repository": "RSPM",
+        "Date/Publication": "2026-07-05 08:30:08 UTC",
+        "Built": "R 4.4.0; x86_64-w64-mingw32; 2026-07-06 10:36:40 UTC; windows",
+        "Archs": "x64",
+        "RemoteType": "standard",
+        "RemoteRef": "Rcpp",
+        "RemotePkgRef": "Rcpp",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.1.2"
       }
     },
     "RcppArmadillo": {
@@ -2622,7 +2630,7 @@
       }
     },
     "ggflags": {
-      "Source": "https://jimjam-slam.r-universe.dev",
+      "Source": "github",
       "Repository": null,
       "description": {
         "Package": "ggflags",
@@ -2631,24 +2639,28 @@
         "Title": "Plot flags of the world in ggplot2",
         "Authors@R": "c(\n  person(\"Baptiste\", \"Auguie\",\n    email = \"baptiste.auguie@gmail.com\",\n    role = c(\"aut\", \"cre\")),\n  person(\"James\", \"Goldie\",\n    email = \"me@jamesgoldie.dev\",\n    role = c(\"aut\", \"ctb\"),\n    comment = c(\n      ORCID = \"0000-0002-5024-6207\"\n    )),\n  person(\n    given = \"Rémi\", \n    family = \"Thériault\",\n    role = c(\"aut\", \"ctb\"),\n    email = \"remi.theriault@mail.mcgill.ca\",\n    comment = c(\n      ORCID = \"0000-0003-4315-6788\",\n      Twitter = \"@rempsyc\")))",
         "License": "GPL (>= 3)",
-        "Description": "A ggplot2 extension that allows you to plot the flags of\n        the world. It functions essentially as geom_point does,\n        requiring, at minimum, a two-letter lowercase country code for\n        the country aesthetic, and x and y aesthetics. You can also\n        adjust the size.",
+        "Description": "A ggplot2 extension that allows you to plot the flags of the world. It functions essentially \n  as geom_point does, requiring, at minimum, a two-letter lowercase country code for the country aesthetic, \n  and x and y aesthetics. You can also adjust the size.",
         "LazyData": "TRUE",
         "Depends": "R (>= 3.5.0)",
-        "Imports": "grid, grImport2, ggplot2, scales",
+        "Imports": "grid,\ngrImport2,\nggplot2,\nscales",
         "Encoding": "UTF-8",
         "RoxygenNote": "7.2.3",
         "URL": "https://github.com/jimjam-slam/ggflags",
         "BugReports": "https://github.com/jimjam-slam/ggflags/issues",
-        "Config/pak/sysreqs": "libjpeg-dev libpng-dev libxml2-dev",
-        "Repository": "https://jimjam-slam.r-universe.dev",
-        "RemoteUrl": "https://github.com/jimjam-slam/ggflags",
-        "RemoteRef": "main",
-        "RemoteSha": "fb6ca53f947a543cc2b003a2a1e7f0e9cf104540",
-        "NeedsCompilation": "no",
-        "Packaged": "2025-03-21 05:19:04 UTC; root",
         "Author": "Baptiste Auguie [aut, cre],\n  James Goldie [aut, ctb] (<https://orcid.org/0000-0002-5024-6207>),\n  Rémi Thériault [aut, ctb] (<https://orcid.org/0000-0003-4315-6788>,\n    @rempsyc)",
         "Maintainer": "Baptiste Auguie <baptiste.auguie@gmail.com>",
-        "Built": "R 4.4.3; ; 2025-03-21 05:20:44 UTC; windows"
+        "Built": "R 4.4.2; ; 2026-08-01 21:17:07 UTC; windows",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteUsername": "jimjam-slam",
+        "RemoteRepo": "ggflags",
+        "RemoteRef": "main",
+        "RemoteSha": "fb6ca53f947a543cc2b003a2a1e7f0e9cf104540",
+        "GithubHost": "api.github.com",
+        "GithubRepo": "ggflags",
+        "GithubUsername": "jimjam-slam",
+        "GithubRef": "main",
+        "GithubSHA1": "fb6ca53f947a543cc2b003a2a1e7f0e9cf104540"
       }
     },
     "ggforce": {
@@ -4712,13 +4724,13 @@
         "Package": "patchwork",
         "Type": "Package",
         "Title": "The Composer of Plots",
-        "Version": "1.3.0",
+        "Version": "1.3.2",
         "Authors@R": "\n    person(given = \"Thomas Lin\",\n           family = \"Pedersen\",\n           role = c(\"cre\", \"aut\"),\n           email = \"thomasp85@gmail.com\",\n           comment = c(ORCID = \"0000-0002-5147-4711\"))",
         "Maintainer": "Thomas Lin Pedersen <thomasp85@gmail.com>",
         "Description": "The 'ggplot2' package provides a strong API for sequentially \n    building up a plot, but does not concern itself with composition of multiple\n    plots. 'patchwork' is a package that expands the API to allow for \n    arbitrarily complex composition of plots by, among others, providing \n    mathematical operators for combining multiple plots. Other packages that try \n    to address this need (but with a different approach) are 'gridExtra' and \n    'cowplot'.",
         "License": "MIT + file LICENSE",
         "Encoding": "UTF-8",
-        "Imports": "ggplot2 (>= 3.0.0), gtable, grid, stats, grDevices, utils,\ngraphics, rlang (>= 1.0.0), cli, farver",
+        "Imports": "ggplot2 (>= 3.0.0), gtable (>= 0.3.6), grid, stats, grDevices,\nutils, graphics, rlang (>= 1.0.0), cli, farver",
         "RoxygenNote": "7.3.2",
         "URL": "https://patchwork.data-imaginist.com,\nhttps://github.com/thomasp85/patchwork",
         "BugReports": "https://github.com/thomasp85/patchwork/issues",
@@ -4726,11 +4738,18 @@
         "VignetteBuilder": "knitr",
         "Config/Needs/website": "gifski",
         "NeedsCompilation": "no",
-        "Packaged": "2024-09-16 08:14:08 UTC; thomas",
-        "Author": "Thomas Lin Pedersen [cre, aut]\n    (<https://orcid.org/0000-0002-5147-4711>)",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-09-16 09:30:02 UTC",
-        "Built": "R 4.4.1; ; 2024-11-04 03:21:44 UTC; windows"
+        "Packaged": "2025-08-25 08:14:43 UTC; thomas",
+        "Author": "Thomas Lin Pedersen [cre, aut] (ORCID:\n    <https://orcid.org/0000-0002-5147-4711>)",
+        "Repository": "RSPM",
+        "Date/Publication": "2025-08-25 10:00:02 UTC",
+        "Built": "R 4.4.0; ; 2025-08-26 04:40:29 UTC; windows",
+        "RemoteType": "standard",
+        "RemoteRef": "patchwork",
+        "RemotePkgRef": "patchwork",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "x86_64-w64-mingw32",
+        "RemoteSha": "1.3.2"
       }
     },
     "pbkrtest": {
@@ -7202,7 +7221,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "44fbd4cbcecd667ea44678570f382617"
+      "checksum": "d3b564245928871351aa8ade378c9d90"
     },
     "_extensions/mcanouil/iconify/_extension.yml": {
       "checksum": "444e92f9fab2b160410ec0ab48069746"
@@ -7254,6 +7273,60 @@
     },
     "_extensions/schochastics/academicons/assets/webfonts/academicons.woff": {
       "checksum": "4421b0e8a7b66deedf91143791fd0114"
+    },
+    "_freeze/climate/index/execute-results/html.json": {
+      "checksum": "7b41c9ee72cd60cd0b136d73760108ef"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-10-1.png": {
+      "checksum": "efd8a961f1759d9a15d4777e3b4e44d6"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-13-1.png": {
+      "checksum": "018267013b8b4e71d16d0f2503068b5e"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-15-1.png": {
+      "checksum": "7fe5401d0d32ae1117822fc6bbe7f493"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-17-1.png": {
+      "checksum": "9bf41b05ded3430222c51544de6e2fee"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-2-1.png": {
+      "checksum": "c32a96b07f38690b935bc3dbdf93335b"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-21-1.png": {
+      "checksum": "c2f5a98854517021853af9d0ee9ef36b"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-24-1.png": {
+      "checksum": "4ed7bbae07903052834cc7c7f132ed1b"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-26-1.png": {
+      "checksum": "677129c66272692f95c8a78257942ba0"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-28-1.png": {
+      "checksum": "692cb5673d7e728ffe6fb9a211253673"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-30-1.png": {
+      "checksum": "20558a063365fac73fcf4511616dd2bd"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-30-2.png": {
+      "checksum": "20558a063365fac73fcf4511616dd2bd"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-4-1.png": {
+      "checksum": "9d4977a103a90a7ce453c550d55b755c"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-6-1.png": {
+      "checksum": "c6835f4332a5d1fc05091d417759b388"
+    },
+    "_freeze/climate/index/figure-html/unnamed-chunk-8-1.png": {
+      "checksum": "98ed858044b4fc474be33db291fd5123"
+    },
+    "_freeze/cv/execute-results/html.json": {
+      "checksum": "a981a0991e90004f4e7f8a951a3630a5"
+    },
+    "_freeze/cv/figure-html/unnamed-chunk-2-1.png": {
+      "checksum": "a1898f189e2f94eaeec08bb5d52ce245"
+    },
+    "_freeze/cv/figure-html/unnamed-chunk-3-1.png": {
+      "checksum": "33be129be233480105825a06ec509a5c"
     },
     "_freeze/posts/apr_30day_2025/index/execute-results/html.json": {
       "checksum": "ba0d5ac168458bc679feb66149aeb486"
@@ -7378,6 +7451,9 @@
     "_freeze/posts/uncertainty/index/figure-html/unnamed-chunk-9-1.png": {
       "checksum": "db5742ba633edc348c592ec09becc882"
     },
+    "_freeze/posts_wip/table_1s/index/execute-results/html.json": {
+      "checksum": "cab5a6b3d2441018276f1a5716c5e5db"
+    },
     "_freeze/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
     },
@@ -7414,11 +7490,23 @@
     "_freeze/site_libs/ggiraphjs-0.8.10/ggiraphjs.min.js": {
       "checksum": "5faf946ba9d179f668fb0249028a2bbb"
     },
+    "_freeze/site_libs/ggiraphjs-0.9.4/girafe.css": {
+      "checksum": "14a61df5d45d828c7246260a3f2812e9"
+    },
+    "_freeze/site_libs/ggiraphjs-0.9.4/girafe.js": {
+      "checksum": "f40386af174919c659cc4300a0721116"
+    },
+    "_freeze/site_libs/ggiraphjs-0.9.4/girafe.yaml": {
+      "checksum": "7e5c6820e740f08b8f9f450cbd193989"
+    },
     "_freeze/site_libs/girafe-binding-0.8.11/girafe.js": {
       "checksum": "316b014884a7f81d13e0f04052884aef"
     },
     "_freeze/site_libs/girafe-binding-0.8.12/girafe.js": {
       "checksum": "316b014884a7f81d13e0f04052884aef"
+    },
+    "_freeze/site_libs/girafe-binding-0.9.6/girafe.js": {
+      "checksum": "f40386af174919c659cc4300a0721116"
     },
     "_freeze/site_libs/htmltools-fill-0.5.8.1/fill.css": {
       "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
@@ -7444,10 +7532,283 @@
     "_freeze/site_libs/kePrint-0.0.1/kePrint.js": {
       "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
     },
+    "_freeze/site_libs/liberation-mono-0.5.0/css/liberation-mono.css": {
+      "checksum": "c8ab8fd0fecc5be71a9eb696e0c7db28"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_freeze/site_libs/liberation-mono-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/css/liberation-sans.css": {
+      "checksum": "f0484399ab52a5dafecafdbd5b8417c1"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_freeze/site_libs/liberation-sans-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/css/liberation-serif.css": {
+      "checksum": "cc027578c3dfea6f89014e0da64ad38f"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_freeze/site_libs/liberation-serif-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
     "_freeze/site_libs/lightable-0.0.1/lightable.css": {
       "checksum": "25547ce4d44910ea8f377212d34397fa"
     },
     "_freeze/site_libs/plotly-binding-4.10.2/plotly.js": {
+      "checksum": "3c7c9d64b95cebf57b0180d466b17239"
+    },
+    "_freeze/site_libs/plotly-binding-4.10.4/plotly.js": {
       "checksum": "3c7c9d64b95cebf57b0180d466b17239"
     },
     "_freeze/site_libs/plotly-binding-4.11.0/plotly.js": {
@@ -7475,7 +7836,7 @@
       "checksum": "ce212e195e9525b8d4ad05a45e1b390c"
     },
     "_quarto.yml": {
-      "checksum": "4f3597041ee53506a2bffe65a6eeebe6"
+      "checksum": "10f251074200bbd52ca13f26464d9f86"
     },
     "_site/30dcc/apr2024/carwidth_ruler.jpg": {
       "checksum": "923d442bacdc636ab982136674c1235d"
@@ -7496,7 +7857,7 @@
       "checksum": "b79dc3a258587d33a5868f826139db89"
     },
     "_site/30dcc/apr2024/index.html": {
-      "checksum": "6393e326e4d58e207624ae7e86583586"
+      "checksum": "e810b6830cf1021adba87995f4584768"
     },
     "_site/30dcc/apr2024/lyn_edit.jpg": {
       "checksum": "7c4afc3e9aa276107573429c4beff060"
@@ -7531,12 +7892,6 @@
     "_site/about.html": {
       "checksum": "3d12fbdbb7ce6f30f9d671f5a12e6a9c"
     },
-    "_site/archived posts/interactive_ggplot/HtmlWidget/lyn.html": {
-      "checksum": "399b7f599340cc60e754e3315fc8bec5"
-    },
-    "_site/archived posts/interactive_ggplot/index.html": {
-      "checksum": "35b18908013ac2bf4e3de59e45ba925e"
-    },
     "_site/articles/bjc_2017.jpg": {
       "checksum": "4a2e2de702e43f07b731b008d2d8bd27"
     },
@@ -7556,82 +7911,73 @@
       "checksum": "30eef8300debae46b1eb394ee6f990bb"
     },
     "_site/climate/index.html": {
-      "checksum": "4f897ffb9f56a869d2aac801e9f738aa"
-    },
-    "_site/climate/index.knit.html": {
-      "checksum": "aa236524ed98dd267ade447a261b798b"
+      "checksum": "ea8ef55fb81d8b7c69a1122e9ffe6e35"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-10-1.png": {
-      "checksum": "cd05e2c4f61b5ab7acb4fa7f582d4d94"
+      "checksum": "efd8a961f1759d9a15d4777e3b4e44d6"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-13-1.png": {
-      "checksum": "2a38361a96115dfed46de1476ed04f97"
+      "checksum": "018267013b8b4e71d16d0f2503068b5e"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-15-1.png": {
-      "checksum": "1debd6a3cc19282c97b914b639983a87"
+      "checksum": "7fe5401d0d32ae1117822fc6bbe7f493"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-17-1.png": {
       "checksum": "9bf41b05ded3430222c51544de6e2fee"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-2-1.png": {
-      "checksum": "3075905a491f10ecc782846e19145547"
+      "checksum": "c32a96b07f38690b935bc3dbdf93335b"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-21-1.png": {
-      "checksum": "4823a290cbc644a43992c6283f5558e2"
+      "checksum": "c2f5a98854517021853af9d0ee9ef36b"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-24-1.png": {
-      "checksum": "0cb15a7115d281202dacf2c2b8fdd883"
+      "checksum": "4ed7bbae07903052834cc7c7f132ed1b"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-26-1.png": {
-      "checksum": "ea32830bd93f8ad473ebc3ac2ecc868d"
+      "checksum": "677129c66272692f95c8a78257942ba0"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-28-1.png": {
-      "checksum": "310db0f5497eb53eeb4ff344cc87e2d5"
+      "checksum": "692cb5673d7e728ffe6fb9a211253673"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-30-1.png": {
-      "checksum": "cba82eac0f1dce1d06eb35eaad8bb61e"
+      "checksum": "20558a063365fac73fcf4511616dd2bd"
+    },
+    "_site/climate/index_files/figure-html/unnamed-chunk-30-2.png": {
+      "checksum": "20558a063365fac73fcf4511616dd2bd"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-4-1.png": {
-      "checksum": "17b1f176e1c380b3589cacee6b70927d"
+      "checksum": "9d4977a103a90a7ce453c550d55b755c"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-6-1.png": {
-      "checksum": "e12d4b4062edbd8f2174c596a11fde49"
+      "checksum": "c6835f4332a5d1fc05091d417759b388"
     },
     "_site/climate/index_files/figure-html/unnamed-chunk-8-1.png": {
-      "checksum": "5d4b6eae19043bb1d93ba9847de54655"
+      "checksum": "98ed858044b4fc474be33db291fd5123"
     },
     "_site/cv.html": {
-      "checksum": "c4a9b1eb044beb11969c494e8401df97"
+      "checksum": "5684d23e872e16bd2a11467525551539"
     },
     "_site/cv_files/figure-html/unnamed-chunk-2-1.png": {
       "checksum": "a1898f189e2f94eaeec08bb5d52ce245"
     },
     "_site/cv_files/figure-html/unnamed-chunk-3-1.png": {
-      "checksum": "f7c615eb0cfa8f7f4fbb5ae614c1a58f"
-    },
-    "_site/cv_files/figure-html/unnamed-chunk-4-1.png": {
-      "checksum": "837d2b77cc07e6c52cace2004b339080"
-    },
-    "_site/cv_files/figure-html/unnamed-chunk-5-1.png": {
-      "checksum": "ef4daf1ea374dfd3a0da2dcc3e7f51c5"
+      "checksum": "33be129be233480105825a06ec509a5c"
     },
     "_site/header_edit.jpg": {
       "checksum": "f48614d49f9aba5fcf7ad6d230d4f990"
     },
     "_site/index.html": {
-      "checksum": "da4c93eb00f3bdcbf510454020c053e6"
+      "checksum": "5739a6a1ec32b3a0bae56e48864f5d44"
     },
     "_site/listings.json": {
-      "checksum": "4a53346030b35ce946965b813ceb2e55"
+      "checksum": "dd66c99837ab6368b13714470d39fe32"
     },
     "_site/logo.svg": {
       "checksum": "d9fab6c7510e9b36eb01c73c0cd484f1"
     },
     "_site/logo_red.svg": {
       "checksum": "7a3e28db02629d55550a46741cdbf8a4"
-    },
-    "_site/lyn.html": {
-      "checksum": "ac5f61136da65bce139ee61382234950"
     },
     "_site/p.jpg": {
       "checksum": "90df378222f76d9406ce9a26a13025a8"
@@ -7650,12 +7996,6 @@
     },
     "_site/portfolio/apr2024/feature_ranks_p.jpg": {
       "checksum": "ddaff9f7cb83bb981f7d7ace05bc909b"
-    },
-    "_site/portfolio/apr2024/forest_carbon_edit.jpg": {
-      "checksum": "b79dc3a258587d33a5868f826139db89"
-    },
-    "_site/portfolio/apr2024/index.html": {
-      "checksum": "f08adaea9126d04123809459b9b7e6ed"
     },
     "_site/portfolio/apr2024/lyn_edit.jpg": {
       "checksum": "98696a34739e3ed6b96443f6e866bdee"
@@ -7680,15 +8020,6 @@
     },
     "_site/portfolio/apr2024/temp_oslo_lin_edit.jpg": {
       "checksum": "b1ac88c4775a0361159ed15a29704a8c"
-    },
-    "_site/portfolio/apr2025/p_fractions.jpg": {
-      "checksum": "31941dacab6e1fefd76ebd90f69f764a"
-    },
-    "_site/portfolio/apr2025/p_fractions_cellph.jpg": {
-      "checksum": "724f79307788494e3f50fc58b3e33417"
-    },
-    "_site/portfolio/apr2025/ua_aid_country.jpg": {
-      "checksum": "52e9bcfabacf189064481034646fab45"
     },
     "_site/portfolio/climate/arctic_ice_group_by_yr.jpg": {
       "checksum": "8be54349cb511782fdf54683eec28957"
@@ -7729,18 +8060,6 @@
     "_site/portfolio/climate/world_temp.jpg": {
       "checksum": "71e49d580176af13a590000578535ba1"
     },
-    "_site/portfolio/collage_30dcc_apr2024.jpg": {
-      "checksum": "442a7856773b37b68967caf37f21a55f"
-    },
-    "_site/portfolio/collage_climate.jpg": {
-      "checksum": "63f76ec180e8f268bb13393710149b0a"
-    },
-    "_site/portfolio/collage_illustrator.jpg": {
-      "checksum": "bf38bf96b6c6f7095758853196652fae"
-    },
-    "_site/portfolio/illustrator/index.html": {
-      "checksum": "ed8a277b762c7ebd9d6d52aa2824c4ab"
-    },
     "_site/portfolio/illustrator/liver_research/fatvsbile.jpg": {
       "checksum": "653cd962d2161ddacddf61b58bb886c2"
     },
@@ -7753,14 +8072,8 @@
     "_site/portfolio/illustrator/liver_research/gut_signals-02.jpg": {
       "checksum": "24b18e0bcbecf6a59c6a643c5aa17f1a"
     },
-    "_site/portfolio/illustrator/liver_research/gut_signals-03.jpg": {
-      "checksum": "459cf694f82b9830f9dbee517d112fe5"
-    },
     "_site/portfolio/illustrator/liver_research/gut_signals-04.jpg": {
       "checksum": "2d03c825ad5ea067ac56d6be44307713"
-    },
-    "_site/portfolio/illustrator/liver_research/gut_signals-05.jpg": {
-      "checksum": "90140eabb2ac5d55c8b604f44ae6bd0f"
     },
     "_site/portfolio/illustrator/liver_research/gut_signals-08.jpg": {
       "checksum": "9c38ceaa9cd14861cc9099ab70759768"
@@ -7772,13 +8085,7 @@
       "checksum": "f0ea3ff34b9c44521fd31cbb3b496bb1"
     },
     "_site/portfolio/index.html": {
-      "checksum": "7a6069e3f53126d2d0d43c0a38096dac"
-    },
-    "_site/portrett_braadland.jpg": {
-      "checksum": "bbf8f214e93c4319ad25b2e4cb6624b2"
-    },
-    "_site/posts/apr_30day_2025/day1/out/p_fractions.jpg": {
-      "checksum": "31941dacab6e1fefd76ebd90f69f764a"
+      "checksum": "e755e2b521517ed5f9c433dff1608c98"
     },
     "_site/posts/apr_30day_2025/day1/out/p_fractions_cellph.jpg": {
       "checksum": "4ef62fc9a3c9e6a2b2311e6c461075a7"
@@ -7802,13 +8109,13 @@
       "checksum": "4ed7447ace47a790f67283e82ff87c72"
     },
     "_site/posts/apr_30day_2025/day2/out/ua_aid_eu_us.jpg": {
-      "checksum": "53a93a4df01b4f68b6d1ec419a526a76"
+      "checksum": "31ff78a4eb2e3a2240d775fbd6a3c807"
     },
     "_site/posts/apr_30day_2025/day25/out/km.jpg": {
-      "checksum": "456cfa374a487bfaf4589507cd105565"
+      "checksum": "c4d5545faaf8fe61637a86f4176ce11a"
     },
     "_site/posts/apr_30day_2025/day27/out/calib_poll.jpg": {
-      "checksum": "e1eaa997df6bd8ed090ee1f7a98cf854"
+      "checksum": "0b3a061997809cb6dbc09ca16bd0831e"
     },
     "_site/posts/apr_30day_2025/day3/out/ua_aid_country.jpg": {
       "checksum": "40533c93912ff5411e99303a8bc1ac3a"
@@ -7825,41 +8132,11 @@
     "_site/posts/apr_30day_2025/day8/out/hist.jpg": {
       "checksum": "4f59331a49d1064c6abee9fab43d2d6c"
     },
-    "_site/posts/apr_30day_2025/extra_poll_calib.jpg": {
-      "checksum": "e31375e62df152b39c948f4b83917057"
-    },
     "_site/posts/apr_30day_2025/index.html": {
-      "checksum": "5598cc5366c112258e0191119e67cf07"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-11-1.png": {
-      "checksum": "fb691556794f35afe55e29f631091415"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-11-2.png": {
-      "checksum": "ea84e2efda812f3e4f5abdfd0dd9d87c"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-12-1.png": {
-      "checksum": "4eb25156fa83d07cb71cf1e42347ac2c"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-12-2.png": {
-      "checksum": "ea84e2efda812f3e4f5abdfd0dd9d87c"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-17-1.png": {
-      "checksum": "fb691556794f35afe55e29f631091415"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-17-2.png": {
-      "checksum": "ea84e2efda812f3e4f5abdfd0dd9d87c"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-3-1.png": {
-      "checksum": "62844976012ec835de02966d63e4326e"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-9-1.png": {
-      "checksum": "fb691556794f35afe55e29f631091415"
-    },
-    "_site/posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-9-2.png": {
-      "checksum": "ea84e2efda812f3e4f5abdfd0dd9d87c"
+      "checksum": "311dc9d1c92bbf1689a4657f6803dc71"
     },
     "_site/posts/apr_30day_2025/jburnmurdoch.jpg": {
-      "checksum": "53857898069533dedfac82611a5e650a"
+      "checksum": "d49128e5a4cbd620b44d5a3b45f34e94"
     },
     "_site/posts/apr_30day_2025/thumbnail.jpg": {
       "checksum": "f7e24cebcb9a0533c5b516b4739c7c9d"
@@ -7889,7 +8166,7 @@
       "checksum": "b79dc3a258587d33a5868f826139db89"
     },
     "_site/posts/apr_30day_p2/index.html": {
-      "checksum": "b510a3d9f2ce05acc451fd65e48cedcd"
+      "checksum": "65da7f609d0568beba7b36b7e4329be4"
     },
     "_site/posts/apr_30day_p2/lyn_edit.jpg": {
       "checksum": "7c4afc3e9aa276107573429c4beff060"
@@ -7957,41 +8234,17 @@
     "_site/posts/hm_clust/thumb2.jpg": {
       "checksum": "a20d487f2b724f178a7f77a6f3e251d8"
     },
-    "_site/posts/interactive_ggplot/HtmlWidget/lyn.html": {
-      "checksum": "399b7f599340cc60e754e3315fc8bec5"
-    },
-    "_site/posts/interactive_ggplot/index.html": {
-      "checksum": "0e50ada13c12796529868e65bb369036"
-    },
-    "_site/posts/interactive_ggplot/index_files/figure-html/unnamed-chunk-2-1.png": {
-      "checksum": "c99b051d5e225132d79b9579f6c3a902"
-    },
-    "_site/posts/interactive_ggplot/index_files/figure-html/unnamed-chunk-3-1.png": {
-      "checksum": "e700f04d42243400624f09be23d19326"
-    },
-    "_site/posts/interactive_ggplot/index_files/figure-html/unnamed-chunk-5-1.png": {
-      "checksum": "89e99cc66ceb10511b24c521c252a794"
-    },
-    "_site/posts/interactive_ggplot/index_files/figure-html/unnamed-chunk-5-2.png": {
-      "checksum": "4c0dc78c585673ddda1b061becf8c226"
-    },
-    "_site/posts/interactive_ggplot/interactive_gif.gif": {
-      "checksum": "9c1d6d2381af6aecc2a23ea9056ece58"
-    },
     "_site/posts/negative_findings/concept.jpg": {
       "checksum": "9501860e96d293e1fa38ea9d9be35742"
     },
-    "_site/posts/negative_findings/gut_microbiome.png": {
-      "checksum": "5ae1648d258a867317eeb6ea3805d474"
-    },
     "_site/posts/negative_findings/index.html": {
-      "checksum": "8b9a5e7ac7c4df7306c4d388de05f531"
+      "checksum": "1f487eeb3119d43e0b0b5cd83b098890"
     },
     "_site/posts/negative_findings/p005.jpg": {
       "checksum": "73776fc2f3ed2d2d7ff55618de80bc76"
     },
     "_site/posts/scraping_scholar/index.html": {
-      "checksum": "bb6213047d24629b5ed164bd0a63f94a"
+      "checksum": "1d9822de27830ad6e6cd421124d2f3a5"
     },
     "_site/posts/scraping_scholar/index_files/figure-html/unnamed-chunk-5-1.png": {
       "checksum": "649ce9425a9b5ba0473ac175e26e8447"
@@ -8005,11 +8258,8 @@
     "_site/posts/scraping_scholar/prev.jpg": {
       "checksum": "079102344a1c40dd7985fbdb06b06689"
     },
-    "_site/posts/table_1s/index.html": {
-      "checksum": "59c49ef7f868897b157417d20cfb99f2"
-    },
     "_site/posts/uncertainty/index.html": {
-      "checksum": "5e4730db83c43f4c27213e1e09c9abd5"
+      "checksum": "3a2c45fd08cc39d03ad9c1c5c6f769f4"
     },
     "_site/posts/uncertainty/index_files/figure-html/unnamed-chunk-10-1.png": {
       "checksum": "cdaa6dfa4593dce79cf9ff27ae6bb426"
@@ -8041,29 +8291,17 @@
     "_site/posts/uncertainty/sampling.jpg": {
       "checksum": "47d0589ae5868b3a0bbce26c49b1886d"
     },
-    "_site/posts/uncertainty/stat_dots_plot.jpg": {
-      "checksum": "babbe54b506f630f2f1ffcb7af8bb056"
-    },
     "_site/posts/uncertainty/thumb.jpg": {
       "checksum": "a1091fc6ace855e07114c6343ef879a7"
     },
     "_site/posts_wip/table_1s/index.html": {
-      "checksum": "0cb58c404738ede09cd268e467942c45"
-    },
-    "_site/presentations/data_visualization_course/introduction_to_data_visualization_v3_condensed.html": {
-      "checksum": "2b28a7ce093ff2139483fb7f9377995f"
+      "checksum": "67b153cc0aa18bb94cc8703f3d455359"
     },
     "_site/presentations/index.html": {
       "checksum": "98891e856dd5fb2acd3c645c2844d1dc"
     },
-    "_site/robots.txt": {
-      "checksum": "36956e7d55c6fc172f693354441aa294"
-    },
-    "_site/scroll_test.html": {
-      "checksum": "c12f1baf5d9bff70926b4dc2fad0e6d7"
-    },
     "_site/search.json": {
-      "checksum": "ae893abb753a2c9483e22888f832a88b"
+      "checksum": "f10204d80eec384cd04ebc3b3bc1e0ce"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "7368407d15110275bb7af49476ae70f2"
@@ -8072,7 +8310,7 @@
       "checksum": "dfd2a6bd06f9dd7437ee67673cd9c447"
     },
     "_site/site_libs/bootstrap/bootstrap.min.css": {
-      "checksum": "45ff9d7697ed51d7f8f526359e222686"
+      "checksum": "55b72cbc95a719d235d905307b1070d6"
     },
     "_site/site_libs/bootstrap/bootstrap.min.js": {
       "checksum": "7ccd9d390d31af98110f74f842ea9b32"
@@ -8113,11 +8351,23 @@
     "_site/site_libs/ggiraphjs-0.8.10/ggiraphjs.min.js": {
       "checksum": "5faf946ba9d179f668fb0249028a2bbb"
     },
+    "_site/site_libs/ggiraphjs-0.9.4/girafe.css": {
+      "checksum": "14a61df5d45d828c7246260a3f2812e9"
+    },
+    "_site/site_libs/ggiraphjs-0.9.4/girafe.js": {
+      "checksum": "f40386af174919c659cc4300a0721116"
+    },
+    "_site/site_libs/ggiraphjs-0.9.4/girafe.yaml": {
+      "checksum": "7e5c6820e740f08b8f9f450cbd193989"
+    },
     "_site/site_libs/girafe-binding-0.8.11/girafe.js": {
       "checksum": "316b014884a7f81d13e0f04052884aef"
     },
     "_site/site_libs/girafe-binding-0.8.12/girafe.js": {
       "checksum": "316b014884a7f81d13e0f04052884aef"
+    },
+    "_site/site_libs/girafe-binding-0.9.6/girafe.js": {
+      "checksum": "f40386af174919c659cc4300a0721116"
     },
     "_site/site_libs/htmltools-fill-0.5.8.1/fill.css": {
       "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
@@ -8143,10 +8393,283 @@
     "_site/site_libs/kePrint-0.0.1/kePrint.js": {
       "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
     },
+    "_site/site_libs/liberation-mono-0.5.0/css/liberation-mono.css": {
+      "checksum": "c8ab8fd0fecc5be71a9eb696e0c7db28"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_site/site_libs/liberation-mono-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/css/liberation-sans.css": {
+      "checksum": "f0484399ab52a5dafecafdbd5b8417c1"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_site/site_libs/liberation-sans-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/css/liberation-serif.css": {
+      "checksum": "cc027578c3dfea6f89014e0da64ad38f"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/AUTHORS": {
+      "checksum": "bd4ed5fc2a64a80726bb393d485b8a98"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/ChangeLog": {
+      "checksum": "51213db710157f7afbbea274bd47d2cc"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Bold.ttf": {
+      "checksum": "883a89d68fdcc93f63ef66ae181ed5f9"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Bold.woff": {
+      "checksum": "da98491eedaf9e41d716b42c321b9433"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-BoldItalic.ttf": {
+      "checksum": "830676799c13431cbb255808e61c87de"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-BoldItalic.woff": {
+      "checksum": "fee892952c60109fe5199d2bd56ce666"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Italic.ttf": {
+      "checksum": "fe730bd81edbfb8e5e6430c410212f4e"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Italic.woff": {
+      "checksum": "e8e613ce122809fff3a059739aabe3cc"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Regular.ttf": {
+      "checksum": "50e5bfa4278f8f70f3b27d8d7186c202"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationMono-Regular.woff": {
+      "checksum": "d7e37bd093067ab0059b6fcae8c23e21"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Bold.ttf": {
+      "checksum": "0e438c676ba336fb23d9cf3b374d438f"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Bold.woff": {
+      "checksum": "3af466ba44041bb865d32b1695d64899"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-BoldItalic.ttf": {
+      "checksum": "09b9faedf75a7d8dc2edd32da92f6701"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-BoldItalic.woff": {
+      "checksum": "43d2c557342bebe0de4719d9bda3c8fd"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Italic.ttf": {
+      "checksum": "ae4ebf63714b0cecdc4e1d79120f9b02"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Italic.woff": {
+      "checksum": "198fcaf4e6ca1c7723742fb824250e22"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Regular.ttf": {
+      "checksum": "bbbd0bdbfba093dec2ee4ca8b62e61f9"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSans-Regular.woff": {
+      "checksum": "f28ed1e842f8300dbe1db9474d4fd92d"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Bold.ttf": {
+      "checksum": "4b73a82dc5deac9ad4629778d2d4c7c5"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Bold.woff": {
+      "checksum": "618f1f34bd8bfd4935cd8af82e5448a3"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-BoldItalic.ttf": {
+      "checksum": "e7a42c00ab241df4dd6b4da3c6d17fa4"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-BoldItalic.woff": {
+      "checksum": "d0fe60c91133cd2d93037d4f86b0fe99"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Italic.ttf": {
+      "checksum": "fcdf9312f9dad73567b40005e8c1b943"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Italic.woff": {
+      "checksum": "42b2a69988cc2f10a1c84cb20063a4ba"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Regular.ttf": {
+      "checksum": "ff12ad264cc906880489f7544848edf4"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LiberationSerif-Regular.woff": {
+      "checksum": "0600c31ecf5eb9aafc20d0a8b179420c"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/LICENSE": {
+      "checksum": "f96db970a9a46c5369142b99f530366b"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/README": {
+      "checksum": "a9c35caaf8490ae9b1dce3c7a7814b5e"
+    },
+    "_site/site_libs/liberation-serif-0.5.0/fonts/TODO": {
+      "checksum": "c100d89cac726935e7cd52d2e2d6b64d"
+    },
     "_site/site_libs/lightable-0.0.1/lightable.css": {
       "checksum": "25547ce4d44910ea8f377212d34397fa"
     },
     "_site/site_libs/plotly-binding-4.10.2/plotly.js": {
+      "checksum": "3c7c9d64b95cebf57b0180d466b17239"
+    },
+    "_site/site_libs/plotly-binding-4.10.4/plotly.js": {
       "checksum": "3c7c9d64b95cebf57b0180d466b17239"
     },
     "_site/site_libs/plotly-binding-4.11.0/plotly.js": {
@@ -8365,8 +8888,11 @@
     "climate/ice/noaa_download/N_seaice_extent_daily_v3.0.csv": {
       "checksum": "1e2f6b9b49a0c8d19ec651c6c8d7d32e"
     },
+    "climate/ice/noaa_download/noaa_data.csv": {
+      "checksum": "01cde7a995a08de46afd98941e5f40b8"
+    },
     "climate/index.qmd": {
-      "checksum": "308b04155acbb55f2083a1f7983d642f"
+      "checksum": "ebeb7248a0b41a5fa9acb7b95838b5b1"
     },
     "climate/mdr.png": {
       "checksum": "7ce57ad1abe8d6902b1dd22c301bdb4d"
@@ -8423,7 +8949,7 @@
       "checksum": "c5b7f72fede62f7b1f838577d9c6b46c"
     },
     "cv.qmd": {
-      "checksum": "beae3bbe0c840a25366ec098fa54ac7b"
+      "checksum": "06ab2113a7c76c438b43339f85431f0a"
     },
     "git_objects.txt": {
       "checksum": "45dcb82f4cb565708f48f68a304ed03e"
@@ -8474,7 +9000,7 @@
       "checksum": "f82654a607a5ba7f32b3c918c3d71099"
     },
     "ice/noaa_download/noaa_data.csv": {
-      "checksum": "118f61f7b54de946a376199800059e63"
+      "checksum": "01cde7a995a08de46afd98941e5f40b8"
     },
     "index.qmd": {
       "checksum": "242acde7551a8d2d3d2b255e465e3dad"
@@ -8738,7 +9264,7 @@
       "checksum": "90057a4d4337f8c37693458d63bd8fd5"
     },
     "posts/apr_30day_2025/day2/out/ua_aid_eu_us.jpg": {
-      "checksum": "53a93a4df01b4f68b6d1ec419a526a76"
+      "checksum": "31ff78a4eb2e3a2240d775fbd6a3c807"
     },
     "posts/apr_30day_2025/day2/ua_aid_country.txt": {
       "checksum": "d8dd20610506e1503fda11d919e7aca5"
@@ -8750,7 +9276,7 @@
       "checksum": "96ca7607cb0497b104338dea1fd59af9"
     },
     "posts/apr_30day_2025/day25/out/km.jpg": {
-      "checksum": "456cfa374a487bfaf4589507cd105565"
+      "checksum": "c4d5545faaf8fe61637a86f4176ce11a"
     },
     "posts/apr_30day_2025/day27/2013.txt": {
       "checksum": "42f4883de0703db45613a1bfb2e691e3"
@@ -8765,7 +9291,7 @@
       "checksum": "c4e901df5c3c49020ece65158f569a71"
     },
     "posts/apr_30day_2025/day27/out/calib_poll.jpg": {
-      "checksum": "e1eaa997df6bd8ed090ee1f7a98cf854"
+      "checksum": "0b3a061997809cb6dbc09ca16bd0831e"
     },
     "posts/apr_30day_2025/day27/out/calib_poll_sperra.jpg": {
       "checksum": "94416ab42324ce4cb1aac84331fce628"
@@ -8807,7 +9333,7 @@
       "checksum": "118f61f7b54de946a376199800059e63"
     },
     "posts/apr_30day_2025/index.qmd": {
-      "checksum": "f9494b7712b9e9c421358a4b0e4c638f"
+      "checksum": "56735ca892fda586e2d46c5042d98bbc"
     },
     "posts/apr_30day_2025/index_files/figure-html/unnamed-chunk-11-1.png": {
       "checksum": "fb691556794f35afe55e29f631091415"
@@ -8843,7 +9369,7 @@
       "checksum": "a34c1c522658d97cae193c7bec6348a0"
     },
     "posts/apr_30day_2025/jburnmurdoch.jpg": {
-      "checksum": "53857898069533dedfac82611a5e650a"
+      "checksum": "d49128e5a4cbd620b44d5a3b45f34e94"
     },
     "posts/apr_30day_2025/maps/EU_USA.pdf": {
       "checksum": "f97431cf2323575dc1e3e2ed8582ce82"
@@ -8855,7 +9381,7 @@
       "checksum": "b5907d1bbdf8f476b59aeab794b9c577"
     },
     "posts/apr_30day_2025/mdg.pdf": {
-      "checksum": "92c7ed543efa1882cdf7e4e81a949753"
+      "checksum": "f8d800f8ed8bf946fec34c65fadbb913"
     },
     "posts/apr_30day_2025/p.jpg": {
       "checksum": "28d4dea835e880cd7c7cf88bb51472de"
@@ -8867,7 +9393,10 @@
       "checksum": "b089407893811bcda5be1a8fa4195ed9"
     },
     "posts/apr_30day_2025/stemmer.jpg": {
-      "checksum": "47afce79e59007fe9a668688ff391e55"
+      "checksum": "83c0e10ac24a712dedf2c1a567ef09a7"
+    },
+    "posts/apr_30day_2025/stemmer.pdf": {
+      "checksum": "24e1b17cdda794f60af1889a557944c8"
     },
     "posts/apr_30day_2025/stemmer_1.csv": {
       "checksum": "14e6d24c1da9ff93086321b27fc4b42c"
@@ -8984,7 +9513,7 @@
       "checksum": "b02c0bafc58e31b2b894976951c0956c"
     },
     "posts/apr_30day_p2/index.qmd": {
-      "checksum": "d69e7463c8d5951645eac193ffb4c12e"
+      "checksum": "893907d3d9262af1733472f3fa7a2d4d"
     },
     "posts/apr_30day_p2/knopfler_albums.txt": {
       "checksum": "43d5d5ab9dac3a67f64f6b6664fbd811"
@@ -9182,7 +9711,7 @@
       "checksum": "796967d897e27a19e856273a1dc28b43"
     },
     "renv.lock": {
-      "checksum": "1abf37d41bf5c554f81fdbd5b62ed094"
+      "checksum": "63f8e90d0dfff4ad766e26b138525676"
     },
     "scripts_not_used.txt": {
       "checksum": "3146f9cf2ca823922521b4c1f8435211"
