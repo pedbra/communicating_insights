@@ -92,11 +92,11 @@ theme_light <- function() {
 library(threadr)
 library(ggpubr)
 library(ggbeeswarm)
-contents <- threadr::list_files_ftp("ftp://sidads.colorado.edu/DATASETS/NOAA/G02135")
-# We identify the path to the daily data sea ice extent csv for north (i.e. Arctic)
-url <- "ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v3.0.csv"
-# We can download the file to a directory in the project folder
-download_ftp_file(url, "ice/noaa_download/noaa_data.csv", verbose = TRUE)
+# contents <- threadr::list_files_ftp("ftp://sidads.colorado.edu/DATASETS/NOAA/G02135")
+# # We identify the path to the daily data sea ice extent csv for north (i.e. Arctic)
+# url <- "ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
+# # We can download the file to a directory in the project folder
+# download_ftp_file(url, "ice/noaa_download/noaa_data.csv", verbose = TRUE)
 noaa_arctic <- read_csv("ice/noaa_download/noaa_data.csv")
 # The raw data has a top row that we do not need
 noaa_arctic <- noaa_arctic[-1, ] %>%
@@ -197,11 +197,19 @@ noaa_arctic_decadal <-
 
 library(patchwork)
 p <-
-    noaa_arctic_apr_means_p + noaa_arctic_decadal + plot_layout(nrow = 1, widths = c(3, 1.3)) +
-    plot_annotation(
-        caption = "Source: Sea Ice Index, Version 3, data set ID G02135. Accessed from: ftp://sidads.colorado.edu/DATASETS/NOAA/G02135"
-        ) &
-  theme(plot.caption = element_text(family = font, size = 7, color = "#CCCCCC"))
+  (noaa_arctic_apr_means_p + 
+     noaa_arctic_decadal + 
+     plot_layout(nrow = 1, widths = c(3, 1.3)) +
+     plot_annotation(
+       caption = "Source: Sea Ice Index, Version 3, data set ID G02135. Accessed from: ftp://sidads.colorado.edu/DATASETS/NOAA/G02135"
+     )) +
+  theme(
+    plot.caption = element_text(
+      family = "Asap Light",
+      size = 7,
+      color = "#CCCCCC"
+    )
+  )
 
 p
 ```
@@ -226,7 +234,7 @@ cols <- c(
   rep(rev(brewer.pal(11, "RdYlBu"))[[7]], 10), # 2000 to end of 2009
   rep(rev(brewer.pal(11, "RdYlBu"))[[9]], 10), # 2010 to end of 2019
   rep(rev(brewer.pal(11, "RdYlBu"))[[10]], 4), # 2020 to 2023
-  rep(rev(brewer.pal(11, "RdYlBu"))[[11]], 2) # 2024, 2025
+  rep(rev(brewer.pal(11, "RdYlBu"))[[11]], 3) # 2024, 2025, 2026
 )
 
 # Compute 7-day rolling avg
@@ -668,10 +676,10 @@ ice_anom_int
 
 # {{< iconify mdi temperature >}} Sea surface temperature
 
-Daily sea surface temperature averaged over the 60°S and 60°N domain Data source: ESA SST CCI Analysis v3.0 https://climate.copernicus.eu/esotc/2023/sea-surface-temperature
+Daily sea surface temperature averaged over the 60°S and 60°N domain Data source: ESA SST CCI Analysis v4.0 https://climate.copernicus.eu/esotc/2023/sea-surface-temperature
 
 ```{r echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE, fig.width = 8.2, fig.height = 8.2}
-#| fig-cap: ESA SST CCI analysis v3.0 mean sea surface temperature averaged over the 60<U+00B0>S and 60<U+00B0>N domain (extrapolar ocean).
+#| fig-cap: ESA SST CCI analysis v4.0 mean sea surface temperature averaged over the 60<U+00B0>S and 60<U+00B0>N domain (extrapolar ocean).
 #| lightbox:
 #|   group: r-graph
 esacci_v3 <- read_csv("temperature/copernicus/esacci_v3_sst_series_60S-60N_1980-2023.csv") %>%
@@ -799,7 +807,7 @@ ggplot() +
     subtitle = "Sea surface temperature (60\u00B0S and 60\u00B0N)",
     y = "",
     title = "Mean extra-polar sea surface temperature",
-    caption = "Data source: ESA SST CCI Analysis v3.0 https://climate.copernicus.eu/esotc/2023/sea-surface-temperature"
+    caption = "Data source: ESA SST CCI Analysis v4.0 https://climate.copernicus.eu/esotc/2023/sea-surface-temperature"
   ) +
   scale_y_continuous(
     breaks = c(20, 20.5, 21), labels = c("20.0 \u00B0C", "20.5 \u00B0C", "21.0 \u00B0C"),
@@ -1027,18 +1035,20 @@ so_hem_temp <-
 library(patchwork)
 
 p <-
-    global_temp + no_hem_temp + so_hem_temp + 
-    plot_layout(nrow = 1) +
-    plot_annotation(
-        title = "HadCRUT.5.0.2.0 near surface temperature data",
-        subtitle = "Anomaly relative to the <span style = 'color:#bd3131'>**1961-1990**</span> period. Let me know if you find the global warming hiatus!",
-        caption = "Source: HadCRUT.5.0.2.0, UK Met Office\nDownloaded from: https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.0.2.0/download.html"
-    ) &
-    theme(
-        plot.title = element_text(color = "#222222", size = 22),
-        plot.subtitle = element_markdown(color = "#222222"),
-        plot.caption = element_text(color = "#999999", size = 10, hjust = 1)
+  global_temp + 
+  no_hem_temp + 
+  so_hem_temp +
+  plot_layout(nrow = 1) +
+  plot_annotation(
+    title = "HadCRUT.5.0.2.0 near surface temperature data",
+    subtitle = "Anomaly relative to the <span style = 'color:#bd3131'>**1961-1990**</span> period. Let me know if you find the global warming hiatus!",
+    caption = "Source: HadCRUT.5.0.2.0, UK Met Office\nDownloaded from: https://www.metoffice.gov.uk/hadobs/hadcrut5/data/HadCRUT.5.0.2.0/download.html",
+    theme = theme(
+      plot.title = element_text(color = "#222222", size = 22),
+      plot.subtitle = element_markdown(color = "#222222"),
+      plot.caption = element_text(color = "#999999", size = 10, hjust = 1)
     )
+  )
 
 p
 ```
@@ -1280,9 +1290,19 @@ library(patchwork)
 layout <- "AAABB"
 
 road_net_zero <- 
-p_traj + cum_co2 + plot_layout(widths = c(3, 2), ncol = 2) +
-  plot_annotation(title = "Why the Road to Net Zero Matters") &
-  theme(text = element_text(family = font, size = 22, face = "bold"))
+  p_traj + 
+  cum_co2 + 
+  plot_layout(widths = c(3, 2), ncol = 2) +
+  plot_annotation(
+    title = "Why the Road to Net Zero Matters",
+    theme = theme(
+      text = element_text(
+        family = "Asap Light",
+        size = 22,
+        face = "bold"
+      )
+    )
+  )
 
 road_net_zero
 ```
@@ -1822,15 +1842,33 @@ p_TR <-
   annotation_custom(rasterGrob(snowflake), xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) +
   my_gg_theme()
 
-library(patchwork)
-comp <- p_TL + p_TR + p_LL + p_LR + plot_layout(ncol = 2, nrow = 2, heights = c(1, 13), widths = c(5, 1)) &
-  theme(plot.margin = unit(c(.2, .2, .2, .2), "cm")) &
-  plot_annotation(
-    theme = theme(plot.background = element_rect(fill = "#444444")),
-    caption = "Data sourced from seklima.met.no/observations/ [23.01.2025]"
-  ) &
-  theme(plot.caption = element_text(family = font, size = 6, color = "#CCCCCC"))
 
+library(patchwork)
+
+comp <-
+  p_TL + p_TR + p_LL + p_LR +
+  plot_layout(
+    ncol = 2,
+    nrow = 2,
+    heights = c(1, 13),
+    widths = c(5, 1)
+  ) +
+  plot_annotation(
+    caption = "Data sourced from seklima.met.no/observations/ [23.01.2025]"
+  )
+
+comp <- comp &
+  theme(
+    plot.background = element_rect(fill = "#444444", color = NA),
+    plot.margin = unit(c(.2, .2, .2, .2), "cm"),
+    plot.caption = element_text(
+      family = font,
+      size = 6,
+      color = "#CCCCCC"
+    )
+  )
+
+comp
 
 # We can look at change in snow depth over time (by calendar year) last 35 years,
 # filtering only months november to april
