@@ -19,118 +19,6 @@
     "engines": ["markdown", "knitr"]
   },
   "packages": {
-    "BH": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "BH",
-        "Type": "Package",
-        "Title": "Boost C++ Header Files",
-        "Version": "1.84.0-0",
-        "Date": "2024-01-09",
-        "Author": "Dirk Eddelbuettel, John W. Emerson and Michael J. Kane",
-        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
-        "Description": "Boost provides free peer-reviewed portable C++ source \n libraries.  A large part of Boost is provided as C++ template code\n which is resolved entirely at compile-time without linking.  This \n package aims to provide the most useful subset of Boost libraries \n for template use among CRAN packages. By placing these libraries in \n this package, we offer a more efficient distribution system for CRAN \n as replication of this code in the sources of other packages is \n avoided. As of release 1.84.0-0, the following Boost libraries are\n included: 'accumulators' 'algorithm' 'align' 'any' 'atomic' 'beast'\n 'bimap' 'bind' 'circular_buffer' 'compute' 'concept' 'config'\n 'container' 'date_time' 'detail' 'dynamic_bitset' 'exception'\n 'flyweight' 'foreach' 'functional' 'fusion' 'geometry' 'graph' 'heap'\n 'icl' 'integer' 'interprocess' 'intrusive' 'io' 'iostreams'\n 'iterator' 'lambda2' 'math' 'move' 'mp11' 'mpl' 'multiprecision'\n 'numeric' 'pending' 'phoenix' 'polygon' 'preprocessor' 'process'\n 'propery_tree' 'qvm' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort'\n 'spirit' 'tuple' 'type_traits' 'typeof' 'unordered' 'url' 'utility'\n 'uuid'.",
-        "License": "BSL-1.0",
-        "URL": "https://github.com/eddelbuettel/bh,\nhttps://dirk.eddelbuettel.com/code/bh.html",
-        "BugReports": "https://github.com/eddelbuettel/bh/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-01-09 13:19:22 UTC; edd",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-01-10 11:53:35 UTC",
-        "Built": "R 4.4.0; ; 2024-04-23 00:24:28 UTC; windows"
-      }
-    },
-    "BiocManager": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "BiocManager",
-        "Title": "Access the Bioconductor Project Package Repository",
-        "Description": "A convenient tool to install and update Bioconductor packages.",
-        "Version": "1.30.25",
-        "Authors@R": "c(\n    person(\"Martin\", \"Morgan\", email = \"martin.morgan@roswellpark.org\",\n        role = \"aut\", comment = c(ORCID = \"0000-0002-5874-8148\")),\n    person(\"Marcel\", \"Ramos\", email = \"marcel.ramos@sph.cuny.edu\",\n        role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-3242-0582\")))",
-        "Imports": "utils",
-        "Suggests": "BiocVersion, BiocStyle, remotes, rmarkdown, testthat, withr,\ncurl, knitr",
-        "URL": "https://bioconductor.github.io/BiocManager/",
-        "BugReports": "https://github.com/Bioconductor/BiocManager/issues",
-        "VignetteBuilder": "knitr",
-        "License": "Artistic-2.0",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.1",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-08-27 21:44:40 UTC; mr148",
-        "Author": "Martin Morgan [aut] (<https://orcid.org/0000-0002-5874-8148>),\n  Marcel Ramos [aut, cre] (<https://orcid.org/0000-0002-3242-0582>)",
-        "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-08-28 14:20:02 UTC",
-        "Built": "R 4.4.2; ; 2025-01-25 02:08:33 UTC; windows"
-      }
-    },
-    "BiocParallel": {
-      "Source": "Bioconductor",
-      "Repository": "https://bioconductor.org/packages/3.20/bioc",
-      "description": {
-        "Package": "BiocParallel",
-        "Type": "Package",
-        "Title": "Bioconductor facilities for parallel evaluation",
-        "Version": "1.40.0",
-        "Authors@R": "c(\n    person(\"Martin\", \"Morgan\",\n        email = \"mtmorgan.bioc@gmail.com\",\n        role=c(\"aut\", \"cre\")),\n    person(\"Jiefei\", \"Wang\", role = \"aut\"),\n    person(\"Valerie\", \"Obenchain\", role=\"aut\"),\n    person(\"Michel\", \"Lang\", email=\"michellang@gmail.com\", role=\"aut\"),\n    person(\"Ryan\", \"Thompson\", email=\"rct@thompsonclan.org\", role=\"aut\"),\n    person(\"Nitesh\", \"Turaga\", role=\"aut\"),\n    person(\"Aaron\", \"Lun\", role = \"ctb\"),\n    person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n    person(\"Madelyn\", \"Carlson\", role = \"ctb\",\n        comment = \"Translated 'Random Numbers' vignette from Sweave to RMarkdown / HTML.\"\n    ),\n    person(\"Phylis\", \"Atieno\", role = \"ctb\",\n        comment = \"Translated 'Introduction to BiocParallel' vignette from Sweave to Rmarkdown / HTML.\"\n    ),\n    person(\n        \"Sergio\", \"Oller\", role = \"ctb\",\n        comment = c(\n            \"Improved bpmapply() efficiency.\",\n            \"ORCID\" = \"0000-0002-8994-1549\"\n        )\n    ))",
-        "Description": "This package provides modified versions and novel\n    implementation of functions for parallel evaluation, tailored to\n    use with Bioconductor objects.",
-        "URL": "https://github.com/Bioconductor/BiocParallel",
-        "BugReports": "https://github.com/Bioconductor/BiocParallel/issues",
-        "biocViews": "Infrastructure",
-        "License": "GPL-2 | GPL-3",
-        "SystemRequirements": "C++11",
-        "Depends": "methods, R (>= 3.5.0)",
-        "Imports": "stats, utils, futile.logger, parallel, snow, codetools",
-        "Suggests": "BiocGenerics, tools, foreach, BBmisc, doParallel,\nGenomicRanges, RNAseqData.HNRNPC.bam.chr14,\nTxDb.Hsapiens.UCSC.hg19.knownGene, VariantAnnotation,\nRsamtools, GenomicAlignments, ShortRead, RUnit, BiocStyle,\nknitr, batchtools, data.table",
-        "Enhances": "Rmpi",
-        "Collate": "AllGenerics.R DeveloperInterface.R prototype.R bploop.R\nErrorHandling.R log.R bpbackend-methods.R bpisup-methods.R\nbplapply-methods.R bpiterate-methods.R bpstart-methods.R\nbpstop-methods.R BiocParallelParam-class.R bpmapply-methods.R\nbpschedule-methods.R bpvec-methods.R bpvectorize-methods.R\nbpworkers-methods.R bpaggregate-methods.R bpvalidate.R\nSnowParam-class.R MulticoreParam-class.R\nTransientMulticoreParam-class.R register.R SerialParam-class.R\nDoparParam-class.R SnowParam-utils.R BatchtoolsParam-class.R\nprogress.R ipcmutex.R worker-number.R utilities.R rng.R\nbpinit.R reducer.R worker.R bpoptions.R cpp11.R\nBiocParallel-defunct.R",
-        "LinkingTo": "BH, cpp11",
-        "VignetteBuilder": "knitr",
-        "RoxygenNote": "7.1.2",
-        "git_url": "https://git.bioconductor.org/packages/BiocParallel",
-        "git_branch": "RELEASE_3_20",
-        "git_last_commit": "a57b788",
-        "git_last_commit_date": "2024-10-29",
-        "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-10-29",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-10-30 01:26:06 UTC; biocbuild",
-        "Author": "Martin Morgan [aut, cre],\n  Jiefei Wang [aut],\n  Valerie Obenchain [aut],\n  Michel Lang [aut],\n  Ryan Thompson [aut],\n  Nitesh Turaga [aut],\n  Aaron Lun [ctb],\n  Henrik Bengtsson [ctb],\n  Madelyn Carlson [ctb] (Translated 'Random Numbers' vignette from Sweave\n    to RMarkdown / HTML.),\n  Phylis Atieno [ctb] (Translated 'Introduction to BiocParallel' vignette\n    from Sweave to Rmarkdown / HTML.),\n  Sergio Oller [ctb] (Improved bpmapply() efficiency.,\n    <https://orcid.org/0000-0002-8994-1549>)",
-        "Maintainer": "Martin Morgan <mtmorgan.bioc@gmail.com>",
-        "Built": "R 4.4.1; x86_64-w64-mingw32; 2024-10-30 15:29:42 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "BiocVersion": {
-      "Source": "Bioconductor",
-      "Repository": "https://bioconductor.org/packages/3.20/bioc",
-      "description": {
-        "Package": "BiocVersion",
-        "Version": "3.20.0",
-        "Title": "Set the appropriate version of Bioconductor packages",
-        "Description": "This package provides repository information for the appropriate\n    version of Bioconductor. ",
-        "Authors@R": "c(\n    person(\"Martin\", \"Morgan\", email = \"martin.morgan@roswellpark.org\",\n        role = \"aut\"),\n    person(\"Marcel\", \"Ramos\", email = \"marcel.ramos@roswellpark.org\",\n        role = \"ctb\"),\n    person(\"Bioconductor\", \"Package Maintainer\",\n        email  = \"maintainer@bioconductor.org\",\n        role = c(\"ctb\", \"cre\")))",
-        "biocViews": "Infrastructure",
-        "Depends": "R (>= 4.4.0)",
-        "License": "Artistic-2.0",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "6.0.1",
-        "git_url": "https://git.bioconductor.org/packages/BiocVersion",
-        "git_branch": "devel",
-        "git_last_commit": "43c716a",
-        "git_last_commit_date": "2024-04-30",
-        "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-10-21",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-10-21 21:15:31 UTC; biocbuild",
-        "Author": "Martin Morgan [aut],\n  Marcel Ramos [ctb],\n  Bioconductor Package Maintainer [ctb, cre]",
-        "Maintainer": "Bioconductor Package Maintainer <maintainer@bioconductor.org>",
-        "Built": "R 4.4.1; ; 2024-10-22 11:00:14 UTC; windows"
-      }
-    },
     "DBI": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -2242,62 +2130,6 @@
         "Archs": "x64"
       }
     },
-    "fastmatch": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "fastmatch",
-        "Version": "1.1-4",
-        "Title": "Fast 'match()' Function",
-        "Author": "Simon Urbanek <simon.urbanek@r-project.org>",
-        "Maintainer": "Simon Urbanek <simon.urbanek@r-project.org>",
-        "Description": "Package providing a fast match() replacement for cases\n\tthat require repeated look-ups. It is slightly faster that R's\n\tbuilt-in match() function on first match against a table, but\n\textremely fast on any subsequent lookup as it keeps the hash\n\ttable in memory.",
-        "License": "GPL-2",
-        "Depends": "R (>= 2.3.0)",
-        "URL": "http://www.rforge.net/fastmatch",
-        "NeedsCompilation": "yes",
-        "Packaged": "2023-06-13 04:44:51 UTC; rforge",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-08-18 03:26:31 UTC",
-        "Built": "R 4.4.0; x86_64-w64-mingw32; 2024-04-23 00:26:54 UTC; windows",
-        "Archs": "x64"
-      }
-    },
-    "fgsea": {
-      "Source": "Bioconductor",
-      "Repository": "https://bioconductor.org/packages/3.20/bioc",
-      "description": {
-        "Package": "fgsea",
-        "Title": "Fast Gene Set Enrichment Analysis",
-        "Version": "1.32.2",
-        "Authors@R": "c(person(\"Gennady\", \"Korotkevich\", role = \"aut\"),\n             person(\"Vladimir\", \"Sukhov\", role = \"aut\"),\n             person(\"Nikolay\", \"Budin\", role = \"ctb\"),\n             person(\"Nikita\", \"Gusak\", role = \"ctb\"),\n             person(\"Zieman\", \"Mark\", role = \"ctb\"),\n\t\t\t person(\"Alexey\", \"Sergushichev\", email = \"alsergbox@gmail.com\", role = c(\"aut\", \"cre\")))",
-        "Description": "The package implements an algorithm for fast gene set enrichment\n    analysis. Using the fast algorithm allows to make more permutations and get\n    more fine grained p-values, which allows to use accurate stantard approaches to\n    multiple hypothesis correction.",
-        "biocViews": "GeneExpression, DifferentialExpression, GeneSetEnrichment,\nPathways",
-        "Depends": "R (>= 4.1)",
-        "Imports": "Rcpp, data.table, BiocParallel, stats, ggplot2 (>= 2.2.0),\ncowplot, grid, fastmatch, Matrix, scales, utils",
-        "Suggests": "testthat, knitr, rmarkdown, reactome.db, AnnotationDbi,\nparallel, org.Mm.eg.db, limma, GEOquery, msigdbr, aggregation,\nSeurat",
-        "License": "MIT + file LICENCE",
-        "LazyData": "true",
-        "LinkingTo": "Rcpp, BH",
-        "RoxygenNote": "7.3.2",
-        "Encoding": "UTF-8",
-        "VignetteBuilder": "knitr",
-        "URL": "https://github.com/ctlab/fgsea/",
-        "BugReports": "https://github.com/ctlab/fgsea/issues",
-        "git_url": "https://git.bioconductor.org/packages/fgsea",
-        "git_branch": "RELEASE_3_20",
-        "git_last_commit": "4620281",
-        "git_last_commit_date": "2024-12-19",
-        "Repository": "Bioconductor 3.20",
-        "Date/Publication": "2024-12-19",
-        "NeedsCompilation": "yes",
-        "Packaged": "2024-12-20 00:10:28 UTC; biocbuild",
-        "Author": "Gennady Korotkevich [aut],\n  Vladimir Sukhov [aut],\n  Nikolay Budin [ctb],\n  Nikita Gusak [ctb],\n  Zieman Mark [ctb],\n  Alexey Sergushichev [aut, cre]",
-        "Maintainer": "Alexey Sergushichev <alsergbox@gmail.com>",
-        "Built": "R 4.4.2; x86_64-w64-mingw32; 2024-12-20 13:09:46 UTC; windows",
-        "Archs": "x64"
-      }
-    },
     "fontBitstreamVera": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -2490,33 +2322,6 @@
         "Archs": "x64"
       }
     },
-    "formatR": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "formatR",
-        "Type": "Package",
-        "Title": "Format R Code Automatically",
-        "Version": "1.14",
-        "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n    person(\"Ed\", \"Lee\", role = \"ctb\"),\n    person(\"Eugene\", \"Ha\", role = \"ctb\"),\n    person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n    person(\"Pavel\", \"Krivitsky\", role = \"ctb\"),\n    person()\n    )",
-        "Description": "Provides a function tidy_source() to format R source code. Spaces\n    and indent will be added to the code automatically, and comments will be\n    preserved under certain conditions, so that R code will be more\n    human-readable and tidy. There is also a Shiny app as a user interface in\n    this package (see tidy_app()).",
-        "Depends": "R (>= 3.2.3)",
-        "Suggests": "rstudioapi, shiny, testit, rmarkdown, knitr",
-        "License": "GPL",
-        "URL": "https://github.com/yihui/formatR",
-        "BugReports": "https://github.com/yihui/formatR/issues",
-        "VignetteBuilder": "knitr",
-        "RoxygenNote": "7.2.3",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2023-01-17 21:46:29 UTC; yihui",
-        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Ed Lee [ctb],\n  Eugene Ha [ctb],\n  Kohske Takahashi [ctb],\n  Pavel Krivitsky [ctb]",
-        "Maintainer": "Yihui Xie <xie@yihui.name>",
-        "Repository": "CRAN",
-        "Date/Publication": "2023-01-17 22:30:02 UTC",
-        "Built": "R 4.4.1; ; 2024-11-04 01:30:20 UTC; windows"
-      }
-    },
     "formattable": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -2579,55 +2384,6 @@
         "Date/Publication": "2024-10-30 08:40:02 UTC",
         "Built": "R 4.4.2; x86_64-w64-mingw32; 2025-01-04 01:25:54 UTC; windows",
         "Archs": "x64"
-      }
-    },
-    "futile.logger": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "futile.logger",
-        "Type": "Package",
-        "Title": "A Logging Utility for R",
-        "Version": "1.4.3",
-        "Date": "2016-07-10",
-        "Author": "Brian Lee Yung Rowe",
-        "Maintainer": "Brian Lee Yung Rowe <r@zatonovo.com>",
-        "Depends": "R (>= 3.0.0)",
-        "Imports": "utils, lambda.r (>= 1.1.0), futile.options",
-        "Suggests": "testthat, jsonlite",
-        "Description": "Provides a simple yet powerful logging utility. Based loosely on\n    log4j, futile.logger takes advantage of R idioms to make logging a\n    convenient and easy to use replacement for cat and print statements.",
-        "License": "LGPL-3",
-        "LazyLoad": "yes",
-        "NeedsCompilation": "no",
-        "ByteCompile": "yes",
-        "Collate": "'options.R' 'appender.R' 'constants.R' 'layout.R' 'logger.R'\n'scat.R' 'futile.logger-package.R'",
-        "RoxygenNote": "5.0.1",
-        "Packaged": "2016-07-10 13:44:30 UTC; brian",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-07-10 16:57:47",
-        "Built": "R 4.4.2; ; 2025-01-21 02:30:34 UTC; windows"
-      }
-    },
-    "futile.options": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "futile.options",
-        "Type": "Package",
-        "Title": "Futile Options Management",
-        "Version": "1.0.1",
-        "Date": "2018-04-20",
-        "Author": "Brian Lee Yung Rowe",
-        "Maintainer": "Brian Lee Yung Rowe <r@zatonovo.com>",
-        "Depends": "R (>= 2.8.0)",
-        "Description": "A scoped options management framework. Used in other packages.",
-        "License": "LGPL-3",
-        "LazyLoad": "yes",
-        "NeedsCompilation": "no",
-        "Packaged": "2018-04-20 16:08:58 UTC; brian",
-        "Repository": "CRAN",
-        "Date/Publication": "2018-04-20 22:04:12 UTC",
-        "Built": "R 4.4.0; ; 2024-04-23 00:26:20 UTC; windows"
       }
     },
     "gargle": {
@@ -2798,30 +2554,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2024-03-14 20:20:02 UTC",
         "Built": "R 4.4.3; ; 2025-03-19 03:42:54 UTC; windows"
-      }
-    },
-    "ggbump": {
-      "Source": "CRAN",
-      "Repository": null,
-      "description": {
-        "Package": "ggbump",
-        "Type": "Package",
-        "Title": "Bump Chart and Sigmoid Curves",
-        "Version": "0.1.0",
-        "Author": "David Sjoberg",
-        "Maintainer": "David Sjoberg <dav.sjob@gmail.com>",
-        "Description": "A geom for ggplot to create bump plots. Can be good to use for showing rank over time.",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "Imports": "ggplot2, dplyr, purrr, tidyr",
-        "RoxygenNote": "7.1.0",
-        "Suggests": "testthat (>= 2.1.0)",
-        "NeedsCompilation": "no",
-        "Packaged": "2020-04-16 17:43:15 UTC; charlicito",
-        "Repository": "CRAN",
-        "Date/Publication": "2020-04-24 16:00:02 UTC",
-        "Built": "R 4.4.2; ; 2025-01-04 03:25:44 UTC; windows"
       }
     },
     "ggdendro": {
@@ -4166,30 +3898,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-08-29 22:20:02 UTC",
         "Built": "R 4.4.0; ; 2024-04-23 00:24:00 UTC; windows"
-      }
-    },
-    "lambda.r": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "lambda.r",
-        "Type": "Package",
-        "Title": "Modeling Data with Functional Programming",
-        "Version": "1.2.4",
-        "Date": "2019-09-15",
-        "Depends": "R (>= 3.0.0)",
-        "Imports": "formatR",
-        "Suggests": "testit",
-        "Author": "Brian Lee Yung Rowe",
-        "Maintainer": "Brian Lee Yung Rowe <r@zatonovo.com>",
-        "Description": "A language extension to efficiently write functional programs in R. Syntax extensions include multi-part function definitions, pattern matching, guard statements, built-in (optional) type safety.",
-        "License": "LGPL-3",
-        "LazyLoad": "yes",
-        "NeedsCompilation": "no",
-        "Packaged": "2019-09-15 08:08:15 UTC; brian",
-        "Repository": "CRAN",
-        "Date/Publication": "2019-09-18 14:30:02 UTC",
-        "Built": "R 4.4.2; ; 2025-01-21 02:15:08 UTC; windows"
       }
     },
     "later": {
@@ -6299,27 +6007,6 @@
         "Built": "R 4.4.2; ; 2025-01-04 02:10:25 UTC; windows"
       }
     },
-    "snow": {
-      "Source": "CRAN",
-      "Repository": "https://packagemanager.posit.co/cran/latest",
-      "description": {
-        "Package": "snow",
-        "Title": "Simple Network of Workstations",
-        "Version": "0.4-4",
-        "Author": "Luke Tierney, A. J. Rossini, Na Li, H. Sevcikova",
-        "Description": "Support for simple parallel computing in R.",
-        "Maintainer": "Luke Tierney <luke-tierney@uiowa.edu>",
-        "Suggests": "rlecuyer",
-        "Enhances": "Rmpi",
-        "License": "GPL",
-        "Depends": "R (>= 2.13.1), utils",
-        "NeedsCompilation": "no",
-        "Packaged": "2021-10-26 17:36:46 UTC; luke",
-        "Repository": "CRAN",
-        "Date/Publication": "2021-10-27 14:10:02 UTC",
-        "Built": "R 4.4.0; ; 2024-04-23 00:25:54 UTC; windows"
-      }
-    },
     "stringi": {
       "Source": "CRAN",
       "Repository": "https://packagemanager.posit.co/cran/latest",
@@ -7515,7 +7202,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "330eed92b7405500b5dba46c1293fd40"
+      "checksum": "4ad471de1495b8edd533db441e848b57"
     },
     "30dcc/apr2024/EVs_on_the_rise.jpg": {
       "checksum": "13e37170a3cb663a0bfd8087267136f7"
@@ -9440,72 +9127,6 @@
     "posts/hm_clust/thumb2.jpg": {
       "checksum": "a20d487f2b724f178a7f77a6f3e251d8"
     },
-    "posts/interactive_ggplot/HtmlWidget/lib/d3-bundle-5.16.0/d3-bundle.min.js": {
-      "checksum": "e6fbd264f058915c3f3b92ef64bb5964"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/d3-lasso-0.0.5/d3-lasso.min.js": {
-      "checksum": "fb82ccbec4c9cd26923a671edaf99783"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/flatbush-4.4.0/flatbush.min.js": {
-      "checksum": "6d70645a31d933928426fded4c678714"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.css": {
-      "checksum": "44133eda0aaad89bdbbeade8596df092"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.js": {
-      "checksum": "5faf946ba9d179f668fb0249028a2bbb"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/girafe-binding-0.8.12/girafe.js": {
-      "checksum": "316b014884a7f81d13e0f04052884aef"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/htmltools-fill-0.5.8.1/fill.css": {
-      "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/htmlwidgets-1.6.4/htmlwidgets.js": {
-      "checksum": "237f59bc086ccf24f39be55311023b91"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lib/save-svg-as-png-1.4.17/save-svg-as-png.min.js": {
-      "checksum": "bf0bfe9a65899d59f92b459bd7c74b60"
-    },
-    "posts/interactive_ggplot/HtmlWidget/lyn.html": {
-      "checksum": "399b7f599340cc60e754e3315fc8bec5"
-    },
-    "posts/interactive_ggplot/data/alpha_div_dekkers.txt": {
-      "checksum": "6307149f0948367269afa40625ca2ea2"
-    },
-    "posts/interactive_ggplot/data/lyn.txt": {
-      "checksum": "c59fb6afd0ba354bbcdf7ff9eb6425fb"
-    },
-    "posts/interactive_ggplot/data/lyn_logo.png": {
-      "checksum": "c58a8b632237d38311477a6dc5cf6521"
-    },
-    "posts/interactive_ggplot/data/lynkamper.txt": {
-      "checksum": "8da3c58e89f2d3a648704b3ddbb0a5fa"
-    },
-    "posts/interactive_ggplot/data/met_ann.txt": {
-      "checksum": "5525b5035af6ae94d5c6b8c41f2f5b63"
-    },
-    "posts/interactive_ggplot/data/shannon_dekkers.txt": {
-      "checksum": "e0880e7d4b7ad6d31161981e50c699a6"
-    },
-    "posts/interactive_ggplot/data/var_expl_dekkers.txt": {
-      "checksum": "4baa49be9c8691d6a7c9de0e40cdcfc0"
-    },
-    "posts/interactive_ggplot/index.qmd": {
-      "checksum": "3cc41c0c1aff6935f900d9ab09f48e42"
-    },
-    "posts/interactive_ggplot/interactive_gif.gif": {
-      "checksum": "9c1d6d2381af6aecc2a23ea9056ece58"
-    },
-    "posts/interactive_ggplot/p1.jpg": {
-      "checksum": "5dc41c1d4f88a32f200fa75133cc2a82"
-    },
-    "posts/interactive_ggplot/p2.jpg": {
-      "checksum": "db3c176559d4f7fcbe3a3fb9562a7d8a"
-    },
-    "posts/interactive_ggplot/p3.jpg": {
-      "checksum": "03abb6aed2eed1a4bd1d19ba077a9367"
-    },
     "posts/negative_findings/concept.jpg": {
       "checksum": "9501860e96d293e1fa38ea9d9be35742"
     },
@@ -9561,7 +9182,7 @@
       "checksum": "796967d897e27a19e856273a1dc28b43"
     },
     "renv.lock": {
-      "checksum": "4026f1144b69ba1fbffb145e7c5b1ac6"
+      "checksum": "1abf37d41bf5c554f81fdbd5b62ed094"
     },
     "scripts_not_used.txt": {
       "checksum": "3146f9cf2ca823922521b4c1f8435211"
