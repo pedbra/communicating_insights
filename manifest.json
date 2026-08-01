@@ -7202,106 +7202,7 @@
   },
   "files": {
     ".Rprofile": {
-      "checksum": "4ad471de1495b8edd533db441e848b57"
-    },
-    "30dcc/apr2024/EVs_on_the_rise.jpg": {
-      "checksum": "13e37170a3cb663a0bfd8087267136f7"
-    },
-    "30dcc/apr2024/carwidth_ruler.jpg": {
-      "checksum": "923d442bacdc636ab982136674c1235d"
-    },
-    "30dcc/apr2024/conflict_edit.jpg": {
-      "checksum": "2d1cfb38abaac49e5670df8c1d23ae14"
-    },
-    "30dcc/apr2024/denial_edit.jpg": {
-      "checksum": "b7c717316955914ab4147576e7964ef0"
-    },
-    "30dcc/apr2024/feature_ranks_p.jpg": {
-      "checksum": "28d7ae27144e9e4de8ba52b7fe45c024"
-    },
-    "30dcc/apr2024/forest_carbon_edit.jpg": {
-      "checksum": "b79dc3a258587d33a5868f826139db89"
-    },
-    "30dcc/apr2024/index.qmd": {
-      "checksum": "9af841840e5d607f2c70d0dcf929d2e0"
-    },
-    "30dcc/apr2024/lyn_edit.jpg": {
-      "checksum": "7c4afc3e9aa276107573429c4beff060"
-    },
-    "30dcc/apr2024/meat_consumption.jpg": {
-      "checksum": "2fa1df88aa976511f54e685c039b817c"
-    },
-    "30dcc/apr2024/no_cn.jpg": {
-      "checksum": "e849a937633830b8e5f6731c7ca844b9"
-    },
-    "30dcc/apr2024/nor_temp_rain.jpg": {
-      "checksum": "d071818f1bb916cd4e861851728cc46a"
-    },
-    "30dcc/apr2024/snow_oslo.jpg": {
-      "checksum": "56f6c9e067e251196a7b40344e84074c"
-    },
-    "30dcc/apr2024/temp_oslo.jpg": {
-      "checksum": "d47de718c87d357828ca1e67d9f6d405"
-    },
-    "30dcc/apr2024/temp_oslo_circ_edit.jpg": {
-      "checksum": "54e85482bfbbd9841c3ef6452b2d2ed6"
-    },
-    "30dcc/apr2024/temp_oslo_lin_edit.jpg": {
-      "checksum": "2617aade38d053835e9ae3f1c7e72be7"
-    },
-    "30dcc/apr2024/width_by_vehicle_type.jpg": {
-      "checksum": "1b0f0a58ffb9f673e2baf4ae6a378b43"
-    },
-    "30dcc/collage.jpg": {
-      "checksum": "81d5b43ed289df20e77ed8f5cceca190"
-    },
-    "30dcc/index.qmd": {
-      "checksum": "c2813d4b286228749bb1a8c5597728cd"
-    },
-    "30dcc/thumbnail.jpg": {
-      "checksum": "44596c318db4673d6c60dba3aba672b3"
-    },
-    "HtmlWidget/ggiraph-2.html": {
-      "checksum": "98449e10df605ba5ce56706382e71063"
-    },
-    "HtmlWidget/lib/d3-bundle-5.16.0/d3-bundle.min.js": {
-      "checksum": "e6fbd264f058915c3f3b92ef64bb5964"
-    },
-    "HtmlWidget/lib/d3-lasso-0.0.5/d3-lasso.min.js": {
-      "checksum": "fb82ccbec4c9cd26923a671edaf99783"
-    },
-    "HtmlWidget/lib/flatbush-4.4.0/flatbush.min.js": {
-      "checksum": "6d70645a31d933928426fded4c678714"
-    },
-    "HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.css": {
-      "checksum": "44133eda0aaad89bdbbeade8596df092"
-    },
-    "HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.js": {
-      "checksum": "5faf946ba9d179f668fb0249028a2bbb"
-    },
-    "HtmlWidget/lib/girafe-binding-0.8.11/girafe.js": {
-      "checksum": "316b014884a7f81d13e0f04052884aef"
-    },
-    "HtmlWidget/lib/girafe-binding-0.8.12/girafe.js": {
-      "checksum": "316b014884a7f81d13e0f04052884aef"
-    },
-    "HtmlWidget/lib/htmltools-fill-0.5.8.1/fill.css": {
-      "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
-    },
-    "HtmlWidget/lib/htmlwidgets-1.6.2/htmlwidgets.js": {
-      "checksum": "237f59bc086ccf24f39be55311023b91"
-    },
-    "HtmlWidget/lib/htmlwidgets-1.6.4/htmlwidgets.js": {
-      "checksum": "237f59bc086ccf24f39be55311023b91"
-    },
-    "HtmlWidget/lib/save-svg-as-png-1.4.17/save-svg-as-png.min.js": {
-      "checksum": "bf0bfe9a65899d59f92b459bd7c74b60"
-    },
-    "HtmlWidget/lyn.html": {
-      "checksum": "f82654a607a5ba7f32b3c918c3d71099"
-    },
-    "_extensions/mcanouil/iconify/LICENSE": {
-      "checksum": "3af21d8aa3082dd4445f6bb41f644322"
+      "checksum": "44fbd4cbcecd667ea44678570f382617"
     },
     "_extensions/mcanouil/iconify/_extension.yml": {
       "checksum": "444e92f9fab2b160410ec0ab48069746"
@@ -7311,6 +7212,9 @@
     },
     "_extensions/mcanouil/iconify/iconify.lua": {
       "checksum": "f99e4da81bf23a7680179aeac33efb87"
+    },
+    "_extensions/mcanouil/iconify/LICENSE": {
+      "checksum": "3af21d8aa3082dd4445f6bb41f644322"
     },
     "_extensions/quarto-ext/lightbox/_extension.yml": {
       "checksum": "9d4227e9643702041f4905b21ab92edb"
@@ -7573,9 +7477,6 @@
     "_quarto.yml": {
       "checksum": "4f3597041ee53506a2bffe65a6eeebe6"
     },
-    "_site/30dcc/apr2024/EVs_on_the_rise.jpg": {
-      "checksum": "13e37170a3cb663a0bfd8087267136f7"
-    },
     "_site/30dcc/apr2024/carwidth_ruler.jpg": {
       "checksum": "923d442bacdc636ab982136674c1235d"
     },
@@ -7584,6 +7485,9 @@
     },
     "_site/30dcc/apr2024/denial_edit.jpg": {
       "checksum": "b7c717316955914ab4147576e7964ef0"
+    },
+    "_site/30dcc/apr2024/EVs_on_the_rise.jpg": {
+      "checksum": "13e37170a3cb663a0bfd8087267136f7"
     },
     "_site/30dcc/apr2024/feature_ranks_p.jpg": {
       "checksum": "28d7ae27144e9e4de8ba52b7fe45c024"
@@ -7732,9 +7636,6 @@
     "_site/p.jpg": {
       "checksum": "90df378222f76d9406ce9a26a13025a8"
     },
-    "_site/portfolio/apr2024/EVs_on_the_rise.jpg": {
-      "checksum": "b2a5b047fff6937077f18215399bc129"
-    },
     "_site/portfolio/apr2024/carwidth_ruler.jpg": {
       "checksum": "ffdf2c0338f27e505a346aa2165e5850"
     },
@@ -7743,6 +7644,9 @@
     },
     "_site/portfolio/apr2024/denial_edit.jpg": {
       "checksum": "d78d742cbc9880384c575a5ec73c5610"
+    },
+    "_site/portfolio/apr2024/EVs_on_the_rise.jpg": {
+      "checksum": "b2a5b047fff6937077f18215399bc129"
     },
     "_site/portfolio/apr2024/feature_ranks_p.jpg": {
       "checksum": "ddaff9f7cb83bb981f7d7ace05bc909b"
@@ -7786,9 +7690,6 @@
     "_site/portfolio/apr2025/ua_aid_country.jpg": {
       "checksum": "52e9bcfabacf189064481034646fab45"
     },
-    "_site/portfolio/climate/SST.jpg": {
-      "checksum": "7970ee5857e3636641f436a00d093ac4"
-    },
     "_site/portfolio/climate/arctic_ice_group_by_yr.jpg": {
       "checksum": "8be54349cb511782fdf54683eec28957"
     },
@@ -7821,6 +7722,9 @@
     },
     "_site/portfolio/climate/sea_ice_anomaly.jpg": {
       "checksum": "75f4f43963e23e4850d666a2db9e0c5c"
+    },
+    "_site/portfolio/climate/SST.jpg": {
+      "checksum": "7970ee5857e3636641f436a00d093ac4"
     },
     "_site/portfolio/climate/world_temp.jpg": {
       "checksum": "71e49d580176af13a590000578535ba1"
@@ -7960,9 +7864,6 @@
     "_site/posts/apr_30day_2025/thumbnail.jpg": {
       "checksum": "f7e24cebcb9a0533c5b516b4739c7c9d"
     },
-    "_site/posts/apr_30day_p2/EVs_on_the_rise.jpg": {
-      "checksum": "13e37170a3cb663a0bfd8087267136f7"
-    },
     "_site/posts/apr_30day_p2/carwidth_ruler.jpg": {
       "checksum": "923d442bacdc636ab982136674c1235d"
     },
@@ -7974,6 +7875,9 @@
     },
     "_site/posts/apr_30day_p2/denial_edit.jpg": {
       "checksum": "b7c717316955914ab4147576e7964ef0"
+    },
+    "_site/posts/apr_30day_p2/EVs_on_the_rise.jpg": {
+      "checksum": "13e37170a3cb663a0bfd8087267136f7"
     },
     "_site/posts/apr_30day_p2/extra.jpg": {
       "checksum": "b779ddbb33b0c6ed1faa981363d2edf8"
@@ -8104,9 +8008,6 @@
     "_site/posts/table_1s/index.html": {
       "checksum": "59c49ef7f868897b157417d20cfb99f2"
     },
-    "_site/posts/uncertainty/MOE.jpg": {
-      "checksum": "fcc0d9ef185a1ca6c5ff50ebf5e1f066"
-    },
     "_site/posts/uncertainty/index.html": {
       "checksum": "5e4730db83c43f4c27213e1e09c9abd5"
     },
@@ -8133,6 +8034,9 @@
     },
     "_site/posts/uncertainty/index_files/figure-html/unnamed-chunk-9-1.png": {
       "checksum": "db5742ba633edc348c592ec09becc882"
+    },
+    "_site/posts/uncertainty/MOE.jpg": {
+      "checksum": "fcc0d9ef185a1ca6c5ff50ebf5e1f066"
     },
     "_site/posts/uncertainty/sampling.jpg": {
       "checksum": "47d0589ae5868b3a0bbce26c49b1886d"
@@ -8332,6 +8236,63 @@
     "_site/style.css": {
       "checksum": "365614dcf3a90a816d9f7836d5f5e745"
     },
+    "30dcc/apr2024/carwidth_ruler.jpg": {
+      "checksum": "923d442bacdc636ab982136674c1235d"
+    },
+    "30dcc/apr2024/conflict_edit.jpg": {
+      "checksum": "2d1cfb38abaac49e5670df8c1d23ae14"
+    },
+    "30dcc/apr2024/denial_edit.jpg": {
+      "checksum": "b7c717316955914ab4147576e7964ef0"
+    },
+    "30dcc/apr2024/EVs_on_the_rise.jpg": {
+      "checksum": "13e37170a3cb663a0bfd8087267136f7"
+    },
+    "30dcc/apr2024/feature_ranks_p.jpg": {
+      "checksum": "28d7ae27144e9e4de8ba52b7fe45c024"
+    },
+    "30dcc/apr2024/forest_carbon_edit.jpg": {
+      "checksum": "b79dc3a258587d33a5868f826139db89"
+    },
+    "30dcc/apr2024/index.qmd": {
+      "checksum": "9af841840e5d607f2c70d0dcf929d2e0"
+    },
+    "30dcc/apr2024/lyn_edit.jpg": {
+      "checksum": "7c4afc3e9aa276107573429c4beff060"
+    },
+    "30dcc/apr2024/meat_consumption.jpg": {
+      "checksum": "2fa1df88aa976511f54e685c039b817c"
+    },
+    "30dcc/apr2024/no_cn.jpg": {
+      "checksum": "e849a937633830b8e5f6731c7ca844b9"
+    },
+    "30dcc/apr2024/nor_temp_rain.jpg": {
+      "checksum": "d071818f1bb916cd4e861851728cc46a"
+    },
+    "30dcc/apr2024/snow_oslo.jpg": {
+      "checksum": "56f6c9e067e251196a7b40344e84074c"
+    },
+    "30dcc/apr2024/temp_oslo.jpg": {
+      "checksum": "d47de718c87d357828ca1e67d9f6d405"
+    },
+    "30dcc/apr2024/temp_oslo_circ_edit.jpg": {
+      "checksum": "54e85482bfbbd9841c3ef6452b2d2ed6"
+    },
+    "30dcc/apr2024/temp_oslo_lin_edit.jpg": {
+      "checksum": "2617aade38d053835e9ae3f1c7e72be7"
+    },
+    "30dcc/apr2024/width_by_vehicle_type.jpg": {
+      "checksum": "1b0f0a58ffb9f673e2baf4ae6a378b43"
+    },
+    "30dcc/collage.jpg": {
+      "checksum": "81d5b43ed289df20e77ed8f5cceca190"
+    },
+    "30dcc/index.qmd": {
+      "checksum": "c2813d4b286228749bb1a8c5597728cd"
+    },
+    "30dcc/thumbnail.jpg": {
+      "checksum": "44596c318db4673d6c60dba3aba672b3"
+    },
     "about.qmd": {
       "checksum": "8c9692f85b511e9055391cb69a1e8993"
     },
@@ -8434,6 +8395,9 @@
     "climate/snow/snowflake.svg": {
       "checksum": "d809af11d31e051540acddf05f45db0f"
     },
+    "climate/temperature/copernicus/esacci_v3_sst_series_60S-60N_1980-2023.csv": {
+      "checksum": "bb71c35ca6c3b12fd46e70a85cfda648"
+    },
     "climate/temperature/HadCRUT.5.0.2.0.analysis.summary_series.global.monthly.csv": {
       "checksum": "e4fffbf18f05fffaa0028ad08f3a6a74"
     },
@@ -8442,9 +8406,6 @@
     },
     "climate/temperature/HadCRUT.5.0.2.0.analysis.summary_series.southern_hemisphere.monthly.csv": {
       "checksum": "aee5c076a2255017e451cab375ae93a7"
-    },
-    "climate/temperature/copernicus/esacci_v3_sst_series_60S-60N_1980-2023.csv": {
-      "checksum": "bb71c35ca6c3b12fd46e70a85cfda648"
     },
     "climate/temperature/ohc_mdr.csv": {
       "checksum": "baf0ac918f46ab72199a39c9f267332c"
@@ -8473,11 +8434,50 @@
     "header_edit.jpg": {
       "checksum": "f48614d49f9aba5fcf7ad6d230d4f990"
     },
+    "HtmlWidget/ggiraph-2.html": {
+      "checksum": "98449e10df605ba5ce56706382e71063"
+    },
+    "HtmlWidget/lib/d3-bundle-5.16.0/d3-bundle.min.js": {
+      "checksum": "e6fbd264f058915c3f3b92ef64bb5964"
+    },
+    "HtmlWidget/lib/d3-lasso-0.0.5/d3-lasso.min.js": {
+      "checksum": "fb82ccbec4c9cd26923a671edaf99783"
+    },
+    "HtmlWidget/lib/flatbush-4.4.0/flatbush.min.js": {
+      "checksum": "6d70645a31d933928426fded4c678714"
+    },
+    "HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.css": {
+      "checksum": "44133eda0aaad89bdbbeade8596df092"
+    },
+    "HtmlWidget/lib/ggiraphjs-0.8.10/ggiraphjs.min.js": {
+      "checksum": "5faf946ba9d179f668fb0249028a2bbb"
+    },
+    "HtmlWidget/lib/girafe-binding-0.8.11/girafe.js": {
+      "checksum": "316b014884a7f81d13e0f04052884aef"
+    },
+    "HtmlWidget/lib/girafe-binding-0.8.12/girafe.js": {
+      "checksum": "316b014884a7f81d13e0f04052884aef"
+    },
+    "HtmlWidget/lib/htmltools-fill-0.5.8.1/fill.css": {
+      "checksum": "0c307b2ce7a3fa7f260a0451457c809f"
+    },
+    "HtmlWidget/lib/htmlwidgets-1.6.2/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "HtmlWidget/lib/htmlwidgets-1.6.4/htmlwidgets.js": {
+      "checksum": "237f59bc086ccf24f39be55311023b91"
+    },
+    "HtmlWidget/lib/save-svg-as-png-1.4.17/save-svg-as-png.min.js": {
+      "checksum": "bf0bfe9a65899d59f92b459bd7c74b60"
+    },
+    "HtmlWidget/lyn.html": {
+      "checksum": "f82654a607a5ba7f32b3c918c3d71099"
+    },
     "ice/noaa_download/noaa_data.csv": {
       "checksum": "118f61f7b54de946a376199800059e63"
     },
     "index.qmd": {
-      "checksum": "80b23abacaaded7bb6b0fd08fddae582"
+      "checksum": "242acde7551a8d2d3d2b255e465e3dad"
     },
     "index.quarto_ipynb": {
       "checksum": "0984f7b30cd18a154354ead1f220919a"
@@ -8536,9 +8536,6 @@
     "polling_script_uncertainty.txt": {
       "checksum": "95acfcbb483cdf3ec08f93e541ed4e63"
     },
-    "portfolio/apr2024/EVs_on_the_rise.jpg": {
-      "checksum": "b2a5b047fff6937077f18215399bc129"
-    },
     "portfolio/apr2024/carwidth_ruler.jpg": {
       "checksum": "ffdf2c0338f27e505a346aa2165e5850"
     },
@@ -8547,6 +8544,9 @@
     },
     "portfolio/apr2024/denial_edit.jpg": {
       "checksum": "d78d742cbc9880384c575a5ec73c5610"
+    },
+    "portfolio/apr2024/EVs_on_the_rise.jpg": {
+      "checksum": "b2a5b047fff6937077f18215399bc129"
     },
     "portfolio/apr2024/feature_ranks_p.jpg": {
       "checksum": "ddaff9f7cb83bb981f7d7ace05bc909b"
@@ -8580,9 +8580,6 @@
     },
     "portfolio/apr2024/width_by_vehicle_type.jpg": {
       "checksum": "fc6461a6d9babe3fb12522beb32ac57d"
-    },
-    "portfolio/climate/SST.jpg": {
-      "checksum": "7970ee5857e3636641f436a00d093ac4"
     },
     "portfolio/climate/arctic_ice_group_by_yr.jpg": {
       "checksum": "8be54349cb511782fdf54683eec28957"
@@ -8622,6 +8619,9 @@
     },
     "portfolio/climate/sea_ice_anomaly.jpg": {
       "checksum": "75f4f43963e23e4850d666a2db9e0c5c"
+    },
+    "portfolio/climate/SST.jpg": {
+      "checksum": "7970ee5857e3636641f436a00d093ac4"
     },
     "portfolio/climate/world_temp.jpg": {
       "checksum": "71e49d580176af13a590000578535ba1"
@@ -8673,12 +8673,6 @@
     },
     "posts/_metadata.yml": {
       "checksum": "8bcb6b29f0a2436c347a042c69ef43a5"
-    },
-    "posts/apr_30day_2025/US_Policy_Uncertainty_Data.txt": {
-      "checksum": "b7d5fad64c2cb6496395826dfa13123c"
-    },
-    "posts/apr_30day_2025/US_Policy_Uncertainty_Data.xlsx": {
-      "checksum": "52a0d00b510c01a296171c28e3f89488"
     },
     "posts/apr_30day_2025/all_tracks.RData": {
       "checksum": "369b194ea1cdacb6890632ebaf2693d0"
@@ -8875,11 +8869,11 @@
     "posts/apr_30day_2025/stemmer.jpg": {
       "checksum": "47afce79e59007fe9a668688ff391e55"
     },
-    "posts/apr_30day_2025/stemmer2.pdf": {
-      "checksum": "f33b405850dc6a0526e2fbb9cd5d5b6c"
-    },
     "posts/apr_30day_2025/stemmer_1.csv": {
       "checksum": "14e6d24c1da9ff93086321b27fc4b42c"
+    },
+    "posts/apr_30day_2025/stemmer2.pdf": {
+      "checksum": "f33b405850dc6a0526e2fbb9cd5d5b6c"
     },
     "posts/apr_30day_2025/test.jpg": {
       "checksum": "0a8ba4252f40a2214bcc93b252595633"
@@ -8893,17 +8887,14 @@
     "posts/apr_30day_2025/thumbnail.jpg": {
       "checksum": "f7e24cebcb9a0533c5b516b4739c7c9d"
     },
+    "posts/apr_30day_2025/US_Policy_Uncertainty_Data.txt": {
+      "checksum": "b7d5fad64c2cb6496395826dfa13123c"
+    },
+    "posts/apr_30day_2025/US_Policy_Uncertainty_Data.xlsx": {
+      "checksum": "52a0d00b510c01a296171c28e3f89488"
+    },
     "posts/apr_30day_2025/votes_aug_sep.csv": {
       "checksum": "476c6e98de4008ef17bcde5b3898f3d1"
-    },
-    "posts/apr_30day_p2/Car Dataset 1945-2020.csv": {
-      "checksum": "0ab4c4b323589ed023c6cc8f0a3d7c97"
-    },
-    "posts/apr_30day_p2/EVs.pdf": {
-      "checksum": "708c61d097dc29392d9d09f6eeecfef7"
-    },
-    "posts/apr_30day_p2/EVs_on_the_rise.jpg": {
-      "checksum": "13e37170a3cb663a0bfd8087267136f7"
     },
     "posts/apr_30day_p2/antonio.pdf": {
       "checksum": "bb7b0db0a32fcb85087a2ecb78b73f1e"
@@ -8919,6 +8910,9 @@
     },
     "posts/apr_30day_p2/boot_res.RData": {
       "checksum": "46cd4336f3267566ea91de5a25d3acbe"
+    },
+    "posts/apr_30day_p2/Car Dataset 1945-2020.csv": {
+      "checksum": "0ab4c4b323589ed023c6cc8f0a3d7c97"
     },
     "posts/apr_30day_p2/carpark.jpg": {
       "checksum": "55a207dc2906a1d6f6b5efe1afae2d32"
@@ -8959,6 +8953,12 @@
     "posts/apr_30day_p2/denial_edit.jpg": {
       "checksum": "b7c717316955914ab4147576e7964ef0"
     },
+    "posts/apr_30day_p2/EVs.pdf": {
+      "checksum": "708c61d097dc29392d9d09f6eeecfef7"
+    },
+    "posts/apr_30day_p2/EVs_on_the_rise.jpg": {
+      "checksum": "13e37170a3cb663a0bfd8087267136f7"
+    },
     "posts/apr_30day_p2/extra.jpg": {
       "checksum": "b779ddbb33b0c6ed1faa981363d2edf8"
     },
@@ -8984,7 +8984,7 @@
       "checksum": "b02c0bafc58e31b2b894976951c0956c"
     },
     "posts/apr_30day_p2/index.qmd": {
-      "checksum": "7d825097cf1a982d1932004867b66a2f"
+      "checksum": "d69e7463c8d5951645eac193ffb4c12e"
     },
     "posts/apr_30day_p2/knopfler_albums.txt": {
       "checksum": "43d5d5ab9dac3a67f64f6b6664fbd811"
@@ -9145,9 +9145,6 @@
     "posts/scraping_scholar/prev.jpg": {
       "checksum": "079102344a1c40dd7985fbdb06b06689"
     },
-    "posts/uncertainty/MOE.jpg": {
-      "checksum": "fcc0d9ef185a1ca6c5ff50ebf5e1f066"
-    },
     "posts/uncertainty/birthdays.RData": {
       "checksum": "6bcf038385449e7bcd70b47977744d04"
     },
@@ -9159,6 +9156,9 @@
     },
     "posts/uncertainty/index.qmd": {
       "checksum": "6db7ac41c31cdfc5369b9ae6008ac0ac"
+    },
+    "posts/uncertainty/MOE.jpg": {
+      "checksum": "fcc0d9ef185a1ca6c5ff50ebf5e1f066"
     },
     "posts/uncertainty/sampling.jpg": {
       "checksum": "47d0589ae5868b3a0bbce26c49b1886d"
