@@ -5520,6 +5520,36 @@
       "Maintainer": "Lionel Henry <lionel@rstudio.com>",
       "Repository": "CRAN"
     },
+    "mapproj": {
+      "Package": "mapproj",
+      "Version": "1.2.12",
+      "Source": "Repository",
+      "Priority": null,
+      "Depends": [
+        "R (>= 3.0.0)",
+        "maps (>= 2.3-0)"
+      ],
+      "Imports": [
+        "stats",
+        "graphics"
+      ],
+      "LinkingTo": [
+        null
+      ],
+      "Suggests": [
+        null
+      ],
+      "Enhances": [
+        null
+      ],
+      "License": "Lucent Public License",
+      "License_is_FOSS": null,
+      "License_restricts_use": null,
+      "OS_type": null,
+      "NeedsCompilation": "yes",
+      "Repository": "CRAN",
+      "Type": "source"
+    },
     "maps": {
       "Package": "maps",
       "Version": "3.4.2",
