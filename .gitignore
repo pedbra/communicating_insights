@@ -5,3 +5,5 @@
 
 /.quarto/
 _site/
+posts/apr_30day_2025/day1/*.geojson
+posts/apr_30day_2025/day1/*.json
