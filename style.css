@@ -1,0 +1,561 @@
+<style>
+
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+/* Headers */
+
+
+/* Container for the banner */
+.quarto-title-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('header_edit.jpg');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px; 
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+/* Limit the banner width to prevent excessive stretching */
+@media (min-width: 1200px) {
+  .quarto-title-banner {
+    max-width: 1400px; /* Add space on the right on widescreens */
+  }
+}
+
+/* Title header over tile plot */
+.quarto-title-banner .quarto-title .title {
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #F17367;
+    text-transform: lowercase;
+    text-shadow: -4px -4px rgba(255,255,255, 0.7);
+    position: relative;
+    z-index: 2; /* Keep title on top */
+}
+
+/* Title header over tile plot for small screens */
+@media (max-width: 768px) {
+  .quarto-title-banner .quarto-title .title {
+    font-weight: 800;
+    font-size: 30px;
+    color: #F17367;
+  }
+}
+
+
+
+
+h1, .h1   {
+  color: #F17367;
+  font-family: 'Asap Condensed', sans-serif;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-size: 36px;
+  text-shadow: -4px -4px rgba(255,255,255, 0.7);
+}
+
+h2   {
+  color: #222222;
+  font-family: "Asap Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h3, h4   {
+  color: #444444;
+  font-family: "Asap Condensed", sans-serif;
+  font-size: 20px;
+}
+
+/* Not sure what this is */
+.quotation   {
+  color: #444444;
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+}
+
+/* Paragraphs (general text) */
+p    {
+  color: #444444;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Hyperlinks */
+a    {
+  color: #F17367;
+  font-family: "Palanquin", sans-serif;
+  transition: color 0.3s;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+}
+a:hover {
+  color: #444444;
+}
+
+/* Header block background color */
+@media (min-width: 992px) {
+    .quarto-title-banner {
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        background-color: #FFFFFF;
+    }
+}
+
+@media (max-width: 768px) {
+    .quarto-title-banner {
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        background-color: #FFFFFF;
+    }
+}
+
+/* Category labels for posts */
+.quarto-title .quarto-categories .quarto-category a {
+    color: #F17367;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+    border-color: #F17367;
+}
+
+
+/* Hyperlinks for blog posts */
+div.quarto-post .body h3.listing-title, div.quarto-post .body .listing-title.h3:hover {
+  color: #F17367;
+}
+
+/* Bullet points */
+ul {
+  list-style-type: circle;
+}
+
+li {
+  color: #444444;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+ul li {
+  color: #444444;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Figure legends */
+.panel-caption,
+.figure-caption,
+figcaption {
+  color: #999999;
+  font-family: "Palanquin", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/* Horizontal ruler */
+hr {
+        border-top: 2px dashed #F9F9F9; 
+    }
+
+
+/* Text box with rounded corners */
+.text-col {
+  height: 100%;
+  background-color: #fcf1f0;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  font-family: "Palanquin", sans-serif; 
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 10px; 
+  margin-bottom: 15px;
+}
+
+
+/* Navigation panel */
+
+.nav-link.active {
+    color: #F9F9F9;
+}
+
+/* Hover effect for navbar links */
+.nav-item:hover {
+    box-shadow: inset 0 -2px 0 0 #F9F9F9; 
+    display: inline-block;
+}
+.nav-item {
+    transition: box-shadow 0.4s ease; /* Smooth transition for box-shadow */
+}
+
+/* Styles for navigation panel text */
+.navbar-nav .nav-item .nav-link {color: #F9F9F9; font-family: "Asap", sans-serif; font-size: 17px; text-transform: lowercase; font-weight: 400;}
+.navbar-nav .nav-item .nav-link:hover {color: #F9F9F9;}
+.navbar-dark .navbar-nav .nav-link.active {color: #F9F9F9;}
+
+/* Style for .navbar-title */
+    .navbar-title {
+        color: #F9F9F9; 
+        font-family: "Asap Condensed", sans-serif; 
+        font-size: 19px; 
+        font-weight: 600;
+    }
+  
+/* Style for the search icon */
+    .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {width: 20px; height: 30px; color: #F9F9F9; opacity: 1; padding-bottom: 12px; margin-top: 12px;}
+    .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon:hover {
+        color: #F9F9F9;
+        box-shadow: inset 0 -2px 0 0 #F9F9F9; 
+        display: inline-block;
+    }
+
+/* Navigation bar logo */
+.navbar-logo {max-height: 30px; max-width: 40px; height: 30px;}
+
+/* Make logo in index scale for mobile devices */
+
+.logo-svg {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Appearance of menu button for mobile devices */
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+
+/* Visual appearance of the code chunks */
+.cell pre {
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    font-family: "Fira Code"; 
+    font-size: 13px; 
+    line-height: 1.2; 
+}
+
+
+/* Show code chunk text aesthetic */
+details>summary {
+    color: #F17367; 
+    font-family: "Palanquin", sans-serif; 
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+/* TOC for blog posts (Quick navigation) */
+
+/* TOC background color */
+#quarto-content.page-columns #quarto-margin-sidebar, #quarto-content.page-columns #quarto-sidebar {
+    z-index: 1;
+    border-left: 2px dashed #F0F0F0; 
+    padding-left: .5rem;
+}
+
+/* TOC header (Quick navigation) */
+.sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: .5rem;
+    margin-top: .3rem;
+    font-family: "Asap", sans-serif;
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0px;
+    color: #444444;
+}
+
+/* TOC links first level h */
+.sidebar nav[role=doc-toc] ul>li>a.active {
+    border-left: 1px solid #F17367;
+    color: #444444 !important;
+}
+
+/* TOC links second level h */
+.sidebar nav[role=doc-toc]>ul li a {
+    line-height: 0.9rem;
+    padding-bottom: .1rem;
+    padding-top: .2rem;
+    color: #444444;
+    font-size: 15px;
+    font-family: "Asap", sans-serif;
+}
+
+/* Hover effect for TOC links */
+.sidebar nav[role=doc-toc]>ul li a:hover {
+    color: #F17367; 
+}
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid #F17367;
+    color: #F17367 !important;
+    font-family: "Asap", sans-serif; 
+    font-size: 15px;
+}
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a {
+    border-left: 1px solid #FFFFFF;
+}
+
+
+
+/* TOC for main page (categories) */
+
+/* Sidebar header (categories of blog posts) */
+#quarto-margin-sidebar .quarto-listing-category-title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: .5rem;
+    margin-top: .3rem;
+    font-family: "Asap", sans-serif;
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: .25rem;
+    color: #444444;
+}
+
+/* Sidebar links to categories of blog posts */
+.quarto-listing-category .category {
+    line-height: 0.9rem;
+    padding-bottom: .1rem;
+    padding-top: .2rem;
+    color: #444444;
+    font-size: 15px;
+    font-family: "Asap", sans-serif;
+    padding-left: .6rem;
+}
+
+/* Sidebar active */
+.quarto-listing-category .category.active {
+    border-left: 1px solid #F17367;
+    color: #F17367 !important;
+    font-family: "Asap", sans-serif; 
+    font-size: 15px;
+}
+
+/* Sidebar hover */
+.quarto-listing-category .category:hover {
+    color: #F17367; /* Change the color on hover */
+}
+
+/* Footer */
+.nav-footer .nav-footer-left {
+    font-size: 14px;
+    font-family: "Asap", sans-serif;
+    color: #444444;
+}
+
+.nav-link {
+    color: #444444;
+    font-family: "Asap", sans-serif;
+    font-size: 14px;
+}
+
+body .sidebar nav[role=doc-toc] ul > li > a:hover,
+body .sidebar nav[role=doc-toc] ul > li > ul > li > a:hover {
+    color: #F17367 !important;
+}
+        
+        
+/* -------- Articles highlight ---------/*
+
+/* Boxes */
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-top: 3px;
+  padding-bottom: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  gap: 15px;
+  background: #FFFFFF;
+  scroll-behavior: smooth; 
+}
+
+.scroll-container > * {
+  scroll-snap-align: start; /* Ensures elements snap to the start */
+}
+
+.box {
+  flex: 0 0 auto; 
+  width: 300px;
+  background-color: #FFFFFF;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  margin-left: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px; 
+  border: 1px solid #E0E0E0;
+}
+
+
+.box img {
+  width: 100%;
+  height: 145px;
+  filter: grayscale(75%);
+  opacity: 0.8;
+  object-fit: cover; 
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  transition: filter 0.5s ease, opacity 0.5s ease; /* Smooth transition for both properties */
+}
+
+
+.box img:hover {
+  filter: grayscale(0%); /* Restore original saturation */
+  opacity: 1; /* Restore full opacity */
+}
+
+.article-name {
+    font-style: bold;
+    font-size: 14px;
+    color: #222222;
+    font-family: "Palanquin", "Fira Code", Arial, sans-serif;
+  }
+  
+.journal-name {
+    font-style: italic;
+    font-size: 12px;
+    color: #444444;
+    font-family: "Palanquin", "Fira Code", Arial, sans-serif;
+    line-height: 0.7;
+  }
+  
+.article-desc {
+    font-size: 12px;
+    color: #444444;
+    font-family: "Palanquin", "Fira Code", Arial, sans-serif;
+    line-height: 0.8; /* Adjust line-height for readability */
+    margin-bottom: 10px; /* Adds some spacing after the paragraph */
+}
+  
+/* ---SCROLLBAR---*/
+
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #FFFFFF;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+  border-radius: 4px;
+}
+
+/* READ BUTTON */
+
+.read-button {
+    font-family: "Asap";    
+    background-color: #f18f8599;
+    color: #222222;   
+    border-radius: 5px; 
+    padding: 3px 15px;   
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer;                  
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+    margin-top: 15px; 
+    margin-bottom: 10px;
+}
+
+.read-button iconify-icon {
+    margin-left: 0.3em; /* Adds spacing between the text and icon */
+    vertical-align: middle;
+}
+
+.read-button:hover {
+    background-color: #f18f8540;  
+    color: #222222;  
+}
+
+/* --Portfolio-- */
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.responsive-grid img {
+  width: 220px; 
+  height: 220px; 
+  object-fit: cover; 
+  object-position: center;
+  border-radius: 8px; 
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15); 
+  opacity: 1;
+  margin: 8px;
+}
+
+@media (max-width: 768px) {
+    .responsive-grid img{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.responsive-grid img:hover {
+    filter: grayscale(100%);
+}
+
+/* Profile picture rounded corners */
+.rounded-image {
+  border-radius: 10px; 
+  
+}
+.round-image {
+  width: 150px; /* Set to your desired size */
+  height: 150px; /* Same as width to maintain a circle */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fills the circle */
+}
+
+.cv-image {
+  width: 250px; /* Set to your desired size */
+  height: 250px; /* Same as width to maintain a circle */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fills the circle */
+}
+
+
+</style>

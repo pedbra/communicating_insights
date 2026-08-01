@@ -1,0 +1,95 @@
+city	country	state
+Buenos Aires	Argentina	
+Adelaide	Australia	
+Brisbane	Australia	
+Canberra	Australia	
+Melbourne	Australia	
+Graz	Austria	
+Vienna	Austria	
+Ghent 	Belgium	
+Leuven	Belgium	
+Calgary, Alberta	Canada	
+Cambridge	USA	Massachusetts
+Edmonton	Canada	
+Rotterdam	Netherlands	
+Toronto, Ontario	Canada	
+Vancouver	Canada	
+Prague	Czech Republic	
+Copenhagen	Denmark	
+Vejle	Denmark	
+Helsinki	Finland	
+Paris	France	
+Berlin	Germany	
+Bonn	Germany	
+Dusseldorf	Germany	
+Hamburg	Germany	
+Hannover	Germany	
+Heidelberg	Germany	
+Kiel	Germany	
+Magdeburg	Germany	
+Mainz	Germany	
+Munich	Germany	
+Regensburg	Germany	
+Saarland	Germany	
+Larissa	Greece	
+Debrecen	Hungary	
+Reykjavik	Iceland	
+Chandigarh	India	
+Shiraz	Iran	
+Dublin	Ireland	
+Tel Aviv	Israel	
+Ancona	Italy	
+Bologna	Italy	
+Florence	Italy	
+Milan	Italy	
+Monza	Italy	
+Padua	Italy	
+Rome	Italy	
+Rozzano	Italy	
+Fukushima	Japan	
+Itabashi	Japan	
+Tokyo	Japan	
+Amsterdam	Netherlands	
+Groningen	Netherlands	
+Maastricht	Netherlands	
+Bergen	Norway	
+Oslo	Norway	
+Warsaw	Poland	
+Bucharest	Romania	
+Johannesburg	South Africa	
+Barcelona	Spain	
+Pamplona	Spain	
+San Sebastian	Spain	
+Gothenburg	Sweden	
+Stockholm	Sweden	
+Uppsala	Sweden	
+Bern	Switzerland	
+Zurich	Switzerland	
+Taoyuan City	Taiwan	
+Birmingham	United Kingdom	
+Cambridge	United Kingdom	
+Glasgow	United Kingdom	
+Hinxton	United Kingdom	
+London	United Kingdom	
+Newcastle	United Kingdom	
+Norwich	United Kingdom	
+Oxford	United Kingdom	
+Ann Arbor	USA	Michigan
+Aurora	USA	Colorado
+Baltimore	USA	Maryland
+Birmingham	USA	Alabama
+Boston	USA	Massachusetts
+Chicago	USA	Illinois
+Cincinnati	USA	Ohio
+Cleveland	USA	Ohio
+Denver	USA	Colorado
+Memphis	USA	Tennessee
+Miami	USA	Florida
+Milwaukee	USA	Wisconsin
+New Brunswick	USA	New Jersey
+New Haven	USA	Connecticut
+Richmond	USA	Virginia
+Rochester	USA	Minnesota
+Sacramento	USA	California
+Salt Lake City	USA	Utah
+Stanford	USA	California

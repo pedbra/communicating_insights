@@ -1,0 +1,1699 @@
+rad
+
+17.11.2024 Lyn - Kongsvinger 1-2
+
+09.11.2024 Lyn - Moss 1-2
+
+26.10.2024 Aasane - Lyn 3-2
+
+21.10.2024 Sandnes_Ulf - Lyn 0-1
+
+06.10.2024 Ranheim - Lyn 1-1
+
+02.10.2024 Lyn - Egersund 2-1
+
+29.09.2024 Lyn - Rafoss 1-2
+
+25.09.2024 Levanger - Lyn 1-3
+
+15.09.2024 Sogndal - Lyn 0-1
+
+01.09.2024 Lyn - Aalesund 0-0
+
+24.08.2024 Vaalerenga - Lyn 4-2
+
+19.08.2024 Lyn - Start 2-2
+
+11.08.2024 Kongsvinger - Lyn 1-1
+
+11.08.2024 Lyn - Stabaek 7-1
+
+27.07.2024 Mjoendalen - Lyn 1-2
+
+20.07.2024 Lyn - Aasane 3-1
+
+23.06.2024 Bryne - Lyn 5-3
+
+16.06.2024 Lyn - Sogndal 1-2
+
+09.06.2024 Start - Lyn 1-4
+
+31.05.2024 Lyn - Mjoendalen 1-1
+
+27.05.2024 Raufoss - Lyn 1-0
+
+23.05.2024 Lyn - Sandnes_Ulf 5-0
+
+16.05.2024 Stabaek - Lyn 2-2
+
+11.05.2024 Lyn - Levanger 3-1
+
+04.05.2024 Egersund - Lyn 1-1
+
+28.04.2024 Lyn - Ranheim 1-1
+
+24.04.2024 Tromsdalen - Lyn 3-1
+
+20.04.2024 Lyn - Vaalerenga 1-1
+
+15.04.2024 Aalesund - Lyn 0-3
+
+07.04.2024 Lyn - Kongsvinger 1-1
+
+01.04.2024 Moss - Lyn 3-0
+
+02.12.2023 Hoedd - Lyn 1-2
+
+27.11.2023 Lyn - Hoedd 3-0
+
+19.11.2023 Tromsdalen - Lyn 0-2
+
+15.11.2023 Lyn - Tromsdalen 1-2
+
+11.11.2023 Lyn - Fram 10-1
+
+04.11.2023 Notodden - Lyn 2-5
+
+28.10.2023 Lyn - vard_haugesund 2-1
+
+22.10.2023 Traeff - Lyn 1-4
+
+15.10.2023 Brattvaag - Lyn 1-1
+
+09.10.2023 Lyn - Aalesund_2 4-0
+
+30.09.2023 oern_horten - Lyn 0-0
+
+24.09.2023 Lyn - Floey-Flekkeroey 3-1
+
+16.09.2023 Grorud - Lyn 2-1
+
+04.09.2023 Lyn - Arendal 4-3
+
+27.08.2023 Lyn - Brattvaag 1-0
+
+21.08.2023 Vaalerenga_2 - Lyn 1-2
+
+16.08.2023 Kjelsaas - Lyn 0-1
+
+12.08.2023 Lyn - Egersund 2-1
+
+08.07.2023 Lyn - Notodden 4-0
+
+26.06.2023 Lyn - Vaalerenga_2 4-0
+
+19.06.2023 Aalesund_2 - Lyn 1-2
+
+10.06.2023 Lyn - Traeff 7-0
+
+03.06.2023 Floey-Flekkeroey - Lyn 1-3
+
+29.05.2023 Lyn - oern_horten 2-1
+
+13.05.2023 Arendal - Lyn 2-1
+
+07.05.2023 vard_haugesund - Lyn 1-4
+
+29.04.2023 Lyn - Grorud 0-1
+
+23.04.2023 Egersund - Lyn 2-1
+
+15.04.2023 Lyn - Kjelsaas 2-0
+
+10.04.2023 Fram - Lyn 0-4
+
+23.10.2022 Lyn - Oppsal 7-0
+
+16.10.2022 Nordstrand - Lyn 0-4
+
+09.10.2022 Lyn - Ready 5-0
+
+04.10.2022 Grorud_2 - Lyn 1-4
+
+25.09.2022 Lyn - Stabaek_2 4-1
+
+17.09.2022 Lyn - Os 4-2
+
+10.09.2022 Lokomotiv_Oslo - Lyn 1-2
+
+06.09.2022 Lyn - Skeid_2 6-0
+
+28.08.2022 Fyllingsdalen - Lyn 2-4
+
+20.08.2022 Lyn - Grei 3-1
+
+15.08.2022 Kjelsaas_2 - Lyn 2-2
+
+16.07.2022 Lyn - Froeya 6-1
+
+10.07.2022 Sandviken - Lyn 0-2
+
+02.07.2022 Lyn - Lokomotiv_Oslo 3-1
+
+26.06.2022 Os - Lyn 1-3
+
+19.06.2022 Lyn - Grorud_2 3-1
+
+11.06.2022 Froeya - Lyn 1-1
+
+07.06.2022 Lyn - Kjelsaas_2 2-0
+
+28.05.2022 Stabaek_2 - Lyn 1-6
+
+22.05.2022 Lyn - Fyllingsdalen 3-1
+
+14.05.2022 Grei - Lyn 2-2
+
+07.05.2022 Ready - Lyn 1-2
+
+01.05.2022 Lyn - Sandviken 4-1
+
+26.04.2022 Skeid_2 - Lyn 0-0
+
+18.04.2022 Lyn - Nordstrand 3-1
+
+09.04.2022 Oppsal - Lyn 1-3
+
+30.10.2021 Lyn - Fyllingsdalen 5-1
+
+23.10.2021 Frigg - Lyn 5-0
+
+16.10.2021 Lyn - Ready 3-1
+
+09.10.2021 Stord - Lyn 3-3
+
+02.10.2021 Bjarg - Lyn 0-2
+
+25.09.2021 Lyn - Os 2-2
+
+18.09.2021 Fjoera - Lyn 0-3
+
+11.09.2021 Sogndal_2 - Lyn 0-7
+
+05.09.2021 Lyn - Brann_2 3-2
+
+28.08.2021 Fana - Lyn 3-1
+
+21.08.2021 Lyn - Sandviken 0-0
+
+18.08.2021 Lyn - aardal 1-1
+
+14.08.2021 Lysekloster - Lyn 2-2
+
+26.10.2019 Lyn - Mjoendalen_2 3-1
+
+19.10.2019 Droebak_Frogn - Lyn 0-1
+
+13.10.2019 Lyn -_FK Toensberg 2-2
+
+05.10.2019 Frigg - Lyn 2-2
+
+28.09.2019 Lyn - Grei 3-0
+
+23.09.2019 Vaalerenga_2 - Lyn 0-3
+
+15.09.2019 Lyn - Norild 4-2
+
+07.09.2019 oern-Horten - Lyn 2-1
+
+31.08.2019 Lyn - Lokomotiv_Oslo 4-1
+
+25.08.2019 Lyn - Follo 0-1
+
+17.08.2019 Halsen - Lyn 1-1
+
+10.08.2019 Lyn - Ready 1-3
+
+14.07.2019 Ullern - Lyn 6-3
+
+06.07.2019 Lyn - Vaalerenga_2 1-3
+
+29.06.2019 Lokomotiv_Oslo - Lyn 2-2
+
+26.06.2019 Lyn - Frigg 0-3
+
+22.06.2019 Lyn - Halsen 5-0
+
+15.06.2019 Grei - Lyn 3-1
+
+08.06.2019 Follo - Lyn 3-0
+
+01.06.2019 Lyn - oern-Horten 0-0
+
+25.05.2019 Norild - Lyn 3-4
+
+11.05.2019 Ready - Lyn 2-3
+
+04.05.2019 Lyn - Ullern 1-1
+
+27.04.2019 Mjoendalen_2 - Lyn 1-4
+
+22.04.2019 Lyn - Droebak_Frogn 7-1
+
+13.04.2019_FK Toensberg - Lyn 2-1
+
+27.10.2018 Lyn - Harstad 4-2
+
+20.10.2018 Skjervoey - Lyn 3-2
+
+14.10.2018 Lyn - Skarp 7-1
+
+06.10.2018 Frigg - Lyn 3-0
+
+30.09.2018 Lyn - Senja 2-2
+
+23.09.2018 Finnsnes - Lyn 1-4
+
+16.09.2018 Lyn - Korsvoll 3-2
+
+09.09.2018 Staalkameratene - Lyn 0-4
+
+02.09.2018 Sortland - Lyn 1-0
+
+27.08.2018 Lyn - Grei 2-0
+
+19.08.2018 Junkeren - Lyn 5-1
+
+11.08.2018 Lyn - Floeya 5-1
+
+05.08.2018 Melbo - Lyn 2-3
+
+28.07.2018 Harstad - Lyn 2-4
+
+22.07.2018 Lyn - Skjervoey 5-2
+
+24.06.2018 Skarp - Lyn 4-4
+
+17.06.2018 Lyn - Frigg 1-0
+
+10.06.2018 Senja - Lyn 2-1
+
+03.06.2018 Lyn - Finnsnes 1-0
+
+26.05.2018 Korsvoll - Lyn 2-1
+
+21.05.2018 Lyn - Staalkameratene 2-0
+
+13.05.2018 Lyn - Sortland 7-0
+
+05.05.2018 Grei - Lyn 1-2
+
+29.04.2018 Lyn - Junkeren 5-1
+
+22.04.2018 Floeya - Lyn 3-1
+
+15.04.2018 Lyn - Melbo 3-0
+
+21.10.2017 Lyn - Korsvoll 2-2
+
+14.10.2017 Frigg - Lyn 1-1
+
+08.10.2017 Lyn - Lillehammer 3-2
+
+30.09.2017 Gjoevik-Lyn - Lyn 1-6
+
+24.09.2017 Lyn - Flisa 3-0
+
+17.09.2017 Lyn - Ready 3-2
+
+09.09.2017 Valdres - Lyn 2-2
+
+03.09.2017 Lyn - Lokomotiv_Oslo 6-2
+
+27.08.2017 Stabaek_2 - Lyn 0-1
+
+22.08.2017 Lyn - Redalen 5-1
+
+17.08.2017 Raufoss_2 - Lyn 1-0
+
+12.08.2017 Eidsvold_TF - Lyn 3-0
+
+07.08.2017 Lyn - Raufoss_2 1-0
+
+16.07.2017 Tynset - Lyn 0-2
+
+09.07.2017 Korsvoll - Lyn 2-3
+
+01.07.2017 Lyn - Frigg 5-2
+
+25.06.2017 Lillehammer - Lyn 2-4
+
+19.06.2017 Lyn - Gjoevik-Lyn 6-3
+
+10.06.2017 Flisa - Lyn 2-3
+
+03.06.2017 Ready - Lyn 1-2
+
+27.05.2017 Lyn - Valdres 3-2
+
+20.05.2017 Lokomotiv_Oslo - Lyn 0-2
+
+14.05.2017 Lyn - Stabaek_2 0-1
+
+06.05.2017 Redalen - Lyn 1-3
+
+30.04.2017 Lyn - Eidsvold_TF 2-1
+
+17.04.2017 Lyn - Tynset 3-1
+
+22.10.2016 Lyn - Lommedalen 3-1
+
+15.10.2016 Lokomotiv_Oslo - Lyn 1-1
+
+10.10.2016 Lyn - Stroemmen_2 4-1
+
+01.10.2016 Hasle-Loeren - Lyn 1-4
+
+26.09.2016 Lyn - Skeid_2 5-3
+
+17.09.2016 Grei - Lyn 1-1
+
+10.09.2016 Lyn - Rilindja 5-2
+
+05.09.2016 Loerenskog_2 - Lyn 1-5
+
+26.08.2016 Lyn - Skjetten 3-0
+
+22.08.2016 Grorud_2 - Lyn 0-4
+
+16.08.2016 Lyn - Kjelsaas_2 3-1
+
+06.08.2016 Korsvoll - Lyn 0-0
+
+30.06.2016 Lyn - Manglerud_Star 3-1
+
+25.06.2016 Lommedalen - Lyn 2-2
+
+18.06.2016 Lyn - Lokomotiv_Oslo 3-1
+
+15.06.2016 Stroemmen_2 - Lyn 1-2
+
+11.06.2016 Lyn - Hasle-Loeren 5-0
+
+06.06.2016 Skeid_2 - Lyn 0-2
+
+28.05.2016 Lyn - Grei 3-0
+
+21.05.2016 Rilindja - Lyn 1-2
+
+16.05.2016 Lyn - Loerenskog_2 0-1
+
+07.05.2016 Skjetten - Lyn 0-2
+
+04.05.2016 Lyn - Grorud_2 1-0
+
+25.04.2016 Kjelsaas_2 - Lyn 0-1
+
+16.04.2016 Lyn - Korsvoll 1-1
+
+09.04.2016 Manglerud_Star - Lyn 0-4
+
+24.10.2015 Lyn - Holmen 9-2
+
+17.10.2015 Senja - Lyn 3-4
+
+11.10.2015 Lyn - Kjelsaas 2-0
+
+04.10.2015 Ullern - Lyn 1-3
+
+27.09.2015 Lyn - Finnsnes 1-1
+
+20.09.2015 Tromsdalen - Lyn 3-0
+
+13.09.2015 Lyn - Mjoelner 2-1
+
+05.09.2015 KFUM - Lyn 4-0
+
+31.08.2015 Lyn - Vaalerenga_2 1-1
+
+23.08.2015 Harstad - Lyn 3-1
+
+15.08.2015 Lyn - Skeid 1-0
+
+10.08.2015 Lyn - Stabaek_2 3-1
+
+02.08.2015 Grorud - Lyn 5-3
+
+11.07.2015 Holmen - Lyn 1-0
+
+04.07.2015 Lyn - Senja 1-6
+
+28.06.2015 Kjelsaas - Lyn 5-1
+
+21.06.2015 Lyn - Ullern 2-2
+
+14.06.2015 Finnsnes - Lyn 4-2
+
+07.06.2015 Lyn - Tromsdalen 1-2
+
+31.05.2015 Mjoelner - Lyn 2-0
+
+21.05.2015 Lyn - KFUM 2-5
+
+18.05.2015 Vaalerenga_2 - Lyn 5-0
+
+10.05.2015 Lyn - Harstad 1-2
+
+01.05.2015 Skeid - Lyn 0-0
+
+27.04.2015 Stabaek_2 - Lyn 3-1
+
+19.04.2015 Lyn - Grorud 0-2
+
+25.10.2014 Lyn - Floroe 2-2
+
+18.10.2014 Stord - Lyn 2-5
+
+11.10.2014 Lyn - aalgaard 0-1
+
+05.10.2014 Foerde - Lyn 3-2
+
+27.09.2014 Lyn - aasane 2-2
+
+20.09.2014 Fana - Lyn 1-2
+
+13.09.2014 Lyn - vard_haugesund 2-3
+
+06.09.2014 Egersund - Lyn 2-0
+
+31.08.2014 Lyn - Grorud 1-1
+
+25.08.2014 Lyn - Vidar 2-1
+
+18.08.2014 Brann_2 - Lyn 2-0
+
+11.08.2014 Lyn - Stabaek_2 6-0
+
+02.08.2014 Fyllingsdalen - Lyn 3-1
+
+12.07.2014 Floroe - Lyn 2-2
+
+05.07.2014 Lyn - Stord 2-0
+
+28.06.2014 aalgaard - Lyn 0-1
+
+21.06.2014 Lyn - Foerde 1-0
+
+14.06.2014 aasane - Lyn 2-0
+
+07.06.2014 Lyn - Fana 1-5
+
+01.06.2014 vard_haugesund - Lyn 1-1
+
+24.05.2014 Lyn - Egersund 0-1
+
+18.05.2014 Grorud - Lyn 2-3
+
+11.05.2014 Vidar - Lyn 2-1
+
+01.05.2014 Lyn - Brann_2 3-0
+
+28.04.2014 Stabaek_2 - Lyn 2-1
+
+21.04.2014 Lyn - Fyllingsdalen 1-2
+
+19.10.2013 Harstad - Lyn 4-1
+
+12.10.2013 Lyn - Pors_Grenland 1-0
+
+05.10.2013 FK_Toensberg - Lyn 3-3
+
+30.09.2013 Lyn - Odd_2 1-1
+
+21.09.2013 Valdres - Lyn 1-0
+
+15.09.2013 Lyn - Nybergsund 1-1
+
+07.09.2013 Frigg - Lyn 1-4
+
+01.09.2013 Lyn - Fram_Larvik 2-3
+
+25.08.2013 Alta - Lyn 1-2
+
+18.08.2013 Lyn - Raufoss 1-1
+
+12.08.2013 Stroemsgodset_2 - Lyn 2-2
+
+04.08.2013 Lyn - Gjoevik_FF 3-3
+
+28.07.2013 Bossekop - Lyn 1-2
+
+21.07.2013 Lyn - Harstad 5-0
+
+30.06.2013 Pors_Grenland - Lyn 2-0
+
+22.06.2013 Lyn - FK_Toensberg 2-1
+
+17.06.2013 Odd_2 - Lyn 0-3
+
+09.06.2013 Lyn - Valdres 0-0
+
+02.06.2013 Nybergsund - Lyn 3-1
+
+25.05.2013 Lyn - Frigg 3-0
+
+18.05.2013 Fram_Larvik - Lyn 0-0
+
+12.05.2013 Lyn - Alta 0-2
+
+05.05.2013 Raufoss - Lyn 0-2
+
+29.04.2013 Lyn - Stroemsgodset_2 6-0
+
+20.04.2013 Gjoevik_FF - Lyn 1-0
+
+13.04.2013 Lyn - Bossekop 2-1
+
+21.10.2012 Ullern - Lyn 0-1
+
+13.10.2012 Lyn - Romsaas 5-0
+
+06.10.2012 Roea - Lyn 0-6
+
+30.09.2012 Lyn - Lommedalen 9-0
+
+24.09.2012 Baerum_2 - Lyn 2-1
+
+16.09.2012 Lyn - Asker_2 4-0
+
+11.09.2012 Raufoss_2 - Lyn 1-2
+
+02.09.2012 Lyn - Nordre_Land 5-1
+
+26.08.2012 Drammen - Lyn 0-3
+
+19.08.2012 Lyn - Modum 0-1
+
+12.08.2012 Mjoendalen_2 - Lyn 0-4
+
+05.08.2012 Lyn - Frigg_2 4-0
+
+07.07.2012 Vestli - Lyn 0-8
+
+29.06.2012 Lyn - Ullern 3-1
+
+24.06.2012 Romsaas - Lyn 0-8
+
+17.06.2012 Lyn - Roea 2-0
+
+09.06.2012 Lommedalen - Lyn 1-12
+
+04.06.2012 Lyn - Baerum_2 2-0
+
+29.05.2012 Asker_2 - Lyn 2-3
+
+23.05.2012 Lyn - Raufoss_2 8-0
+
+19.05.2012 Nordre_Land - Lyn 0-2
+
+16.05.2012 Lyn - Drammen_FK 2-0
+
+05.05.2012 Modum_FK - Lyn 1-3
+
+29.04.2012 Lyn - Mjoendalen_2 2-2
+
+22.04.2012 Frigg_2 - Lyn 0-5
+
+15.04.2012 Lyn - Vestli_IL 6-1
+
+23.10.2011 Nesodden_2 - Lyn 0-6
+
+15.10.2011 Lyn - Skeid_2 2-2
+
+11.10.2011 Lyn - Vollen 8-0
+
+04.10.2011 Frognerparken - Lyn 0-8
+
+28.09.2011 Lyn - Bygdoe_Monolitten 7-0
+
+25.09.2011 Lyn - Ullern_2 12-1
+
+20.09.2011 Heggedal - Lyn 0-3
+
+11.09.2011 Lyn - Hauger 11-0
+
+06.09.2011 oevrevoll_Hosle - Lyn 0-13
+
+30.08.2011 Lyn - Fagerborg 8-0
+
+21.08.2011 Fossum - Lyn 2-6
+
+16.08.2011 Lyn - Holmen 1-0
+
+06.08.2011 Lokomotiv_Oslo - Lyn 0-3
+
+26.06.2011 Vollen - Lyn 1-2
+
+21.06.2011 Lyn - Frognerparken 1-0
+
+14.06.2011 Bygdoe_Monolitten - Lyn 0-8
+
+07.06.2011 Ullern_2 - Lyn 0-3
+
+31.05.2011 Lyn - Heggedal 8-1
+
+24.05.2011 Hauger - Lyn 3-4
+
+16.05.2011 Lyn - oevrevoll_Hosle 10-0
+
+10.05.2011 Fagerborg - Lyn 2-3
+
+03.05.2011 Lyn - Fossum 2-0
+
+26.04.2011 Holmen - Lyn 0-2
+
+10.04.2011 Lyn - Lokomotiv_Oslo 6-0
+
+16.10.2010 Lyn - Hasle_Loeren_2 3-2
+
+10.10.2010 Teisen - Lyn 1-3
+
+29.09.2010 Nesoeya - Lyn 1-14
+
+26.09.2010 Lyn - oevrevoll_Hosle_2 10-0
+
+12.09.2010 Lyn - Lokomotiv_Oslo_2 4-1
+
+08.09.2010 Dynamo_Mjoesa - Lyn 1-5
+
+29.08.2010 Lyn - Dania 8-2
+
+25.08.2010 BI_Athletics - Lyn 2-2
+
+22.08.2010 Lyn - Vinderen 5-2
+
+11.08.2010 Christianssand - Lyn 1-10
+
+06.06.2010 Alta - Lyn 2-0
+
+30.05.2010 Lyn - Follo 2-4
+
+24.05.2010 Bryne - Lyn 3-1
+
+16.05.2010 Lyn - Ranheim 2-3
+
+09.05.2010 Love_Ham - Lyn 4-1
+
+04.05.2010 Lyn - Sogndal 3-1
+
+01.05.2010 Moss - Lyn 2-3
+
+25.04.2010 Lyn - Fredrikstad 1-2
+
+18.04.2010 Stroemmen - Lyn 1-1
+
+11.04.2010 Lyn - Nybergsund 1-1
+
+05.04.2010 Bodoe_Glimt - Lyn 4-1
+
+01.11.2009 Lyn - Fredrikstad 0-5
+
+25.10.2009 Odd - Lyn 4-1
+
+18.10.2009 Lyn - Stroemsgodset 0-1
+
+04.10.2009 Lillestroem - Lyn 2-1
+
+27.09.2009 Lyn - Tromsoe 0-1
+
+20.09.2009 Vaalerenga - Lyn 4-1
+
+13.09.2009 Lyn - Aalesund 0-2
+
+31.08.2009 Rosenborg - Lyn 4-1
+
+23.08.2009 Lyn - Start 4-1
+
+16.08.2009 Sandefjord - Lyn 2-1
+
+03.08.2009 Lyn - Brann 2-2
+
+26.07.2009 Viking - Lyn 5-2
+
+12.07.2009 Lyn - Bodoe_Glimt 0-1
+
+05.07.2009 Lyn - Stabaek 2-2
+
+28.06.2009 Molde - Lyn 4-0
+
+24.06.2009 Fredrikstad - Lyn 2-1
+
+21.06.2009 Lyn - Odd 1-1
+
+14.06.2009 Brann - Lyn 2-1
+
+01.06.2009 Lyn - Lillestroem 1-1
+
+24.05.2009 Tromsoe - Lyn 1-0
+
+21.05.2009 Lyn - Vaalerenga 4-4
+
+16.05.2009 Aalesund - Lyn 2-0
+
+06.05.2009 Lyn - Rosenborg 1-1
+
+03.05.2009 Stabaek - Lyn 0-0
+
+26.04.2009 Lyn - Sandefjord 1-2
+
+19.04.2009 Stroemsgodset - Lyn 1-1
+
+13.04.2009 Lyn - Viking 0-0
+
+05.04.2009 Bodoe_Glimt - Lyn 0-2
+
+22.03.2009 Start - Lyn 1-1
+
+15.03.2009 Lyn - Molde 0-1
+
+02.11.2008 Fredrikstad - Lyn 0-2
+
+26.10.2008 Lyn - Aalesund 3-0
+
+19.10.2008 HamKam - Lyn 3-2
+
+05.10.2008 Lyn - Rosenborg 1-2
+
+28.09.2008 Brann - Lyn 2-0
+
+21.09.2008 Lyn - Molde 1-3
+
+15.09.2008 Vaalerenga - Lyn 1-2
+
+31.08.2008 Lyn - Tromsoe 3-3
+
+23.08.2008 Stabaek - Lyn 1-1
+
+10.08.2008 Lyn - Lillestroem 1-0
+
+03.08.2008 Viking - Lyn 2-0
+
+27.07.2008 Bodoe_Glimt - Lyn 2-1
+
+20.07.2008 Lyn - Stroemsgodset 3-2
+
+13.07.2008 Lyn - Brann 1-1
+
+06.07.2008 Lillestroem - Lyn 1-2
+
+28.06.2008 Lyn - Viking 1-1
+
+08.06.2008 Molde - Lyn 0-1
+
+01.06.2008 Lyn - Vaalerenga 2-0
+
+25.05.2008 Tromsoe - Lyn 2-0
+
+16.05.2008 Lyn - Stabaek 0-2
+
+04.05.2008 Aalesund - Lyn 0-4
+
+27.04.2008 Lyn - Fredrikstad 0-0
+
+20.04.2008 Stroemsgodset - Lyn 2-1
+
+13.04.2008 Lyn - HamKam 2-1
+
+06.04.2008 Lyn - Bodoe_Glimt 3-1
+
+31.03.2008 Rosenborg - Lyn 2-1
+
+03.11.2007 Lyn - Start 4-1
+
+28.10.2007 Rosenborg - Lyn 3-0
+
+21.10.2007 Lyn - Vaalerenga 3-1
+
+08.10.2007 Brann - Lyn 3-1
+
+30.09.2007 Lyn - Stabaek 3-2
+
+23.09.2007 Tromsoe - Lyn 2-1
+
+16.09.2007 Lyn - Viking 2-3
+
+02.09.2007 Aalesund - Lyn 3-1
+
+26.08.2007 Lyn - Stroemsgodset 1-0
+
+12.08.2007 Lyn - Lillestroem 0-4
+
+05.08.2007 Odd - Lyn 2-0
+
+30.07.2007 Lyn - Fredrikstad 0-0
+
+21.07.2007 Sandefjord - Lyn 3-1
+
+01.07.2007 Start - Lyn 0-1
+
+25.06.2007 Lyn - Rosenborg 2-1
+
+20.06.2007 Vaalerenga - Lyn 0-0
+
+16.06.2007 Lyn - Brann 6-0
+
+10.06.2007 Stabaek - Lyn 3-2
+
+28.05.2007 Lyn - Tromsoe 4-3
+
+16.05.2007 Viking - Lyn 4-2
+
+13.05.2007 Lyn - Aalesund 0-0
+
+06.05.2007 Stroemsgodset - Lyn 1-1
+
+30.04.2007 Lillestroem - Lyn 3-1
+
+22.04.2007 Lyn - Odd 3-1
+
+14.04.2007 Fredrikstad - Lyn 3-1
+
+09.04.2007 Lyn - Sandefjord 3-0
+
+05.11.2006 Lillestroem - Lyn 2-0
+
+29.10.2006 Lyn - Fredrikstad 1-2
+
+22.10.2006 Viking - Lyn 1-2
+
+15.10.2006 Lyn - Brann 2-0
+
+01.10.2006 Rosenborg - Lyn 2-1
+
+24.09.2006 Hamkam - Lyn 1-0
+
+17.09.2006 Lyn - Odd 1-1
+
+10.09.2006 Tromsoe - Lyn 1-2
+
+27.08.2006 Lyn - Sandefjord 2-0
+
+23.08.2006 Lyn - Lillestroem 3-3
+
+13.08.2006 Stabaek - Lyn 3-2
+
+06.08.2006 Lyn - Molde 2-0
+
+31.07.2006 Lyn - Start 1-2
+
+22.07.2006 Vaalerenga - Lyn 1-2
+
+02.07.2006 Fredrikstad - Lyn 1-2
+
+05.06.2006 Lyn - Viking 0-0
+
+28.05.2006 Brann - Lyn 2-0
+
+21.05.2006 Lyn - Rosenborg 1-2
+
+16.05.2006 Lyn - Hamkam 1-0
+
+13.05.2006 Odd - Lyn 2-1
+
+07.05.2006 Lyn - Tromsoe 1-3
+
+03.05.2006 Sandefjord - Lyn 2-2
+
+30.04.2006 Lyn - Stabaek 1-4
+
+23.04.2006 Molde - Lyn 0-1
+
+16.04.2006 Lyn - Vaalerenga 2-1
+
+09.04.2006 Start - Lyn 0-0
+
+29.10.2005 Lyn - Bodoe_Glimt 6-0
+
+23.10.2005 Aalesund - Lyn 1-1
+
+16.10.2005 Lyn - Tromsoe 0-1
+
+02.10.2005 Vaalerenga - Lyn 0-1
+
+25.09.2005 Lyn - Brann 1-0
+
+18.09.2005 HamKam - Lyn 1-0
+
+11.09.2005 Lyn - Odd 1-2
+
+28.08.2005 Rosenborg - Lyn 0-1
+
+14.08.2005 Lyn - Viking 2-1
+
+07.08.2005 Molde - Lyn 1-3
+
+03.08.2005 Start - Lyn 1-1
+
+30.07.2005 Lyn - Lillestroem 1-0
+
+24.07.2005 Fredrikstad - Lyn 2-1
+
+03.07.2005 Bodoe_Glimt - Lyn 1-3
+
+26.06.2005 Lyn - Aalesund 0-0
+
+19.06.2005 Tromsoe - Lyn 0-0
+
+12.06.2005 Lyn - Vaalerenga 1-1
+
+29.05.2005 Brann - Lyn 3-0
+
+22.05.2005 Lyn - Hamkam 1-0
+
+16.05.2005 Odd - Lyn 0-2
+
+08.05.2005 Lyn - Rosenborg 3-2
+
+05.05.2005 Viking - Lyn 0-0
+
+01.05.2005 Lyn - Molde 6-1
+
+24.04.2005 Lyn - Start 1-1
+
+17.04.2005 Lillestroem - Lyn 1-0
+
+10.04.2005 Lyn - Fredrikstad 1-1
+
+31.10.2004 Rosenborg - Lyn 4-1
+
+24.10.2004 Lyn - Lillestroem 1-1
+
+17.10.2004 Viking - Lyn 0-0
+
+03.10.2004 Lyn - Fredrikstad 2-2
+
+26.09.2004 Brann - Lyn 5-1
+
+19.09.2004 Tromsoe - Lyn 0-1
+
+12.09.2004 Lyn - Bodoe_Glimt 1-0
+
+29.08.2004 Stabaek - Lyn 0-1
+
+22.08.2004 Lyn - HamKam 1-1
+
+08.08.2004 Sogndal - Lyn 1-1
+
+01.08.2004 Lyn - Odd 2-2
+
+25.07.2004 Vaalerenga - Lyn 1-2
+
+04.07.2004 Lyn - Molde 1-2
+
+27.06.2004 Lyn - Rosenborg 0-2
+
+20.06.2004 Lillestroem - Lyn 1-1
+
+13.06.2004 Lyn - Viking 2-0
+
+06.06.2004 Fredrikstad - Lyn 2-4
+
+31.05.2004 Lyn - Brann 1-2
+
+23.05.2004 Lyn - Tromsoe 2-1
+
+20.05.2004 Bodoe_Glimt - Lyn 0-0
+
+16.05.2004 Lyn - Stabaek 2-0
+
+09.05.2004 HamKam - Lyn 1-0
+
+02.05.2004 Lyn - Sogndal 2-0
+
+25.04.2004 Odd - Lyn 0-0
+
+18.04.2004 Lyn - Vaalerenga 1-1
+
+12.04.2004 Molde - Lyn 2-0
+
+01.11.2003 Lyn - Lillestroem 0-3
+
+26.10.2003 Vaalerenga - Lyn 0-1
+
+19.10.2003 Odd - Lyn 1-1
+
+06.10.2003 Lyn - Tromsoe 5-1
+
+28.09.2003 Sogndal - Lyn 1-2
+
+21.09.2003 Lyn - Bryne 2-0
+
+14.09.2003 Viking - Lyn 2-2
+
+31.08.2003 Lyn - Stabaek 2-3
+
+24.08.2003 Aalesund - Lyn 2-0
+
+17.08.2003 Lyn - Molde 0-2
+
+10.08.2003 Rosenborg - Lyn 2-0
+
+31.07.2003 Lyn - Bodoe_Glimt 1-2
+
+27.07.2003 Brann - Lyn 4-1
+
+20.07.2003 Lillestroem - Lyn 2-0
+
+30.06.2003 Lyn - Vaalerenga 1-1
+
+22.06.2003 Lyn - Odd 0-2
+
+15.06.2003 Tromsoe - Lyn 0-1
+
+01.06.2003 Lyn - Sogndal 3-0
+
+29.05.2003 Bryne - Lyn 4-0
+
+25.05.2003 Lyn - Viking 3-3
+
+16.05.2003 Stabaek - Lyn 1-3
+
+11.05.2003 Lyn - Aalesund 2-1
+
+04.05.2003 Molde - Lyn 2-2
+
+27.04.2003 Lyn - Rosenborg 0-3
+
+21.04.2003 Bodoe_Glimt - Lyn 3-2
+
+14.04.2003 Lyn - Brann 0-0
+
+27.10.2002 Lyn - Viking 0-1
+
+21.10.2002 Odd - Lyn 1-1
+
+06.10.2002 Lyn - Brann 2-3
+
+29.09.2002 Sogndal - Lyn 2-2
+
+15.09.2002 Lyn - Stabaek 2-0
+
+01.09.2002 Bodoe_Glimt - Lyn 0-2
+
+24.08.2002 Lyn - Vaalerenga 1-0
+
+18.08.2002 Start - Lyn 2-2
+
+11.08.2002 Lyn - Moss 0-1
+
+04.08.2002 Molde - Lyn 2-0
+
+01.08.2002 Viking - Lyn 0-0
+
+29.07.2002 Lyn - Rosenborg 2-3
+
+21.07.2002 Lillestroem - Lyn 0-1
+
+30.06.2002 Lyn - Bryne 1-0
+
+16.06.2002 Lyn - Odd 3-0
+
+09.06.2002 Brann - Lyn 1-1
+
+02.06.2002 Lyn - Sogndal 1-0
+
+27.05.2002 Stabaek - Lyn 5-0
+
+16.05.2002 Lyn - Bodoe_Glimt 3-1
+
+11.05.2002 Vaalerenga - Lyn 1-2
+
+08.05.2002 Lyn - Start 1-0
+
+05.05.2002 Moss - Lyn 0-2
+
+01.05.2002 Lyn - Molde 3-1
+
+27.04.2002 Rosenborg - Lyn 5-1
+
+21.04.2002 Lyn - Lillestroem 2-0
+
+14.04.2002 Bryne - Lyn 0-1
+
+28.10.2001 Lyn - Bryne 1-3
+
+21.10.2001 Tromsoe - Lyn 2-3
+
+14.10.2001 Lyn - Moss 0-2
+
+30.09.2001 Rosenborg - Lyn 1-1
+
+16.09.2001 Lyn - Molde 0-2
+
+09.09.2001 Viking - Lyn 2-0
+
+26.08.2001 Lyn - Brann 3-2
+
+19.08.2001 Stabaek - Lyn 2-5
+
+12.08.2001 Lyn - Lillestroem 0-2
+
+05.08.2001 Bodoe_Glimt - Lyn 5-2
+
+29.07.2001 Odd - Lyn 2-2
+
+22.07.2001 Lyn - Sogndal 1-1
+
+08.07.2001 Stroemsgodset - Lyn 3-3
+
+01.07.2001 Bryne - Lyn 1-2
+
+24.06.2001 Lyn - Tromsoe 4-0
+
+17.06.2001 Moss - Lyn 3-1
+
+10.06.2001 Lyn - Rosenborg 1-1
+
+24.05.2001 Molde - Lyn 3-2
+
+20.05.2001 Lyn - Viking 1-1
+
+16.05.2001 Brann - Lyn 2-1
+
+13.05.2001 Lyn - Stabaek 1-1
+
+06.05.2001 Lillestroem - Lyn 2-1
+
+02.05.2001 Lyn - Bodoe_Glimt 2-1
+
+29.04.2001 Lyn - Odd 1-2
+
+22.04.2001 Sogndal - Lyn 1-0
+
+16.04.2001 Lyn - Stroemsgodset 2-2
+
+22.10.2000 Byaasen - Lyn 3-1
+
+15.10.2000 Lyn - Kongsvinger 2-3
+
+30.09.2000 Tromsdalen - Lyn 2-3
+
+24.09.2000 Lyn - Eik_Toensberg 1-0
+
+17.09.2000 Skeid - Lyn 0-0
+
+10.09.2000 Strindheim - Lyn 3-3
+
+27.08.2000 Lyn - Hoenefoss 3-2
+
+20.08.2000 Kjelsaas - Lyn 2-2
+
+13.08.2000 Lyn - Raufoss 1-0
+
+06.08.2000 HamKam - Lyn 2-4
+
+29.07.2000 Lyn - Stroemsgodset 2-0
+
+23.07.2000 Sogndal - Lyn 1-2
+
+16.07.2000 Lyn - Sandefjord 1-0
+
+02.07.2000 Lyn - Byaasen 2-1
+
+25.06.2000 Kongsvinger - Lyn 3-2
+
+18.06.2000 Lyn - Tromsdalen 2-0
+
+12.06.2000 Eik_Toensberg - Lyn 0-3
+
+05.06.2000 Lyn - Skeid 1-0
+
+01.06.2000 Lyn - Strindheim 4-0
+
+28.05.2000 Hoenefoss - Lyn 0-2
+
+20.05.2000 Lyn - Kjelsaas 2-0
+
+14.05.2000 Raufoss - Lyn 0-3
+
+10.05.2000 Lyn - HamKam 3-0
+
+07.05.2000 Stroemsgodset - Lyn 2-2
+
+03.05.2000 Lyn - Sogndal 2-0
+
+30.04.2000 Sandefjord - Lyn 0-2
+
+17.10.1999 Bryne - Lyn 1-0
+
+03.10.1999 Lyn - Byaasen 2-0
+
+26.09.1999 Sogndal - Lyn 1-2
+
+19.09.1999 Lyn - Haugesund 0-2
+
+12.09.1999 Hoedd - Lyn 2-0
+
+05.09.1999 Lyn - Eik_Toensberg 7-0
+
+29.08.1999 Start - Lyn 1-1
+
+21.08.1999 Lyn - Lofoten 2-1
+
+18.08.1999 Skjetten - Lyn 1-6
+
+08.08.1999 Kjelsaas - Lyn 1-1
+
+01.08.1999 Lyn - Raufoss 2-1
+
+25.07.1999 Hoenefoss - Lyn 3-0
+
+21.07.1999 Lyn - Clausenengen 6-0
+
+18.07.1999 Lyn - Bryne 6-0
+
+27.06.1999 Byaasen - Lyn 0-1
+
+20.06.1999 Lyn - Sogndal 2-2
+
+13.06.1999 Haugesund - Lyn 4-3
+
+06.06.1999 Lyn - Hoedd 3-2
+
+30.05.1999 Eik_Toensberg - Lyn 0-0
+
+26.05.1999 Lyn - Start 1-2
+
+16.05.1999 Lofoten - Lyn 1-1
+
+13.05.1999 Lyn - Skjetten 1-1
+
+09.05.1999 Lyn - Kjelsaas 0-0
+
+02.05.1999 Raufoss - Lyn 2-2
+
+25.04.1999 Lyn - Hoenefoss 1-1
+
+18.04.1999 Clausenengen - Lyn 1-4
+
+18.10.1998 Skeid - Lyn 2-0
+
+03.10.1998 Lyn - Bryne 5-0
+
+27.09.1998 Ullern - Lyn 1-7
+
+20.09.1998 Lyn - Start 1-1
+
+13.09.1998 Aalesund - Lyn 2-0
+
+06.09.1998 Lyn - Odd 0-0
+
+29.08.1998 Byaasen - Lyn 1-1
+
+23.08.1998 Lyn - Kjelsaas 2-2
+
+16.08.1998 Raufoss - Lyn 1-1
+
+09.08.1998 HamKam - Lyn 3-5
+
+03.08.1998 Lyn - Strindheim 0-0
+
+12.07.1998 Eik_Toensberg - Lyn 2-0
+
+08.07.1998 Lyn - Hoedd 0-1
+
+28.06.1998 Lyn - Skeid 1-1
+
+21.06.1998 Bryne - Lyn 1-0
+
+15.06.1998 Lyn - Ullern 5-0
+
+07.06.1998 Start - Lyn 1-0
+
+01.06.1998 Lyn - Aalesund 1-0
+
+24.05.1998 Odd - Lyn 1-1
+
+21.05.1998 Lyn - Byaasen 1-2
+
+16.05.1998 Kjelsaas - Lyn 3-1
+
+11.05.1998 Lyn - Raufoss 6-0
+
+03.05.1998 Lyn - HamKam 2-0
+
+29.04.1998 Strindheim - Lyn 0-1
+
+26.04.1998 Lyn - Eik_Toensberg 3-1
+
+19.04.1998 Hoedd - Lyn 0-0
+
+19.10.1997 Lyn - Tromsoe 4-0
+
+12.10.1997 Lillestroem - Lyn 2-0
+
+05.10.1997 Lyn - Brann 1-5
+
+21.09.1997 Molde - Lyn 3-0
+
+14.09.1997 Lyn - Skeid 2-0
+
+31.08.1997 Stroemsgodset - Lyn 6-1
+
+24.08.1997 Lyn - Bodoe_Glimt 1-2
+
+10.08.1997 Rosenborg - Lyn 5-1
+
+03.08.1997 Lyn - Stabaek 0-1
+
+27.07.1997 Haugesund - Lyn 1-0
+
+13.07.1997 Lyn - Viking 4-4
+
+06.07.1997 Lyn - Sogndal 5-2
+
+02.07.1997 Lyn - Lillestroem 0-4
+
+22.06.1997 Tromsoe - Lyn 2-0
+
+18.06.1997 Lyn - Molde 1-3
+
+01.06.1997 Brann - Lyn 0-0
+
+29.05.1997 Kongsvinger - Lyn 1-1
+
+25.05.1997 Skeid - Lyn 3-0
+
+19.05.1997 Lyn - Stroemsgodset 1-3
+
+16.05.1997 Bodoe_Glimt - Lyn 1-0
+
+11.05.1997 Lyn - Rosenborg 0-5
+
+08.05.1997 Stabaek - Lyn 1-1
+
+04.05.1997 Lyn - Haugesund 3-0
+
+25.04.1997 Viking - Lyn 0-0
+
+20.04.1997 Sogndal - Lyn 2-1
+
+13.04.1997 Lyn - Kongsvinger 1-2
+
+29.09.1996 Tromsdalen - Lyn 2-6
+
+22.09.1996 Lyn - HamKam 2-0
+
+14.09.1996 Ullern - Lyn 0-3
+
+09.09.1996 Lyn - Elverum 3-0
+
+01.09.1996 Mjoendalen - Lyn 0-2
+
+26.08.1996 Lyn - Odd 1-0
+
+18.08.1996 Droebak_Frogn - Lyn 1-0
+
+10.08.1996 Lyn - Harstad 5-1
+
+04.08.1996 Eik_Toensberg - Lyn 2-4
+
+28.07.1996 Lyn - Staalkameratene 1-1
+
+14.07.1996 Jevnaker - Lyn 1-6
+
+07.07.1996 Lyn - Tromsdalen 1-0
+
+03.07.1996 HamKam - Lyn 3-2
+
+23.06.1996 Lyn - Ullern 1-1
+
+09.06.1996 Elverum - Lyn 1-2
+
+04.06.1996 Lyn - Mjoendalen 3-1
+
+27.05.1996 Odd - Lyn 0-4
+
+20.05.1996 Lyn - Droebak_Frogn 1-1
+
+16.05.1996 Harstad - Lyn 0-3
+
+12.05.1996 Lyn - Eik_Toensberg 2-0
+
+05.05.1996 Staalkameratene - Lyn 2-1
+
+29.04.1996 Lyn - Jevnaker 0-0
+
+01.10.1995 Lyn - Mjoelner-Narvik 3-0
+
+24.09.1995 Stroemsgodset - Lyn 3-0
+
+17.09.1995 Odd - Lyn 0-1
+
+11.09.1995 Lyn - Sandefjord 1-1
+
+03.09.1995 Staalkameratene - Lyn 0-2
+
+26.08.1995 Lyn - Nardo 3-1
+
+20.08.1995 Skeid - Lyn 1-2
+
+13.08.1995 Lyn - Tromsdalen 1-2
+
+06.08.1995 Alta - Lyn 0-1
+
+30.07.1995 Lyn - Eik_Toensberg 2-3
+
+23.07.1995 Jevnaker - Lyn 1-3
+
+16.07.1995 Mjoelner-Narvik - Lyn 2-1
+
+10.07.1995 Lyn - Stroemsgodset 0-1
+
+25.06.1995 Lyn - Odd 3-1
+
+18.06.1995 Sandefjord - Lyn 2-0
+
+11.06.1995 Lyn - Staalkameratene 2-0
+
+08.06.1995 Nardo - Lyn 2-0
+
+28.05.1995 Lyn - Skeid 0-1
+
+21.05.1995 Tromsdalen - Lyn 2-0
+
+14.05.1995 Lyn - Alta 1-0
+
+07.05.1995 Eik_Toensberg - Lyn 3-1
+
+02.05.1995 Lyn - Jevnaker 4-3
+
+02.10.1994 Lyn - Stjoerdals_Blink 4-1
+
+25.09.1994 Mjoelner-Narvik - Lyn 1-2
+
+19.09.1994 Lyn - Moss 3-0
+
+14.09.1994 Stabaek - Lyn 2-0
+
+29.08.1994 Skeid - Lyn 0-2
+
+24.08.1994 Lyn - Strindheim 0-1
+
+21.08.1994 Lyn - Tromsdalen 4-1
+
+14.08.1994 Baerum - Lyn 0-1
+
+07.08.1994 Lyn - Droebak_Frogn 0-1
+
+30.07.1994 Nardo - Lyn 1-0
+
+16.07.1994 Lyn - Alta 0-2
+
+10.07.1994 Stjoerdals_Blink - Lyn 0-4
+
+03.07.1994 Lyn - Mjoelner-Narvik 0-2
+
+28.05.1994 Tromsdalen - Lyn 3-4
+
+23.05.1994 Droebak_Frogn - Lyn 1-1
+
+16.05.1994 Lyn - Baerum 4-0
+
+12.05.1994 Lyn - Stabaek 1-1
+
+08.05.1994 Alta - Lyn 2-1
+
+01.05.1994 Lyn - Nardo 1-0
+
+27.04.1994 Moss - Lyn 1-1
+
+24.04.1994 Lyn - Skeid 0-2
+
+16.04.1994 Strindheim - Lyn 2-2
+
+17.10.1993 Brann - Lyn 3-7
+
+03.10.1993 Lyn - Viking 2-3
+
+26.09.1993 Start - Lyn 2-2
+
+12.09.1993 Lyn - Bodoe_Glimt 1-2
+
+05.09.1993 Molde - Lyn 6-3
+
+29.08.1993 Lyn - HamKam 0-6
+
+22.08.1993 Fyllingen - Lyn 0-0
+
+15.08.1993 Lyn - Tromsoe 2-0
+
+08.08.1993 Kongsvinger - Lyn 2-1
+
+01.08.1993 Lyn - Lillestroem 1-1
+
+18.07.1993 Lyn - Brann 5-1
+
+04.07.1993 Viking - Lyn 2-0
+
+30.06.1993 Rosenborg - Lyn 4-2
+
+27.06.1993 Lyn - Start 1-3
+
+20.06.1993 Bodoe_Glimt - Lyn 8-0
+
+16.06.1993 HamKam - Lyn 3-1
+
+13.06.1993 Lyn - Molde 5-3
+
+23.05.1993 Lyn - Fyllingen 3-0
+
+20.05.1993 Tromsoe - Lyn 0-2
+
+16.05.1993 Lyn - Kongsvinger 1-1
+
+09.05.1993 Lillestroem - Lyn 2-0
+
+02.05.1993 Lyn - Rosenborg 0-1
+
+18.10.1992 Molde - Lyn 2-1
+
+04.10.1992 Lyn - Tromsoe 2-1
+
+27.09.1992 Lyn - Sogndal 7-3
+
+20.09.1992 Kongsvinger - Lyn 1-0
+
+13.09.1992 Lyn - Brann 1-1
+
+29.08.1992 Viking - Lyn 0-1
+
+23.08.1992 Lyn - Start 1-2
+
+15.08.1992 Lillestroem - Lyn 1-1
+
+09.08.1992 Lyn - HamKam 2-1
+
+26.07.1992 Mjoendalen - Lyn 0-1
+
+19.07.1992 Lyn - Rosenborg 1-3
+
+05.07.1992 Lyn - Molde 1-1
+
+28.06.1992 Tromsoe - Lyn 0-0
+
+21.06.1992 Sogndal - Lyn 1-2
+
+14.06.1992 Lyn - Kongsvinger 3-2
+
+08.06.1992 Brann - Lyn 1-0
+
+31.05.1992 Lyn - Viking 3-1
+
+24.05.1992 Start - Lyn 5-0
+
+16.05.1992 Lyn - Lillestroem 3-1
+
+10.05.1992 HamKam - Lyn 0-2
+
+03.05.1992 Lyn - Mjoendalen 1-0
+
+26.04.1992 Rosenborg - Lyn 2-0
+
+13.10.1991 Kongsvinger - Lyn 1-1
+
+06.10.1991 Lyn - Sogndal 1-1
+
+29.09.1991 Viking - Lyn 3-4
+
+22.09.1991 Lyn - Brann 1-1
+
+08.09.1991 Rosenborg - Lyn 2-2
+
+31.08.1991 Lyn - Tromsoe 1-1
+
+18.08.1991 Lillestroem - Lyn 1-1
+
+11.08.1991 Lyn - Stroemsgodset 3-1
+
+04.08.1991 Start - Lyn 0-0
+
+28.07.1991 Lyn - Fyllingen 1-0
+
+21.07.1991 Molde - Lyn 3-0
+
+07.07.1991 Lyn - Kongsvinger 0-0
+
+30.06.1991 Sogndal - Lyn 0-2
+
+23.06.1991 Lyn - Viking 1-1
+
+16.06.1991 Brann - Lyn 3-0
+
+07.06.1991 Lyn - Rosenborg 0-4
+
+26.05.1991 Tromsoe - Lyn 1-1
+
+20.05.1991 Lyn - Lillestroem 3-2
+
+16.05.1991 Stroemsgodset - Lyn 0-1
+
+12.05.1991 Lyn - Start 1-0
+
+05.05.1991 Fyllingen - Lyn 1-0
+
+28.04.1991 Lyn - Molde 2-0
+
+30.09.1990 Lyn - Sprint_Jeloey 1-1
+
+23.09.1990 Raade - Lyn 0-1
+
+16.09.1990 Lyn - Eik_Toensberg 1-1
+
+09.09.1990 Mjoendalen - Lyn 1-0
+
+02.09.1990 Lyn - Strindheim 2-1
+
+26.08.1990 Pors-Grenland - Lyn 2-0
+
+19.08.1990 Lyn - Mjoelner-Narvik 3-1
+
+12.08.1990 Fredrikstad - Lyn 1-1
+
+05.08.1990 Lyn - Sandefjord 0-1
+
+28.07.1990 Namsos - Lyn 1-3
+
+21.07.1990 Lyn - Skarp 3-1
+
+07.07.1990 Sprint_Jeloey - Lyn 1-5
+
+23.06.1990 Lyn - Raade 4-1
+
+16.06.1990 Eik_Toensberg - Lyn 2-4
+
+08.06.1990 Lyn - Mjoendalen 2-4
+
+02.06.1990 Strindheim - Lyn 1-2
+
+26.05.1990 Lyn - Pors-Grenland 3-0
+
+19.05.1990 Mjoelner-Narvik - Lyn 1-0
+
+15.05.1990 Lyn - Fredrikstad 4-1
+
+12.05.1990 Sandefjord - Lyn 0-3
+
+05.05.1990 Lyn - Namsos 5-0
+
+29.04.1990 Skarp - Lyn 1-3

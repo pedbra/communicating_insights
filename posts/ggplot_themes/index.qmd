@@ -1,0 +1,100 @@
+---
+title: "Theming your ggplot"
+author: "Peder Braadland"
+date: "2023-09-26"
+categories: [ggplot2, dataviz, rstats]
+image: "ggplot_themes.jpg"
+---
+
+In my opinion, focus on effective and eye-catching data visualization is all too often overlooked in scientific publishing. I must say I'm probably well above average interested in data visualization. Plots that are visually pleasing are just... nice to look at. But it goes beyond that: Well-styled plots can actually help you to better convey your message, and can make plot easier to understand. In addition it can add a personal touch which makes your plots recognizable.
+
+You may have found them hidden away in Supplementary data, or even occasionally in main manuscripts as well: The hated and loved default ggplots with gray background. Although you don't specify it, `theme_grey()` will be under the hood by default. While it's certainly fine to stick to the default, there is so much to gain from specifying 'theme()' components. One important and often overlooked property is that it enables you to control things such as axis line widths, axis labels, tags and gridlines, which in most journal is required to be of a specific size, color or font (more on this in a later blog post where I describe how you can make ggplots into wonderful, editable pdfs that meet specific journal requirements).
+
+If you have an R script with multiple ggplots, you may have noticed that the code tends to become cluttered with multiple 'theme()' components that are repeated for each ggplot. And modifying these theme components for all the plots can become quite laborious. A nice solution to this issue is to create your own theme, which you can wrap inside a function. This way you can modify your theme *once*, and all plots using this theme will adjust accordingly.
+
+Let's give it a try! Below I've made a quite minimalistic theme with a nice font. You can play around with the various components (which by the way is not exhaustive - there are multiple other components that can be specified):
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+sysfonts::font_add_google(name = "Asap")
+showtext::showtext_auto()
+font <- "Segoe UI"
+my_gg_theme <- function(){theme(
+  # Control legend appearance
+  legend.key = element_blank(),
+  legend.background = element_blank(),
+  legend.title = element_blank(),
+  legend.text = element_text(family = font, size = 30, color = "#888888"),
+  # Control text appearance and spacing
+  axis.title.x=element_text(size = 30, color = "#888888", family = font, margin = margin(b = 10, t = 10)),
+  axis.title.y = element_text(size = 30, color = "#888888", family = font, margin = margin(l = 10, r = 10)),
+  axis.text.y = element_text(size = 30, color = "#888888", family = font),
+  axis.text.x = element_text(size = 30, color = "#888888", family = font),
+  # Control labs elements
+  plot.title = element_text(family = font, size = 30, color = "#555555"),
+  # Grid, ticks and plot lines
+  line = element_line(color = "#F9F9F9", size = 0.1),
+  axis.ticks.x = element_line(color="#eeeeee", size = 0.1),
+  panel.grid.major.x = element_line(color = "#eeeeee", size = 0.1), 
+  axis.ticks.y = element_line(color = "#eeeeee", size = 0.1),
+  panel.grid.major.y = element_line(color = "#eeeeee", size = 0.1),
+  panel.grid.minor.y = element_line(color = "#f0f0f0", size = 0.1),
+  panel.background = element_rect(fill = NA))
+  }
+```
+
+Now we can create some plots and apply the theme to them. We use the iris dataset which is loaded by default when you open R.
+
+Note that you can apply the theme() argument after you specify your theme function, enabling you to override or add specific theme components. This can be handy here, where I've removed the y-axis label and title for the right-hand plot since they share the y-aesthetic (Petal.Length).
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, fig.width = 12, fig.height = 6}
+# Load necessary packages
+library(tidyverse)
+library(ggdist)
+library(ggpubr)
+library(patchwork)
+library(extrafont)
+
+# Code two separate plots
+# -------------------------->
+p1 <- iris %>%
+  ggplot(aes(x = Sepal.Length, y = Petal.Length, fill = Species)) +
+  geom_point(shape = 21, stroke = 1, size = 3.5, color = "white") +
+  scale_fill_manual(values = c("#CCCCCC", "#f17367", "#999999")) +
+  my_gg_theme() +
+  labs(y = "Petal length", x = "Sepal length")
+
+p2 <-
+iris %>%
+  ggplot(aes(y = Petal.Length, x = Species)) +
+  ggdist::stat_dots(aes(fill=Species), justification = 1.5, side = "left", shape = 21, color = NA, binwidth = 0.1) +    
+  geom_boxplot(aes(fill=Species), width = 0.6, outlier.color = NA, color = NA) +
+  stat_boxplot(aes(color=Species), geom = "errorbar", size = 1, width = 0.2, position = position_dodge(0.5)) +
+  stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median, geom = "crossbar", width = 0.6, color="#FFFFFF", size = 0.5, position = "identity") +
+  scale_fill_manual(values = c("#CCCCCC", "#f17367", "#999999")) +
+  scale_color_manual(values = c("#CCCCCC", "#f17367", "#999999")) +
+  my_gg_theme() +
+  # Modify the existing theme
+  theme(legend.position = "none",
+        panel.grid.major.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.y = element_blank()) +
+  labs(y = "Petal length")
+```
+
+Now we put the two plots into a composite figure to show how consistent theming gives that high quality feel. There are several alternatives to plot composite figures, including *ggpubr::ggarrange*, gridExtra::grid.arrange and the *patchwork* package. With patchwork, you can specify the grid on which the plots should appear. '112' indicates that there are three "slots", of which plot #1 occupies the first two.
+
+A neat feature with patchwork is the possibility to "collect" guides (e.g. legend) from plots that share aesthetics.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, fig.width = 12, fig.height = 6}
+# Create a composite plot
+# -------------------------->
+design <- "112"
+
+p1 + p2 +
+  plot_layout(guides = 'collect', design = design)
+```
+
+Pretty neat, huh?
+

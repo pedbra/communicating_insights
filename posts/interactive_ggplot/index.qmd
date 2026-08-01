@@ -1,0 +1,666 @@
+---
+author: "Peder Braadland"
+date: "2024-12-19"
+categories: [rstats, dataviz, ggplot2, ggiraph]
+image: "interactive_gif.gif"
+title: "Interactive plots using ggiraph"
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    toc: true
+    toc-title: "Quick navigation"
+filters:
+   - lightbox
+lightbox:
+    match: auto
+    effect: fade
+    loop: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+library(sysfonts); library(ggtext); library(extrafont)
+font_add_google(name = "Roboto", regular.wt = 400)
+```
+
+I have yet to see an interactive data visualization in a scientific article. I think this is a lost opportunity for journals and researchers to allow plots to give *additional* insights. With e-publishing being standard for most journals, incorporating dynamic visualizations would really not require that much.<br></br>
+
+Interactive plots can be saved as HTML widgets to a file which could be included in e-publications. The reader does not need R or additional software to interact with the plot. I think there are many cases where interactive (sometimes called dynamic) plots are useful such as displaying a tooltip when the reader hovers over an individual data point (See Fig. 1 below). This removes removes the need for cluttered annotations (a challenge which to some extent can be overcome using `ggrepel::geom_text_repel()`). <br></br>
+
+Let's load some packages and define some reusables:
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Click to view code"
+
+"%ni%" <- Negate("%in%")
+# Load packages
+# ---------------------------------------------------------------------------->
+library(scholar)
+library(ggiraph)
+library(tidyverse)
+library(lubridate)
+library(ggpubr)
+library(patchwork)
+library(ggtext)
+library(glue)
+
+
+# Define a theme
+# ---------------------------------------------------------------------------->
+theme_simple <- function() {
+  theme_minimal(base_family = "Roboto") +
+    theme(
+      axis.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold", hjust = 0),
+      plot.subtitle = element_text(hjust = 0),
+      strip.text = element_text(hjust = 0, size = 5, color = "#444444")
+    )
+}
+# Set a color palette
+# ---------------------------------------------------------------------------->
+palette <- c(
+  `Cofactors and Vitamins` = "#d4e080", 
+  Lipid = "#f17367", 
+  Nucleotide = "#b3646c", 
+  Peptide = "#ff85a5", 
+  `Partially Characterized Molecules` = "#e06bdf",
+  Unknown = "#9db98b",
+  Energy = "#71dcca",
+  Carbohydrate = "#66c4ec",
+  `Amino Acid` = "#7392ba",
+  Xenobiotics = "#ffd38b"
+)
+```
+
+### Using an integrated metagenome--metabolome dataset
+
+The data used in this part was downloaded from a [*Nature Communications* article](https://www.nature.com/articles/s41467-022-33050-0) from Dekkers *et al.*, where the authors used paired analyses of blood and stool to learn more about the associations between circulating (blood) metabolites and the fecal microbiome. In the [supplement to the article](https://www.nature.com/articles/s41467-022-33050-0#Sec22) as well as an [online atlas](https://gutsyatlas.serve.scilifelab.se/app/gutsyatlas), the authors generously supply both data on the variance of individual metabolite levels explained by the microbiome and associations between individual metabolites and the Shannon diversity index, which is a measure of microbial diversity (higher Shannon index indicates a more diverse microbiome).<br></br>
+
+We load these data, as well as metabolite annotation data from Metabolon (the platform Dekkers *et al.,* used to analyze the circulating metabolome) into R and generate an interactive plot showing the bivariate association between the metabolite's variance explained by the microbiome and Shannon diversity.<br></br>
+
+I've used the [`ggiraph`](https://davidgohel.github.io/ggiraph/) package which is available on `CRAN`. In brief, this package allows you to add interactive `geoms` to your ggplot, which' aesthetics require both a `tooltip` and a `data_id` to be defined. These arguments define what should be displayed, e.g. when you hover over or click on a plot element, as well as `data_id` which defines the ID to be associated with the elements. There are loads of ways you can customize the appearances with `CSS` and `JavaScript`, but since this is my first attempt at making interactive plots I've tried to keep it simple.
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Loading data and data wrangling (click to view code)"
+
+# Load and wrangle data
+# ---------------------------------------------------------------------------->
+
+# Load metabolite annotation data from Metabolon
+met_ann <- read_delim("data/met_ann.txt") %>%
+  mutate(SuperPathway = ifelse(is.na(SuperPathway), "Unknown", SuperPathway))
+
+# Load Supplementary Data 5. Variance explained of plasma metabolite levels by variation in the gut microbiota
+var_expl <- read_delim("data/var_expl_dekkers.txt")
+
+# Load Supplementary Data 4. Association between Shannon diversity index and plasma metabolites
+alpha_div <- read_delim("data/alpha_div_dekkers.txt")
+
+# Join the data
+df <- var_expl %>%
+  left_join(alpha_div, by = "biochem") %>%
+  left_join(met_ann %>% select(biochem = Biochemical, super_pathw = SuperPathway, sub_pathw = SubPathway), by = "biochem") %>%
+  filter(!is.na(super_pathw)) %>%
+  # For some reason the tooltip cannot contain the ' symbol
+  mutate(biochem = gsub("'", "", biochem))
+```
+
+Now we can create a tooltip and produce the plot (Fig. 1).
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Creating the interactive plot (click to view code)"
+dekkers_p <-
+  df %>%
+  mutate(tooltip = glue(
+    "<b>{biochem}</b><br>",
+    "R<sup>2</sup> = {r2}<br>",
+    "Shannon diversity, rho = {partial_spearman}"
+  )) %>%
+    # Arrange to get points with higher r2 appear in upper layers
+    arrange(r2) %>%
+ggplot(aes(x = partial_spearman, y = r2, fill = super_pathw, size = r2, tooltip = tooltip, data_id = tooltip)) +
+  geom_point_interactive(shape = 21, color = "white") +
+  theme_simple() +
+  theme(
+    legend.position = "top",
+    legend.title = element_blank(),
+    legend.key.height = unit(2, "mm"),
+    legend.key.width = unit(1, "mm"),
+    axis.title.x = element_text(color = "#444444"),
+    axis.title.y = element_text(color = "#444444")
+  ) +
+  labs(
+    x = "Partial correlation with alpha diversity (Spearman)",
+    y = bquote("Variance explained by gut microbiota, " ~ R^2)
+  ) +
+  guides(fill = guide_legend(label.position = "right", nrow = 2, override.aes = list(size = 4)), size = "none") +
+  scale_size(range = c(1, 4)) +
+  scale_fill_manual(values = palette)
+
+# Define CSS theming
+# ---------------------------------------------------------------------------->
+tooltip_css <- "
+  background-color: #F9F9F9;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 2px;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+"
+# Use ggiraph::girafe() to create the interactive plot and apply effects and CSS 
+# theming
+# ---------------------------------------------------------------------------->
+dekkers_p_int <- girafe(
+  ggobj = dekkers_p,
+  options = list(
+    opts_hover(css = "fill: black;"),
+    opts_tooltip(css = tooltip_css, use_fill = TRUE),
+    opts_sizing(rescale = FALSE)
+  ),
+  height_svg = 5.5,
+  width_svg = 7.5
+)
+```
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#| fig-cap: "Fig. 1. Bivariate association between metabolite's variance explained by the gut microbiota and their association with Shannon diversity. Data sourced from https://www.nature.com/articles/s41467-022-33050-0."
+
+dekkers_p_int
+```
+
+### Metabolite enrichment
+
+Enrichment plots are ubiqutous in the scientific literature. What if you could *see* the elements which contribute to enrichment of a given pathway? Let's explore how we can use ggiraph to add more information to these plots, using the Dekkers *et al.* dataset from above. We can e.g. explore which metabolic pathway is *most* enriched for microbial metabolites, and, when hovering over the individual pathways, display the names of the 10 metabolite which contribute the most to each pathway's enrichment (Fig. 2).
+
+```{r echo = TRUE, message = FALSE, warning = FALSE, fig.align="left"}
+#| code-summary: "Click to view code"
+
+# Load the fgsea package (available on BioConductor)
+# if (!require("BiocManager", quietly = TRUE))
+#     install.packages("BiocManager")
+# BiocManager::install("fgsea")
+library(fgsea)
+
+# We define the "metabolite set" (the GSEA method is most frequently used in transcriptomics data, where you would call this a "gene set")
+# ----------------------------------------------------------------------------->
+metabo_set_df <- 
+    df %>% select(biochem, super_pathw) 
+metabo_set <- split(metabo_set_df$biochem, metabo_set_df$super_pathw)
+
+# Rank metabolites by R2 (variance explained by the gut microbiome)
+# ----------------------------------------------------------------------------->
+ranked_biochems <- df %>% arrange(desc(r2)) %>% select(biochem, r2)
+r2 <- ranked_biochems$r2
+biochems <- ranked_biochems$biochem
+# Create a named vector where the values are from the 'r2' vector and the names are from the 'biochems' vector.
+stats <- setNames(r2, biochems)
+
+# Run FGSEA
+# ----------------------------------------------------------------------------->
+metabo_gsea <- 
+    fgsea(pathways = metabo_set, stats = stats, gseaParam = 0) 
+
+# Create a GSEA bar plot indicating which metabolite contribute the most to the enrichment
+# ----------------------------------------------------------------------------->
+pal <- c("Negative enrichment" = "#66c4ec", "Positive enrichment" = "#f17367")
+
+fgsea_interactive <- 
+metabo_gsea %>% 
+    mutate(color = ifelse(NES > 0, "Positive enrichment", "Negative enrichment")) %>%
+    mutate(leading_edge_metabs = sapply(leadingEdge, function(x) paste(x, collapse = "\n"))) %>%
+    mutate(
+    leading_edge_metabs = sapply(
+      leadingEdge, 
+      function(x) paste(head(x, 10), collapse = "\n")
+    )
+  ) %>%
+    ggplot(aes(x = NES, y = reorder(pathway, NES), fill = color, tooltip = leading_edge_metabs, data_id = leading_edge_metabs))+
+    
+    geom_col_interactive(width = 0.5)+
+    theme_simple()+
+    theme(
+        panel.grid.major.y = element_blank(),
+        legend.position = "top",
+        legend.title = element_blank(),
+        legend.key.height = unit(1.5, "mm")
+    )+
+    scale_fill_manual(values = pal)+
+    guides(fill = guide_legend(label.position = "bottom"))
+
+fgsea_interactive <- fgsea_interactive + plot_spacer()
+
+fgsea_interactive <- girafe(
+  ggobj = fgsea_interactive,
+  options = list(
+    opts_hover(css = "fill: black;"),
+    opts_tooltip(css = tooltip_css, use_fill = TRUE),
+    opts_sizing(rescale = FALSE)
+  ),
+  height_svg = 3,
+  width_svg = 6
+)
+```
+
+```{r include = FALSE}
+# Rug plot where you can hover over the lines to see which metabolites are there
+# fgsea_data <- (fgsea::plotEnrichment(pathway = metabo_set$Xenobiotics, stats = stats))$data
+# positions <- which(names(stats) %in% metabo_set$Xenobiotics)
+# biochems <- tibble(biochem = metabo_set_df$biochem, super_pathw = metabo_set_df$super_pathw) %>%
+#     mutate(x = c(0:nrow(.))) %>%
+#     filter(x %in% positions)
+# fgsea_data <- fgsea_data %>% left_join(biochems)
+# 
+# conv_enr <- 
+# ggplot()+
+#     geom_line_interactive(data = fgsea_data, aes(x = x, y = y, tooltip = biochem, data_id = biochem), color = "#7392ba", size = 0.5)+
+#     theme_void() +
+#   theme(plot.margin = unit(c(0.5, 0, 0.5, 0), "mm")) +
+#   scale_y_continuous(expand = c(0,0))
+# 
+# conv_enr_rug <- 
+#     ggplot()+
+#     geom_point_interactive(data = fgsea_data, aes(x = x, y = 1, tooltip = biochem, data_id = biochem), size = 3, shape = "|", color = "#7392ba") +
+#   theme_void() +
+#   theme(plot.margin = unit(c(0.5, 0, 0.5, 0), "mm")) +
+#   scale_y_continuous(expand = c(0,0))
+# 
+# library(patchwork)
+# conv_enr_comp <- conv_enr + conv_enr_rug + plot_layout(nrow = 2, heights = c(5, 1))
+# 
+# conv_enr_comp <- girafe(
+#   ggobj = conv_enr_comp,
+#   options = list(
+#     opts_hover(css = "fill: black;"),
+#     opts_tooltip(css = tooltip_css, use_fill = TRUE),
+#     opts_sizing(rescale = FALSE)
+#   ),
+#   height_svg = 3.5,
+#   width_svg = 5
+# )
+```
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#| fig-cap: "Fig. 2. Interactive enrichment plot. Positive enrichment scores indicate that the metabolic pathway is enriched for metabolites which' variance is explained by the gut microbiome."
+fgsea_interactive
+```
+
+### Using Google scholar citations data
+
+I am always hopeful that my research will have an impact. Citations is one measure of this. I've previously written about how you can [scrape Google Scholar {{< ai google-scholar-square >}} data](../scraping_scholar/) to gain more insight into these metrics than what is directly available on Google Scholar's website. I now wanted to create an interactive plot which gives some more information, including a bar plot with a hover effect. The tooltip gives a text-based visualisation of citations over time. 
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Data wrangling (click to view code)"
+
+# Scrape scholar data
+# ---------------------------------------------------------------------------->
+author_id <- scholar::get_scholar_id(last_name = "Braadland", first_name = "Peder")
+pubs <- scholar::get_publications(author_id) %>%
+  # Remove data with no cid (except for preprints)
+  filter(!(is.na(cid))) %>%
+  # One article had been duplicated albeit with different titles
+  mutate(title = ifelse(title == "Ex vivo metabolic fingerprinting identifies biomarkers predictive of prostate cancer recurrence",
+    "Ex vivo metabolic fingerprinting identifies biomarkers predictive of prostate cancer recurrence following radical prostatectomy", title
+  )) %>%
+  # For duplicated articles, chose just first occurrence
+  group_by(title) %>%
+  slice(1) %>%
+  filter(!str_detect(title, "Back Cover")) %>%
+  rename(
+    cites_total = cites,
+    year_published = year
+  )
+
+# We can also collect data on each article ('pubid') and the number of citations
+# received any year after the article was published
+pubs_cit_per_yr <- tibble(year = numeric(), cites = numeric(), pubid = character())
+articles <- pubs %>% pull(pubid)
+for (i in 1:length(articles)) {
+  article <- articles[i]
+  article_info <- get_article_cite_history(id = author_id, article = article)
+  pubs_cit_per_yr <- bind_rows(pubs_cit_per_yr, article_info)
+}
+
+# Append publication titles
+pubs_cit_per_yr <-
+  pubs_cit_per_yr %>%
+  left_join(pubs)
+```
+
+We can produce an interactive plot, again using `ggirafe` (Fig. 3)
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Producing an interactive plot (click to view code)"
+
+p_cites_per_yr <-
+  pubs_cit_per_yr %>%
+  group_by(title) %>%
+  mutate(total_cites = sum(cites)) %>%
+  mutate(yearly_cites = paste0(year, ": ", strrep("|", cites))) %>%
+  select(year_published, yearly_cites, total_cites, title, journal) %>%
+  group_by(year_published, total_cites, title, journal) %>%
+  summarize(yearly_cites_list = list(yearly_cites), .groups = "drop") %>%
+  mutate(ann = glue("{journal} (<b>{year_published}</b>)")) %>%
+  mutate(title_short = ifelse(
+    nchar(title) > 80,
+    paste0(substr(title, 1, 80), "..."),
+    title
+  )) %>%
+  mutate(tooltip = paste0(
+    "<b>Title:</b> ", title_short,
+    "<b>\nN citations: </b>", total_cites,
+    "<b>\nBy year:</b>\n",
+    sapply(yearly_cites_list, function(x) paste(x, collapse = "\n"))
+  )) %>%
+  ggplot(aes(x = total_cites, y = reorder(ann, total_cites), tooltip = tooltip, data_id = ann)) +
+  geom_col_interactive(width = 0.5) +
+  theme_simple() +
+  theme(
+    axis.text.y = element_markdown(),
+    panel.grid.major.y = element_blank()
+  )
+
+tooltip_css <- "
+  background-color: #F9F9F9;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 2px;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+"
+p_cites_per_yr_int <- girafe(
+  ggobj = p_cites_per_yr,
+  options = list(
+    opts_hover(css = "opacity:0.8;"),
+    opts_tooltip(css = tooltip_css, use_fill = TRUE),
+    opts_sizing(rescale = FALSE)
+  ),
+  height_svg = 4,
+  width_svg = 6
+)
+# Optional: You can save the interactive plot as a HTML widget.
+# htmltools::save_html(p_cites_per_yr_int, "HtmlWidget/ggiraph-interactive_ggplot.html")
+```
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#| fig-cap: "Fig. 3. Google Scholar citations data. Interactive barplot with hover effect - the mouse-over reveals additional information in the data."
+p_cites_per_yr_int
+```
+
+### Interacting plots
+
+Dynamic plots can also be *connected*, in that interacting with one plot leads to a visual change in another, which can be handy when two plots convey different sets of information from the same data. I use the Google scholar data to illustrate publications "over-performing" in terms of citations since the year of publication alongside the plot from above (Fig. 4).
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+#| code-summary: "Creating two interacting plots (click to view code)"
+# Create a scatterplot that will interact with the bar plot
+# ---------------------------------------------------------------------------->
+p2 <-
+  pubs_cit_per_yr %>%
+  group_by(title) %>%
+  mutate(total_cites = sum(cites)) %>%
+  mutate(yearly_cites = paste0(year, ": ", strrep("|", cites))) %>%
+  select(year_published, yearly_cites, total_cites, title, journal) %>%
+  group_by(year_published, total_cites, title, journal) %>%
+  summarize(yearly_cites_list = list(yearly_cites), .groups = "drop") %>%
+  mutate(ann = glue("{journal} (<b>{year_published}</b>)")) %>%
+  ggplot(aes(x = year_published, y = total_cites)) +
+  geom_point_interactive(aes(size = total_cites, tooltip = total_cites, data_id = ann)) +
+  stat_smooth(method = "loess", span = 1, alpha = 0.25, color = "#999999", lwd = 0.5, linetype = "dashed") +
+  theme_simple() +
+  theme(
+    axis.title.y = element_text(color = "#444444"),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+    legend.position = "none"
+  ) +
+  labs(
+    x = "",
+    y = "N citations"
+  ) +
+  scale_x_continuous(breaks = seq(2016, 2024, 2)) +
+  scale_size(range = c(2, 4.5))
+
+# Combine the two plots using the pathwork package
+# ---------------------------------------------------------------------------->
+combi <- (p2 + p_cites_per_yr) + plot_layout(widths = c(2, 2.5))
+
+p_combi <- girafe(
+  ggobj = combi,
+  options = list(
+    opts_hover(css = "fill: orange;"),
+    opts_tooltip(css = tooltip_css, use_fill = TRUE)
+    ),
+  height_svg = 3.8,
+  width_svg = 8
+)
+```
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#| fig-cap: "Fig. 4. Google Scholar citations data. The individual plots in the plot composite interact with each other when you hover your mouse over plot elements."
+p_combi
+
+```
+
+## Interactive tile plot
+
+During the [April 2024 30 day chart challenge](../apr_30day_p2/) I had a look at my favorite football club Lyn's seasons since 1990. I thought it would be nice if you could get information about the individual matches when you hover your pointer over them. I've also added an interactive effect on the bumper plot shown below the tile plot.
+
+The data were downloaded from [LynHistorie](www.LynHistorie.com).
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+# Reusables
+# ----------------------->
+library(ggbump)
+library(ggpubr)
+library(showtext)
+library(png)
+library(grid)
+font <- "Montserrat"
+
+# Wrangling and plotting
+# ----------------------->
+
+# Load the Lyn logo
+lyn_logo <- png::readPNG("data/lyn_logo.png")
+
+# Load data on divisions by season
+lyn <- read_delim("data/lyn.txt", delim = "\t") %>%
+  filter(yr != 2010) %>%
+  mutate(yr = as.character(yr)) %>%
+  bind_rows(data.frame(yr = c("2010S", "2010F"), level = c(2, 7))) %>%
+  mutate(yr = factor(yr, levels = c(1990:2009, "2010S", "2010F", 2011:2024))) %>%
+  arrange(yr) %>%
+  mutate(x_yr = as.numeric(c(1:n()))) %>%
+  # We can create a tooltip for change from one season to the next
+  mutate(
+    change = lead(level) - level, # Calculate the change in league level to the next season
+    season_tooltip = case_when(
+      yr == "2010S" ~ "Bankruptcy",
+      yr == "2010F" ~ "Double promotion",
+      change > 0 ~ "Relegation", 
+      change < 0 ~ "Promotion", 
+      change == 0 ~ "No change", 
+      TRUE ~ "No change" # Final season (2024)
+    )
+  )
+
+# Labels for the y-axis
+ylabs <- c("Top division", "2nd division", "3rd division", "4th division", "5th division", "6th division", "Rock bottom")
+
+# Plot the bump-plot
+p_bump <-
+  lyn %>%
+  ggplot(aes(x = x_yr, y = level)) +
+  geom_bump(smooth = 15, size = 0.3, color = "#555555") +
+  geom_point_interactive(aes(tooltip = season_tooltip, data_id = season_tooltip), shape = 21, color = "#555555", stroke = 0.3, fill = "#F9F9F9") +
+  scale_y_reverse(breaks = c(1:7), labels = ylabs) +
+  scale_x_continuous(limits = c(1, 36), breaks = c(1:36), labels = c(1990:2009, "2010S", "2010F", 2011:2024)) +
+  theme(
+    legend.position = "none",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text.y = element_text(family = font, size = 7.5, color = "#555555", hjust = 1),
+    axis.text.x = element_text(family = font, size = 8, angle = 90, hjust = 0, vjust = 0, color = "#555555"),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    plot.title = element_text(family = font, size = 15, color = "#555555", margin = margin(b = 5)),
+    plot.subtitle = element_text(family = font, size = 5.5, color = "#555555"),
+    plot.caption = element_text(family = font, size = 6, color = "#999999"),
+    plot.background = element_rect(fill = "#fefaf2", color = NA),
+    panel.background = element_rect(fill = "#fefaf2", color = NA),
+    axis.ticks = element_blank()
+  ) +
+  labs(
+    caption = "\nSource: Lynhistorie.com. Datavisualisation by Peder R. Braadland (2024)"
+  ) +
+  coord_cartesian(clip = "off")
+
+# Load the individual matches (quite messy)
+kamper <-
+  read_delim("data/lynkamper.txt", delim = "\t") %>%
+  separate(col = rad, into = c("date", "home_team", "delete", "away_team", "result"), sep = " ") %>%
+  select(-delete) %>%
+  mutate(date = dmy(date)) %>%
+  separate(col = result, into = c("home_goals", "away_goals"), sep = "-") %>%
+  mutate(lyn_victory = case_when(
+    home_team == "Lyn" & home_goals > away_goals ~ "win",
+    away_team == "Lyn" & away_goals > home_goals ~ "win",
+    home_goals == away_goals ~ "draw",
+    TRUE ~ "loss"
+  )) %>%
+  mutate(season = year(date)) %>%
+  mutate(season = case_when(
+    season == 2010 & date < "2010-08-11" ~ "2010S",
+    season == 2010 & date >= "2010-08-11" ~ "2010F",
+    TRUE ~ as.character(season)
+  )) %>%
+  mutate(season = factor(season, levels = c(1990:2009, "2010S", "2010F", 2011:2024))) %>%
+  group_by(season) %>%
+  mutate(match_no = rev(c(1:n()))) %>%
+  mutate(match_result = paste0(home_goals, "-", away_goals)) %>%
+  mutate(lyn_victory = factor(lyn_victory, levels = c("win", "draw", "loss")))
+
+# Calculate average points home vs away (win = 3 points, draw = 1 point, loss = 0 points)
+pts <-
+  kamper %>%
+  mutate(
+    home_away = ifelse(home_team == "Lyn", "home", "away"),
+    pre_post_bankrupt = ifelse(season %in% c(1990:2009, "2010S"), "pre-bankrupt", "post_bankrupt")
+  ) %>%
+  group_by(pre_post_bankrupt, home_away) %>%
+  summarise(
+    count = n(),
+    win_count = sum(lyn_victory == "win"),
+    loss_count = sum(lyn_victory == "loss"),
+    draw_count = sum(lyn_victory == "draw")
+  ) %>%
+  mutate(avg_points = round((win_count * 3 + draw_count * 1) / count, 2))
+
+# Best and worst opponent (6 or more matches)
+best_worst <- 
+kamper %>%
+    mutate(opponent = case_when(home_team == "Lyn" ~ away_team,
+                                home_team != "Lyn" ~ home_team)) %>%
+    group_by(opponent) %>%
+    mutate(count = n()) %>%
+    filter(count >= 6) %>%
+    summarise(
+    count = n(),
+    win_count = sum(lyn_victory == "win"),
+    loss_count = sum(lyn_victory == "loss"),
+    draw_count = sum(lyn_victory == "draw")
+  ) %>%
+  mutate(avg_points = round((win_count * 3 + draw_count * 1) / count, 2)) %>%
+    arrange(desc(avg_points))
+
+best_opp <- paste0("Best opponent (6 or more matches): ", best_worst[1, 1], ",\naverage points: ", best_worst[1, 6], " over ", best_worst[1, 2], " matches.")
+worst_opp <- paste0("Worst opponent (6 or more matches): ", best_worst[nrow(best_worst), 1], ",\naverage points: ", best_worst[nrow(best_worst), 6], " over ", best_worst[nrow(best_worst), 2], " matches.")
+
+# Plot the tile plot
+p_tile <-
+  kamper %>%
+    # Create a tooltip
+    mutate(match_res = paste0(home_team, " - ", away_team, " ", match_result)) %>%
+    mutate(match_res = ifelse(match_res == "Lyn - Kongsvinger 1-2", "Qualification for promotion: Lyn - Kongsvinger 1-2", match_res)) %>%
+    mutate(tooltip = glue(
+    "<b>Date: </b>{date}<br>",
+    "<b>Match: </b>{match_res}"
+  )) %>%
+  ggplot(aes(y = match_no, x = season, fill = lyn_victory, label = match_result)) +
+  geom_tile_interactive(aes(tooltip = tooltip, data_id = tooltip), color = "#F9F9F9", stroke = 0.1) +
+  scale_fill_manual(values = c("#a5d0a0", "#ffdf7a", "#f3766e")) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    plot.title = element_text(family = font, color = "#555555", size = 24, face = "bold", hjust = 0),
+    plot.subtitle = element_text(family = font, color = "#555555", size = 10, hjust = 0),
+    plot.background = element_rect(fill = "#fefaf2", color = NA),
+    panel.background = element_rect(fill = "#fefaf2", color = NA),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.ticks = element_blank(),
+    legend.direction = "horizontal",
+    legend.title = element_blank(),
+    legend.background = element_rect(fill = NA, color = NA),
+    legend.key.size = unit(3, "mm"),
+    legend.text = element_text(family = font, size = 7.5, color = "#555555"),
+    legend.position = c(0.5, 1)
+  ) +
+  geom_text(size = 1.75, family = "Roboto") +
+  scale_x_discrete(breaks = levels(kamper$season), drop = F, expand = c(0, 0)) +
+  labs(
+    title = "Lyn 1896 FK from 1990 to date",
+    subtitle = "Lyn is a football club located in the Western part of Oslo. In June 2010, the top-flight men's team went bankrupt.\nThe fans decided to rally behind the grassroot team Lyn Fotball at the 7th level\nAfter 13 years in the mud the club has now returned to the second highest level of Norwegian men's football.\n"
+  ) +
+  annotation_custom(rasterGrob(lyn_logo), xmin = -9, xmax = 4, ymin = 34, ymax = 40.5) +
+  coord_cartesian(clip = "off") +
+  annotate(geom = "text", label = "All matches cancelled due to the pandemic", hjust = 0, family = font, size = 3.2, color = "#555555", angle = 90, x = 32, y = 0.5) +
+  geom_segment(aes(x = 21.5, xend = 21.5, y = -2, yend = 29.5), color = "#999999", linetype = "dashed", size = 0.1) +
+  annotate(geom = "text", label = paste0("After bankruptcy:\nAverage points home / away: ", pts$avg_points[[2]], " / ", pts$avg_points[[1]], "."), x = 21.8, y = 29.5, family = font, size = 3.2, color = "#555555", hjust = 0, vjust = 1, lineheight = 0.9) +
+  annotate(geom = "text", label = paste0("Before bankruptcy:\nAverage points home / away: ", pts$avg_points[[4]], " / ", pts$avg_points[[3]], "."), x = 21.2, y = -2, family = font, size = 3.2, color = "#555555", hjust = 1, vjust = 0, lineheight = 0.9)+
+    guides(fill = guide_legend(label.position = "bottom"))+
+    
+    annotate(geom = "text", label = best_opp, x = 1, y = 31, size = 3.2, color = "#555555", hjust = 0, family = font, lineheight = 0.8)+
+    annotate(geom = "text", label = worst_opp, x = 1, y = 28.5, size = 3.2, color = "#555555", hjust = 0, family = font, lineheight = 0.8)
+
+
+tooltip_css <- "
+  background-color: white;
+  color: #222222;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #222222;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+"
+
+p_comp <- ggarrange(p_tile + theme(plot.margin = unit(c(5, 5, 0, 24), "mm")),
+    p_bump, nrow = 2, heights = c(4, 1))
+
+interactive_lyn <- girafe(
+  ggobj = p_comp,
+  options = list(
+    opts_tooltip(css = tooltip_css, use_fill = TRUE),
+    opts_hover(css = "fill: white;")
+    ),
+  height_svg = 8,
+  width_svg = 8
+)
+
+
+```
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#| fig-cap: "Fig. 5. Hover over the matches to get more information!"
+interactive_lyn
+```
+
+<iframe src="HtmlWidget/lyn.html"></iframe>
+
+<hr>
+
+</hr>

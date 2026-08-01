@@ -1,0 +1,18 @@
+---
+title-block-banner: true
+filters:
+   - lightbox
+lightbox:
+    match: auto
+    effect: fade
+    loop: true
+title: "{{< iconify ri presentation-fill >}} Presentations"
+format:
+  html:
+    toc: false
+    toc-title: "Quick navigation"
+---
+
+## Presentations on data visualization
+
+<a href="https://sparkly-granita-274da7.netlify.app/courses/data_visualization/introduction_to_data_visualization_v3_condensed#/title-slide" class="read-button" target="_blank">Lecture 1: Introduction on data visualization using R and ggplot2<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon></a>

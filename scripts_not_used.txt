@@ -1,0 +1,288 @@
+```{r}
+# Doughnut chart with emphasis 
+
+library(tidyverse)
+
+ggplot() +
+  # Create the gray circle
+  geom_rect(aes(xmin = 3.6, xmax = 3.8, ymin = 2, ymax = 3), fill = "#CCCCCC") +
+  # Create the region of interest
+  geom_rect(aes(xmin = 3.4, xmax = 4, ymin = 2.5, ymax = 2.8), fill = "#f17367") +
+  coord_polar(theta = "y", start = pi) +
+  scale_x_continuous(limits = c(0, 4)) +
+  theme_void()
+```
+
+# MSJKAY
+
+```{r}
+set.seed(1337)
+tibble(
+  x = rnorm(100, 50, 20)
+) %>%
+  mutate(cols = case_when(x > 75 ~ "A", x <= 75 & x > 50 ~ "B", TRUE ~ "C")) %>%
+  ggplot(aes(x)) +
+  geom_dotsinterval(aes(slab_color = cols), slab_shape = 16) +
+  scale_color_manual(values = c("green", "yellow", "red"))
+```
+
+
+## Dekkers 
+
+
+```{r echo = TRUE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(ggbeeswarm)
+library(ggplotify)
+library(cowplot)
+library(grid)
+library(ggtext)
+library(ggrepel)
+library(png)
+library(showtext)
+"%ni%" <- Negate("%in%")
+# Themes and aesthetics
+update_geom_defaults("text", list(family = "IBM Plex Sans"))
+update_geom_defaults("label_repel", list(family = "IBM Plex Sans"))
+
+font_add_google("IBM Plex Sans", "ibm", regular.wt = 300)
+font_add_google("Roboto Condensed", "roboto_head")
+
+
+waffle_theme <- function() {
+  theme_minimal(base_family = "ibm", base_size = 7) +
+    theme(
+      panel.grid = element_blank(),
+      axis.text = element_blank(),
+      axis.title = element_blank(),
+      axis.ticks = element_blank(),
+      strip.text = element_text(size = 6, hjust = 0, face = "bold"),
+      panel.margin.y = unit(0.1, "lines"),
+      plot.title = element_textbox_simple(family = "roboto_head", face = "bold", size = 16, margin = margin(2, 0, 5, 0)),
+      plot.subtitle = element_textbox_simple(margin = margin(4, 0, 8, 0)),
+      plot.caption = element_textbox_simple(color = "#999999", hjust = 0, margin = margin(10, 0, 0, 0)),
+      plot.margin = unit(c(5, 2, 5, 2), "mm"),
+      legend.position = "none"
+    )
+}
+
+leg_theme <- function() {
+  theme_minimal(base_family = "ibm", base_size = 6) +
+    theme(
+      panel.grid = element_blank(),
+      axis.text.y = element_blank(),
+      axis.title.y = element_blank(),
+      axis.ticks.y = element_blank(),
+      axis.ticks.x = element_line(size = 0.15, color = "#222222"),
+      axis.line.x = element_line(size = 0.15, color = "#222222"),
+      axis.ticks.length.x = unit(1.5, "mm"),
+      plot.background = element_rect(fill = "white", color = NA),
+      legend.position = "none"
+    )
+}
+
+# Colors for R2 categories
+fill_r2 <- c(
+  "Low" = "#e7ebed",
+  "Int. low" = "#a1b0b8",
+  "Int. high" = "#4e6a78",
+  "High" = "#111111"
+)
+
+# A picture of a bacterium
+bact <- readPNG("day1/bacteria.png")
+
+# My logo
+logo <- readPNG("../../logo_gray_png.png")
+logo_red <- readPNG("../../logo_red_png.png")
+
+```
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+met_ann <- read_delim("day1/met_ann.txt") %>%
+  select(biochem = Biochemical, super_pathw = SuperPathway) %>%
+  mutate(super_pathw = case_when(
+    super_pathw == "Amino Acid" ~ "Amino acids",
+    super_pathw == "Carbohydrate" ~ "Carbohydrates",
+    super_pathw == "Cofactors and Vitamins" ~ "Cofactors/vitamins",
+    super_pathw == "Lipid" ~ "Lipids",
+    super_pathw == "Nucleotide" ~ "Nucleotides",
+    super_pathw == "Peptide" ~ "Peptides",
+    TRUE ~ super_pathw
+  ))
+
+var_expl <- read_delim("day1/dekkers_var_expl.txt", locale = locale(decimal_mark = ",")) %>%
+  select(biochem, r2) %>%
+  # Join in metabolite annotation data
+  left_join(met_ann, by = "biochem") %>%
+  mutate(super_pathw = ifelse(is.na(super_pathw), "Unknown pathway", super_pathw)) %>%
+  # Categorize variance explained by microbiome
+  mutate(r2_cat = case_when(
+    r2 > 0.3 ~ "High",
+    r2 <= 0.3 & r2 > 0.15 ~ "Int. high",
+    r2 <= 0.15 & r2 > 0.05 ~ "Int. low",
+    r2 <= 0.05 ~ "Low"
+  )) %>%
+  # Remove pathways with few observations
+  filter(super_pathw %ni% c("Partially Characterized Molecules", "Energy"))
+
+# Ordering by number of metabolites per super_pathw
+pathw_ord <-
+  var_expl %>%
+  group_by(super_pathw) %>%
+  count() %>%
+  arrange(desc(n)) %>%
+  pull(super_pathw)
+```
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# Wide screen friendly
+# ----------------------------------------------------------------------------->
+# Wrangle the data for a waffle, with 10 columns per row
+var_expl_waffle <-
+  var_expl %>%
+  group_by(super_pathw) %>%
+  mutate(
+    row = (row_number() - 1) %% 10 + 1,
+    col = (row_number() - 1) %/% 10 + 1
+  ) %>%
+  mutate(super_pathw = factor(super_pathw, levels = pathw_ord)) %>%
+  mutate(ann_lab = case_when(biochem %in% c("p-cresol sulfate", "phenylacetylglutamine", "phenylacetate", "isoursodeoxycholate") ~ "lab", TRUE ~ "nolab")) %>%
+  mutate(biochem = case_when(
+    biochem == "phenylacetylglutamine" ~ "PAGln",
+    biochem == "isoursodeoxycholate" ~ "iso-UDCA",
+    TRUE ~ biochem
+  ))
+
+showtext_auto()
+
+# Plot the waffle plot
+p_fractions <-
+  ggplot(var_expl_waffle, aes(y = col, x = row, fill = r2_cat)) +
+  geom_tile(color = "white") + # Tile grid
+  scale_y_reverse(expand = c(0, 0)) + # Reverse y-axis so it reads top-to-bottom
+  facet_grid(cols = vars(super_pathw), space = "free", scales = "free") +
+  waffle_theme() +
+  labs(
+    title = "Gut bacterial byproducts",
+    subtitle = "Using an <span style = 'color:#4e6a78;'>**integrated blood metabolomics—stool metagenomics**</span> dataset, we can classify metabolites of various classes by how much their circulating **variation is explained by the gut microbiome**. While the metabolite library may be biased, these datasets nonetheless serve as a resource to identify metabolites of more-or-less gut microbial origin. *As a sanity check, some known microbial metabolites are annotated.*",
+    caption = "**Source:** Dekkers et al., Nat Commun **2022** Sep 23;13(1):5370<br>Data visualization by Peder Braadland."
+  ) +
+  geom_label_repel(aes(label = ifelse(ann_lab == "lab", biochem, NA)), size = 1.8, box.padding = 0.5, min.segment.length = 0, alpha = 0.8, segment.size = 0.3, segment.curvature = -0.3, label.padding = 0.15, color = "#222222", fill = "#F9F9F9") +
+  scale_fill_manual(values = fill_r2) +
+  geom_vline(xintercept = 12, linetype = "dashed", linewidth = 0.1, color = "#F0F0F0")
+
+leg <-
+  var_expl %>%
+  ggplot(aes(x = r2, color = r2_cat, y = "")) +
+  geom_quasirandom(size = 1, shape = 16, width = 0.55) +
+  leg_theme() +
+  scale_color_manual(values = fill_r2) +
+  scale_x_continuous(breaks = c(0, 0.05, 0.15, 0.30, 0.5), limits = c(0, 0.5), expand = expansion(mult = c(0, 0))) +
+  scale_y_discrete(expand = c(0.05, 0.05)) +
+  geom_segment(aes(x = 0.002, xend = 0.049, y = 0.35, yend = 0.35), linewidth = 3.2, color = "#e7ebed") +
+  geom_segment(aes(x = 0.051, xend = 0.149, y = 0.35, yend = 0.35), linewidth = 3.2, color = "#a1b0b8") +
+  geom_segment(aes(x = 0.151, xend = 0.299, y = 0.35, yend = 0.35), linewidth = 3.2, color = "#4e6a78") +
+  geom_segment(aes(x = 0.301, xend = 0.50, y = 0.35, yend = 0.35), linewidth = 3.2, color = "#111111") +
+  # Empty spacer for more space
+  geom_segment(aes(x = 0.301, xend = 0.50, y = 0.25, yend = 0.25), linewidth = 3, color = "#FFFFFF") +
+  # Text annotations
+  annotate(geom = "text", label = "Low", x = 0.025, hjust = 0.5, y = 0.35, size = 1.8, vjust = 0.5, color = "#222222") +
+  annotate(geom = "text", label = "Low int.", x = 0.15 - 0.05, hjust = 0.5, y = 0.35, size = 1.8, vjust = 0.5, color = "#222222") +
+  annotate(geom = "text", label = "High int.", x = 0.15 + (0.30 - 0.15) / 2, hjust = 0.5, y = 0.35, size = 1.8, vjust = 0.5, color = "#F9F9F9") +
+  annotate(geom = "text", label = "High", x = 0.30 + (0.50 - 0.30) / 2, hjust = 0.5, y = 0.35, size = 1.8, vjust = 0.5, color = "#F9F9F9") +
+  labs(
+    x = expression("Variance explained by the microbiome, R"^2)
+  )
+
+# Composite
+
+final_plot <- ggdraw() +
+  draw_plot(p_fractions, 0, 0, 1, 1) +
+  draw_grob(as.grob(leg), x = 0.49, y = 0.05, width = 0.50, height = 0.5) +
+  draw_grob(rasterGrob(bact), x = 0.33, y = 0.91, width = 0.05, height = 0.05) +
+  draw_grob(rasterGrob(logo), x = 0.95, y = 0.02, width = 0.05, height = 0.05)
+
+```
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+# Cell phone screen friendly
+# ----------------------------------------------------------------------------->
+# Wrangle the data for a waffle, with 5 rows per column
+var_expl_waffle <-
+  var_expl %>%
+  group_by(super_pathw) %>%
+  mutate(
+    row = (row_number() - 1) %% 5 + 1,
+    col = (row_number() - 1) %/% 5 + 1
+  ) %>%
+  mutate(super_pathw = factor(super_pathw, levels = pathw_ord)) %>%
+  mutate(ann_lab = case_when(biochem %in% c("p-cresol sulfate", "phenylacetylglutamine", "phenylacetate", "isoursodeoxycholate") ~ "lab", TRUE ~ "nolab")) %>%
+  mutate(biochem = case_when(
+    biochem == "phenylacetylglutamine" ~ "PAGln",
+    biochem == "isoursodeoxycholate" ~ "iso-UDCA",
+    TRUE ~ biochem
+  ))
+
+# Plot the waffle plot
+p_fractions <-
+  ggplot(var_expl_waffle, aes(x = col, y = row, fill = r2_cat)) +
+  geom_tile(color = "white") + # Tile grid
+  scale_x_continuous(expand = c(0, 0)) + # Reverse y-axis so it reads top-to-bottom
+  facet_wrap(~super_pathw, nrow = 8) +
+  waffle_theme() +
+  theme(
+    strip.text = element_text(size = 6, hjust = 0, margin = margin(l = 0, b = 1), face = "bold")
+  ) +
+  labs(
+    title = "Gut bacterial byproducts",
+    subtitle = "Using an <span style = 'color:#4e6a78;'>**integrated blood metabolomics—stool metagenomics**</span> dataset, we can classify metabolites of various classes by how much their circulating **variation is explained by the gut microbiome**. While the metabolite library may be biased, these datasets nonetheless serve as a resource to identify metabolites of more-or-less gut microbial origin. *As a sanity check, some known microbial metabolites are annotated.*",
+    caption = "**Source:** Dekkers et al., Nat Commun **2022** Sep 23;13(1):5370<br>Data visualization by Peder Braadland."
+  ) +
+  geom_label_repel(aes(label = ifelse(ann_lab == "lab", biochem, NA)), size = 1.8, box.padding = 0.5, min.segment.length = 0, alpha = 0.8, segment.size = 0.3, segment.curvature = -0.3, label.padding = 0.15, color = "#222222", fill = "#F9F9F9") +
+  scale_fill_manual(values = fill_r2)
+
+leg <-
+  var_expl %>%
+  ggplot(aes(x = r2, color = r2_cat, y = "")) +
+  leg_theme() +
+  theme(
+    plot.background = element_rect(fill = "#F9F9F9", color = NA),
+    plot.margin = unit(c(1, 4, 1, 4), "mm")
+  ) +
+  scale_color_manual(values = fill_r2) +
+  scale_x_continuous(breaks = c(0, 0.05, 0.15, 0.30, 0.5), limits = c(0, 0.5), expand = expansion(mult = c(0, 0))) +
+  scale_y_discrete(expand = c(0.05, 0.05)) +
+  # Empty spacer for more space
+  geom_segment(aes(x = 0.301, xend = 0.50, y = 0.075, yend = 0.075), linewidth = 3, color = "#F9F9F9") +
+  # Annotating the categories: segments
+  geom_segment(aes(x = 0.002, xend = 0.049, y = 0.15, yend = 0.15), linewidth = 3.2, color = "#e7ebed") +
+  geom_segment(aes(x = 0.051, xend = 0.149, y = 0.15, yend = 0.15), linewidth = 3.2, color = "#a1b0b8") +
+  geom_segment(aes(x = 0.151, xend = 0.299, y = 0.15, yend = 0.15), linewidth = 3.2, color = "#4e6a78") +
+  geom_segment(aes(x = 0.301, xend = 0.50, y = 0.15, yend = 0.15), linewidth = 3.2, color = "#111111") +
+  # Annotating the categories: text
+  annotate(geom = "text", label = "Low", x = 0.025, hjust = 0.5, y = 0.15, size = 1.8, vjust = 0.5, color = "#222222") +
+  annotate(geom = "text", label = "Low int.", x = 0.15 - 0.05, hjust = 0.5, y = 0.15, size = 1.8, vjust = 0.5, color = "#222222") +
+  annotate(geom = "text", label = "High int.", x = 0.15 + (0.30 - 0.15) / 2, hjust = 0.5, y = 0.15, size = 1.8, vjust = 0.5, color = "#F9F9F9") +
+  annotate(geom = "text", label = "High", x = 0.30 + (0.50 - 0.30) / 2, hjust = 0.5, y = 0.15, size = 1.8, vjust = 0.5, color = "#F9F9F9") +
+  labs(
+    x = expression("Variance explained by the microbiome, R"^2)
+  )
+
+# Composite
+final_plot <- ggdraw() +
+  draw_plot(p_fractions, 0, 0, 1, 1) +
+  draw_grob(as.grob(leg), x = 0.3, y = 0.25, width = 0.6, height = 0.12) +
+  draw_grob(rasterGrob(bact), x = 0.66, y = 0.89, width = 0.12, height = 0.12) +
+  draw_grob(rasterGrob(logo), x = 0.93, y = 0.01, width = 0.05, height = 0.05)
+```
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+#showtext_opts(dpi = 500)
+#ggsave("day1/out/p_fractions_cellph.jpg", final_plot, width = 90, height = 150, unit = "mm", dpi = 500)
+```

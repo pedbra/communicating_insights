@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+$presentation-font-size-root: 28px;
+$font-family-sans-serif: "Source Sans Pro";
+
+$code-block-font-size: 14px;
+/*-- scss:rules --*/
+
+.panel-tabset {
+    [role="tab"] {
+        // Default styling for tabs
+        background-color: #f0f1eb;
+        border: 0px;
+        font-size: 20px;
+
+        // Styling for the selected tab
+        &[aria-selected="true"] {
+            background-color: #644a9b; // Selected tab color
+            border: 1px solid #999;
+            border-bottom-color: #f0f1eb;
+            color: #f0f1eb;
+            font-size: 20px;
+        }
+    }
+}
+
+ul {
+    list-style-type: disc;
+
+    li {
+
+        ul {
+            list-style-type: circle; // Adjust the bullet style for sub-points
+            color: #9b644a; // Different color for indented points
+
+            li {
+                // Further customization for deeply nested points (if needed)
+                ul {
+                    list-style-type: square;
+                    color: darkgray;
+                }
+            }
+        }
+    }
+}

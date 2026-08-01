@@ -1,0 +1,52 @@
+navn	sex	trinn	farge
+Angelina	f	1	G
+Agnes	f	1	G
+Una Marie	f	1	G
+Vårin	f	1	G
+Mathea	f	1	G
+Deniz 	m	1	G
+Jon	m	1	G
+Mads	m	1	G
+Max	m	1	G
+Africa	f	1	B
+Ellie Othilie	f	1	B
+Emily	f	1	B
+Jayne	f	1	B
+Arthus	m	1	B
+Andras	m	1	B
+Peter	m	1	B
+Eileen	f	2	G
+Elivra	f	2	G
+Florence	f	2	G
+Frida	f	2	G
+Mille	f	2	G
+Nora	f	2	G
+Aleksander	m	2	G
+Antoine	m	2	G
+Filip F	m	2	G
+Herman	m	2	G
+Lukas	m	2	G
+Robin	m	2	G
+Leonid	m	2	G
+Ava	f	2	B
+Elise	f	2	B
+Mira	f	2	B
+Nelia	f	2	B
+Zahra	f	2	B
+Carl Olav	m	2	B
+Emrik	m	2	B
+Rafael	m	2	B
+Tristan	m	2	B
+Vincent	m	2	B
+Simon	m	2	B
+Louis	m	2	B
+Salma	f	3	G
+Elliot	m	3	G
+Leander	m	3	G
+Christian	m	3	G
+Milla	f	3	B
+Aleksander WR	m	3	B
+Hugo	m	3	B
+Thorvald	m	3	B
+Tobias	m	3	B
+William	m	3	B

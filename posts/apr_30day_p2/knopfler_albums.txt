@@ -1,0 +1,134 @@
+album_title	year	track_no	track_title	track_length
+Golden Heart	1996	1	Darling Pretty	04:31
+Golden Heart	1996	2	Imelda	05:26
+Golden Heart	1996	3	Golden Heart	05:01
+Golden Heart	1996	4	No Can Do	04:54
+Golden Heart	1996	5	Vic and Ray	04:36
+Golden Heart	1996	6	Dont you get it	05:16
+Golden Heart	1996	7	A Night in Summer Long Ago	04:43
+Golden Heart	1996	8	Cannibals	03:41
+Golden Heart	1996	9	Im the Fool	04:28
+Golden Heart	1996	10	Je Suis Desole	05:14
+Golden Heart	1996	11	Rudiger	06:03
+Golden Heart	1996	12	Nobodys Got the Gun	05:25
+Golden Heart	1996	13	Done with Bonaparte	05:06
+Golden Heart	1996	14	Are We in Trouble Now	05:54
+Sailing to Philadelphia	2000	1	What It Is	04:57
+Sailing to Philadelphia	2000	2	Sailing to Philadelphia	05:29
+Sailing to Philadelphia	2000	3	Whos Your Baby Now	03:05
+Sailing to Philadelphia	2000	4	Baloney Again	05:09
+Sailing to Philadelphia	2000	5	The Last Laugh	03:22
+Sailing to Philadelphia	2000	6	Silvertown Blues	05:32
+Sailing to Philadelphia	2000	7	El Macho	05:29
+Sailing to Philadelphia	2000	8	Prairie Wedding	04:26
+Sailing to Philadelphia	2000	9	Wanderlust	03:52
+Sailing to Philadelphia	2000	10	Speedway at Nazareth	06:23
+Sailing to Philadelphia	2000	11	Junkie Doll	04:34
+Sailing to Philadelphia	2000	12	Sands of Nevada	03:56
+Sailing to Philadelphia	2000	13	One More Matinee	03:57
+The Ragpickers Dream	2002	1	Why Aye Man	06:14
+The Ragpickers Dream	2002	2	Devil Baby	04:05
+The Ragpickers Dream	2002	3	Hill Farmers Blues	03:45
+The Ragpickers Dream	2002	4	A Place Where We Used to Live	04:34
+The Ragpickers Dream	2002	5	Quality Shoe	03:56
+The Ragpickers Dream	2002	6	Fare Thee Well Northumberland	06:29
+The Ragpickers Dream	2002	7	Marbletown	03:33
+The Ragpickers Dream	2002	8	You Dont Know Youre Born	05:20
+The Ragpickers Dream	2002	9	Coyote	05:56
+The Ragpickers Dream	2002	10	The Ragpickers Dream	04:20
+The Ragpickers Dream	2002	11	Daddys Gone to Knoxville	02:48
+The Ragpickers Dream	2002	12	Old Pigweed	04:34
+Shangri-La	2004	1	5.15 A.M.	05:54
+Shangri-La	2004	2	Boom, Like That	05:49
+Shangri-La	2004	3	Sucker Row	04:56
+Shangri-La	2004	4	The Trawlermans Song	05:02
+Shangri-La	2004	5	Back to Tupelo	04:31
+Shangri-La	2004	6	Our Shangri-La	05:41
+Shangri-La	2004	7	Everybody Pays	05:24
+Shangri-La	2004	8	Song for Sonny Liston	05:06
+Shangri-La	2004	9	Whoop De Doo	03:53
+Shangri-La	2004	10	Postcards from Paraguay	04:07
+Shangri-La	2004	11	All That Matters	03:08
+Shangri-La	2004	12	Stand Up Guy	04:32
+Shangri-La	2004	13	Donegans Gone	03:05
+Shangri-La	2004	14	Dont Crash the Ambulance	05:06
+Kill to Get Crimson	2007	1	True Love Will Never Fade	04:21
+Kill to Get Crimson	2007	2	The Scaffolders Wife	03:52
+Kill to Get Crimson	2007	3	The Fizzy and the Still	04:07
+Kill to Get Crimson	2007	4	Heart Full of Holes	06:36
+Kill to Get Crimson	2007	5	We Can Get Wild	04:17
+Kill to Get Crimson	2007	6	Secondary Waltz	03:43
+Kill to Get Crimson	2007	7	Punish the Monkey	04:36
+Kill to Get Crimson	2007	8	Let It All Go	05:17
+Kill to Get Crimson	2007	9	Behind with the Rent	04:46
+Kill to Get Crimson	2007	10	The Fish and the Bird	03:45
+Kill to Get Crimson	2007	11	Madame Genevas	03:59
+Kill to Get Crimson	2007	12	In the Sky	07:29
+Get Lucky	2009	1	Border Reiver	04:35
+Get Lucky	2009	2	Hard Shoulder	04:33
+Get Lucky	2009	3	You Cant Beat the House	03:25
+Get Lucky	2009	4	Before Gas and TV	05:50
+Get Lucky	2009	5	Monteleone	03:39
+Get Lucky	2009	6	Cleaning My Gun	04:43
+Get Lucky	2009	7	The Car Was the One	03:55
+Get Lucky	2009	8	Remembrance Day	05:05
+Get Lucky	2009	9	Get Lucky	04:33
+Get Lucky	2009	10	So Far from the Clyde	05:58
+Get Lucky	2009	11	Piper to the End	05:47
+Privateering	2012	1	Redbud Tree	03:19
+Privateering	2012	2	Haul Away	04:01
+Privateering	2012	3	Dont Forget Your Hat	05:15
+Privateering	2012	4	Privateering	06:19
+Privateering	2012	5	Miss You Blues	04:18
+Privateering	2012	6	Corned Beef City	03:32
+Privateering	2012	7	Go, Love	04:52
+Privateering	2012	8	Hot or What	04:54
+Privateering	2012	9	Yon Two Crows	04:26
+Privateering	2012	10	Seattle	04:17
+Privateering	2012	1	Kingdom of Gold	05:22
+Privateering	2012	2	Got to Have Something	04:01
+Privateering	2012	3	Radio City Serenade	05:13
+Privateering	2012	4	I Used to Could	03:36
+Privateering	2012	5	Gator Blood	04:15
+Privateering	2012	6	Bluebird	03:27
+Privateering	2012	7	Dream of the Drowned Submariner	04:57
+Privateering	2012	8	Blood and Water	05:19
+Privateering	2012	9	Today Is Okay	04:45
+Privateering	2012	10	After the Beanstalk	03:54
+Tracker	2015	1	Laughs and Jokes and Drinks and Smokes	06:40
+Tracker	2015	2	Basil	05:45
+Tracker	2015	3	River Towns	06:17
+Tracker	2015	4	Skydiver	04:38
+Tracker	2015	5	Mighty Man	05:55
+Tracker	2015	6	Broken Bones	05:30
+Tracker	2015	7	Long Cool Girl	05:06
+Tracker	2015	8	Lights of Taormina	06:09
+Tracker	2015	9	Silver Eagle	05:02
+Tracker	2015	10	Beryl	03:11
+Tracker	2015	11	Wherever I Go	06:27
+Down the Road Wherever	2018	1	Trapper Man	06:00
+Down the Road Wherever	2018	2	Back on the Dance Floor	05:30
+Down the Road Wherever	2018	3	Nobodys Child	04:16
+Down the Road Wherever	2018	4	Just a Boy Away from Home	05:12
+Down the Road Wherever	2018	5	When You Leave	04:12
+Down the Road Wherever	2018	6	Good on You Son	05:37
+Down the Road Wherever	2018	7	My Bacon Roll	05:35
+Down the Road Wherever	2018	8	Nobody Does That	05:15
+Down the Road Wherever	2018	9	Drovers Road	05:05
+Down the Road Wherever	2018	10	One Song at a Time	06:17
+Down the Road Wherever	2018	11	Floating Away	05:02
+Down the Road Wherever	2018	12	Slow Learner	04:34
+Down the Road Wherever	2018	13	Heavy Up	06:00
+Down the Road Wherever	2018	14	Matchstick Man	02:52
+One Deep River	2024	1	Two Pairs of Hands	04:05
+One Deep River	2024	2	Ahead of the Game	03:56
+One Deep River	2024	3	Smart Money	04:27
+One Deep River	2024	4	Scavengers Yard	04:33
+One Deep River	2024	5	Black Tie Jobs	02:57
+One Deep River	2024	6	Tunnel 13	05:27
+One Deep River	2024	7	Janine	04:42
+One Deep River	2024	8	Watch Me Gone	05:02
+One Deep River	2024	9	Sweeter Than the Rain	04:16
+One Deep River	2024	10	Before My Train Comes	04:04
+One Deep River	2024	11	This Ones Not Going to End Well	04:00
+One Deep River	2024	12	One Deep River	04:17

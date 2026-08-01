@@ -1,0 +1,102 @@
+bydel	valgkrets	snitt	andel_H
+Frogner	Bygdoey skole	8901	60
+Vestre Aker	Ris skole	7899	50
+Sentrum	Oslo raadhus	7849	30
+Vestre Aker	Svendstuen skole	5589	59
+Nordre Aker	Engebraaten skole	5513	37
+Nordstrand	Bekkelaget skole	4666	50
+Ullern	oeraker skole	4458	51
+Nordre Aker	Korsvoll skole	4310	37
+Nordstrand	Nedre Bekkelaget skole	4189	48
+Nordre Aker	Skeidhuset	3803	33
+Vestre Aker	Vinderen skole	3766	43
+Nordre Aker	Ullevaal skole	3498	30
+Nordre Aker	Disen skole	3477	39
+Nordstrand	Ljan skole	3447	44
+Nordre Aker	Taasen skole	3320	35
+Ullern	Bestum skole	3224	53
+Vestre Aker	Persbraaten videregaaende skole	3218	43
+Nordstrand	Nordstrand skole	3171	48
+Ullern	Ullern videregaaende skole	2883	50
+Vestre Aker	Bogstad skole	2800	46
+Ullern	Lysejordet skole	2756	48
+Nordre Aker	Kjelsaas skole	2623	35
+Frogner	Bymuseet	2609	49
+Ullern	Smestad skole	2352	47
+Nordstrand	Munkerud skole	2228	43
+Nordstrand	Ekeberg skole	2222	35
+Ullern	Skoeyen skole	2169	42
+Frogner	Oslo handelsgymnasium	2166	45
+Vestre Aker	Grindbakken skole	2080	52
+Nordstrand	Nordseter skole	1996	49
+Frogner	Uranienborg skole	1869	45
+Marka	Soerkedalen skole	1834	33
+Nordre Aker	Blindern videregaaende skole	1829	30
+oestensjoe	oestensjoe skole	1789	28
+Nordstrand	Lambertseter videregaaende skole	1765	39
+Frogner	Majorstuen skole	1750	38
+Nordre Aker	Kringsjaa skole	1719	29
+Nordre Aker	Morellbakken skole	1707	37
+St.Hanshaugen	Oslo katedralskole	1688	27
+Frogner	Kristelig Gymnasium	1544	39
+Vestre Aker	Hovseter idrettshall	1291	33
+Soendre Nordstrand	Klemetsrud skole	1282	32
+oestensjoe	Hoeyenhall skole	1240	34
+Bjerke	Loeren skole	1211	30
+oestensjoe	Ulsrud videregaaende skole	1161	21
+St.Hanshaugen	Fagerborg skole	1083	27
+oestensjoe	Abildsoe skole	1045	34
+Frogner	Norges musikkhoegskole	1045	30
+Gruenerloekka	Foss videregaaende skole	1024	20
+Soendre Nordstrand	Prinsdal skole	1016	23
+Grorud	Roedtvet skole	1000	22
+Gruenerloekka	Teglverket skole	975	20
+Bjerke	aarvoll skole	949	29
+Marka	Maridalen skole	921	28
+St.Hanshaugen	Bolteloekka skole	829	27
+oestensjoe	Godlia skole	828	24
+Soendre Nordstrand	Mortensrud skole	797	20
+Sagene	Lilleborg skole	712	17
+Gamle Oslo	Gamlebyen skole	709	21
+Stovner	Stovner videregaaende skole	700	15
+oestensjoe	Trasop skole	679	23
+St.Hanshaugen	Moellergata skole	675	21
+Sagene	Fernanda Nissen skole	582	34
+oestensjoe	Manglerud skole	576	30
+Gamle Oslo	Etterstad videregaaende skole	566	21
+Sagene	Nordpolen skole	531	20
+Stovner	Folkvang Hoeybraaten	510	34
+Gruenerloekka	Sinsen skole	508	25
+oestensjoe	Oppsal skole	501	23
+Gruenerloekka	Sofienberg skole	492	17
+Gamle Oslo	Fyrstikkalleen skole	443	23
+oestensjoe	Skullerud skole	421	24
+Alna	Hellerud videregaaende skole	398	23
+Gamle Oslo	Kampen skole	397	13
+Alna	Furuset skole	368	17
+Alna	Ellingsrudaasen skole	348	20
+Stovner	Stovner skole	293	27
+Grorud	Ammerud skole	284	18
+Gruenerloekka	Anker Hotel	260	18
+Soendre Nordstrand	Toppaasen skole	248	18
+St.Hanshaugen	Ila skole	232	23
+Grorud	Nordtvet skole	232	18
+Gruenerloekka	Gruenerloekka skole	228	18
+Sagene	Sagene festivitetshus	225	20
+Soendre Nordstrand	Bjoerndal skole	214	24
+Alna	Granstangen skole	197	16
+Soendre Nordstrand	Hallagerbakken skole	141	15
+Stovner	Tokerud skole	135	20
+Sagene	Sagene samfunnshus	132	17
+Nordstrand	Lambertseter skole	115	26
+Sagene	Bjoelsen skole	105	17
+Bjerke	Veitvet skole	104	15
+Gamle Oslo	Toeyen skole	102	12
+Alna	Bryn skole	92	23
+Gamle Oslo	Vahl skole	84	15
+Alna	Lindeberg skole	71	17
+Bjerke	Linderud skole	70	22
+Alna	Haukaasen skole	18	18
+Soendre Nordstrand	Rosenholm skole	10	14
+Bjerke	Tonsenhagen skole	7	22
+Grorud	Tiurleiken skole	3	13

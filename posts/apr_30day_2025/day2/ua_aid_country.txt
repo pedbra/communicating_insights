@@ -1,0 +1,43 @@
+country	tot_bilat_alloc_perc_gdp2021
+Australia	0,070191704
+Austria	0,180855552
+Belgium	0,338393618
+Bulgaria	0,305279847
+Canada	0,447867349
+Croatia	0,526948682
+Cyprus	0,015149324
+Czechia	0,497586419
+Denmark	2,173823842
+Estonia	2,203977354
+EU (Commission and Council)	0,306569838
+Finland	0,981021643
+France	0,177936571
+Germany	0,435975719
+Greece	0,074378584
+Hungary	0,031853175
+Iceland	0,178309248
+Ireland	0,038169585
+Italy	0,115458392
+Japan	0,229204553
+Latvia	1,526769007
+Lithuania	1,80132373
+Luxembourg	0,33436763
+Malta	0,012826003
+Netherlands	0,778658151
+New Zealand	0,025405924
+Norway	0,74687569
+Poland	0,797154974
+Portugal	0,097310888
+South Korea	0,046825244
+Romania	0,423270424
+Slovakia	0,653686547
+Slovenia	0,145141312
+Spain	0,109762811
+Sweden	0,914878804
+Switzerland	0,12562631
+Turkiye	0,009298455
+United Kingdom	0,508711692
+United States	0,526753856
+China	1,42294E-05
+Taiwan	0,005681155
+India	9,18406E-05

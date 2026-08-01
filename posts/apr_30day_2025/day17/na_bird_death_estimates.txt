@@ -1,0 +1,14 @@
+hazard	min_range	max_range	estimate
+Habitat Loss/Conversion			
+Collision - Building Glass	365000000	988000000	599000000
+Collisions - Communication towers			6600000
+Collisions - Electrical lines	8000000	57300000	25500000
+Collision - Vehicles	89000000	340000000	214500000
+Collisions - Land-based Wind Turbines	140438	327586	234012
+Collisions - Offshore Wind Turbines			
+Collisions - Solar Panels			
+Electrocutions	900	11600000	5600000
+Burning -Solar Towers			
+Poison			72000000
+Cats	1400000000	3700000000	2400000000
+Oil Pits	500	1000000	750

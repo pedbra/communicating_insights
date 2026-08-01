@@ -1,0 +1,7 @@
+- source: project
+  quarto-pub:
+    - id: b3d8bfcf-a1a6-4b00-89de-bd2da297aeec
+      url: 'https://peder.quarto.pub/blog'
+  netlify:
+    - id: 404627a1-5793-4ee4-ab34-2389582d18c7
+      url: 'https://boisterous-dusk-0c4473.netlify.app'

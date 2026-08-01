@@ -1,0 +1,93 @@
+---
+title-block-banner: true
+filters:
+   - lightbox
+lightbox:
+    match: auto
+    effect: fade
+    loop: true
+title: "{{< iconify uis graph-bar >}} Portfolio"
+format:
+  html:
+    toc: false
+    toc-title: "Quick navigation"
+---
+
+## 30daychartchallenges
+
+### 2025
+
+<p style="text-align: left;"><a href="../posts/apr_30day_2025/index.qmd" class="read-button">R code<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
+
+::: {.responsive-grid}
+![](../posts/apr_30day_2025/day1/out/p_nor_protect.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day2/out/ua_aid_eu_us.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day3/out/ua_aid_country.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day4/out/planets_diameter.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day5/out/arctic_ice_min.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day6/out/florence_strava.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day8/out/hist.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day11/out/climate_stripes.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day15/complicated.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day17/out/birds_edit.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day19/out/pollofpolls.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day25/out/km.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day27/out/calib_poll.jpg){group="apr30daygallery"}
+![](../posts/apr_30day_2025/day1/out/p_fractions_wide.jpg){group="apr30daygallery"}
+:::
+
+### 2024
+
+<p style="text-align: left;"><a href="../posts/apr_30day_p2/index.qmd" class="read-button">R code<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
+
+::: {.responsive-grid}
+![](apr2024/temp_oslo_lin_edit.jpg){group="apr30daygallery"}
+![](apr2024/no_cn.jpg){group="apr30daygallery"}
+![](apr2024/carwidth_ruler.jpg){group="apr30daygallery"}
+![](apr2024/conflict_edit.jpg){group="apr30daygallery"}
+![](apr2024/snow_oslo.jpg){group="apr30daygallery"}
+![](apr2024/feature_ranks_p.jpg){group="apr30daygallery"}
+![](apr2024/denial_edit.jpg){group="apr30daygallery"}
+![](apr2024/temp_oslo.jpg){group="apr30daygallery"}
+![](apr2024/EVs_on_the_rise.jpg){group="apr30daygallery"}
+![](apr2024/meat_consumption.jpg){group="apr30daygallery"}
+![](apr2024/lyn_edit.jpg){group="apr30daygallery"}
+![](apr2024/nor_temp_rain.jpg){group="apr30daygallery"}
+![](apr2024/temp_oslo_circ_edit.jpg){group="apr30daygallery"}
+:::
+
+
+## Climatology visualisations
+
+<p style="text-align: left;"><a href="../climate/index.qmd" class="read-button">R code<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
+
+::: {.responsive-grid}
+![](climate/heatmap_northern.jpg){group="climate"}
+![](climate/sea_ice_anomaly.jpg){group="climate"}
+![](climate/ohc_mdr_plot.jpg){group="climate"}
+![](climate/ice_rel_1981_2010.jpg){group="climate"}
+![](climate/arctic_ice_group_by_yr.jpg){group="climate"}
+![](climate/road_net_zero.jpg){group="climate"}
+![](climate/world_temp.jpg){group="climate"}
+![](climate/SST.jpg){group="climate"}
+![](climate/forest_potential.png){group="climate"}
+![](climate/decadal_means.jpg){group="climate"}
+![](climate/hadcrut5_northern.jpg){group="climate"}
+![](climate/noaa_arctic_apr_means.jpg){group="climate"}
+![](climate/oslo_rain.jpg){group="climate"}
+:::
+
+## Illustrations
+
+::: {.responsive-grid}
+![](illustrator/liver_research/gut_signals-08.jpg){group="illustrator"}
+![](illustrator/liver_research/gut_signals-02.jpg){group="illustrator"}
+![](illustrator/liver_research/fatvsbile.jpg){group="illustrator"}
+![](illustrator/liver_research/fatvsbile_2.jpg){group="illustrator"}
+![](illustrator/liver_research/gut_signals-01.jpg){group="illustrator"}
+![](illustrator/liver_research/liver_circ.jpg){group="illustrator"}
+![](illustrator/liver_research/gut_signals-04.jpg){group="illustrator"}
+![](illustrator/liver_research/gut_signals-09.jpg){group="illustrator"}
+:::
+
+

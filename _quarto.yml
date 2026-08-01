@@ -1,0 +1,39 @@
+project:
+  type: website
+website:
+  title: "communicating insights"
+  favicon: "logo_red.svg"
+  navbar:
+    logo: "logo.svg"
+    background: "#f18f85"
+    right:
+      - text: "{{< iconify uis graph-bar >}} portfolio"
+        href: portfolio/index.qmd
+      - text: "{{< iconify fluent weather-cloudy-20-filled >}} Climate viz"
+        href: climate/index.qmd
+      - text: "{{< iconify ri presentation-fill >}} Presentations"
+        href: presentations/index.qmd
+      - text: "{{< iconify mdi face-man-outline >}} About me"
+        href: about.qmd
+      - text: "{{< iconify ph read-cv-logo-fill >}} CV and publications"
+        href: cv.qmd
+      - text: "{{< ai google-scholar-square >}}"
+        href: https://scholar.google.com/citations?user=ut-ZrT0AAAAJ&hl=no
+      - text: "{{< iconify ri bluesky-fill >}}"
+        href: https://bsky.app/profile/braadland.bsky.social
+  page-footer:
+    background: "#f9f9f9"
+    left: "Created with R & Quarto | I don't store your data"
+    right: 
+      - text: "Contact me {{< iconify ic outline-email >}}"
+        href: "mailto:pbraadland@gmail.com"
+format:
+  html:
+    theme: 
+      - sandstone
+    css: style.css
+    grid:
+      sidebar-width: 350px
+    highlight-style: monokai
+
+editor: source
