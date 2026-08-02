@@ -33,8 +33,8 @@ library(showtext)
 library(png)
 library(ggtext)
 "%ni%" <- Negate("%in%")
-logo <- readPNG("../../logo_gray_png.png")
-logo_red <- readPNG("../../logo_red_png.png")
+logo <- readPNG("../../images/logo_gray_png.png")
+logo_red <- readPNG("../../images/logo_red_png.png")
 font_add_google("IBM Plex Sans", regular.wt = 300)
 update_geom_defaults("text", list(family = "IBM Plex Sans"))
 
@@ -166,7 +166,7 @@ bar_prot <-
   geom_text(y = 4.1, x = 0, size = 1.75, color = "#444444", hjust = 0) +
   coord_cartesian(clip = "off") +
   labs(
-    caption = "**Source:** Miljodirektoratet | **Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+    caption = "**Source:** Miljodirektoratet | **Data <visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
   )
 
 library(patchwork)
@@ -247,8 +247,8 @@ fill_r2 <- c(
 bact <- readPNG("day1/bacteria.png")
 
 # My logo
-logo <- readPNG("../../logo_gray_png.png")
-logo_red <- readPNG("../../logo_red_png.png")
+logo <- readPNG("../../images/logo_gray_png.png")
+logo_red <- readPNG("../../images/logo_red_png.png")
 
 # Load metabolite annotation data
 met_ann <- read_delim("day1/met_ann.txt") %>%
@@ -505,7 +505,7 @@ ua_aid_eu_us_p <-
   scale_color_manual(values = c("#1277b0", "#ec7477")) +
   coord_cartesian(clip = "off") +
   labs(
-    caption = "**Source:** Ukraine Support Tracker; ifw-kiel.de/publications/ukraine-support-tracker-data-20758/<br>**Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+    caption = "**Source:** Ukraine Support Tracker; ifw-kiel.de/publications/ukraine-support-tracker-data-20758/<br>**Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
   )
 
 showtext_auto()
@@ -598,7 +598,7 @@ ua_aid_country <-
     subtitle = "The total donations to Ukraine from February 1st 2022 to today, as a percentage of 2021 GDP, for the top 20 donating countries. Each <strong>box</strong> represents 0.01% of the GDP.",
     x = "",
     y = "",
-    caption = "**Total bilateral allocations to Ukraine** from February 1st 2022 to today, as % of 2021 GDP.<br>Data downloaded from ifw-kiel.de/publications/ukraine-support/tracker-data-20758/.<br><br>Data visualization by Peder Braadland <img src='../../logo_red_png.png' width='10'/>"
+    caption = "**Total bilateral allocations to Ukraine** from February 1st 2022 to today, as % of 2021 GDP.<br>Data downloaded from ifw-kiel.de/publications/ukraine-support/tracker-data-20758/.<br><br>Data visualization by Peder Braadland <img src='../../images/logo_red_png.png' width='10'/>"
   ) +
   scale_fill_manual(values = c("#0057b7", "#ffd700"))
 
@@ -665,7 +665,7 @@ planets_diameter <-
   tibble(
     planet = c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"),
     mass = c(0.33, 4.87, 5.97, 0.642, 1898, 568, 86.8, 102, 0.013), # https://nssdc.gsfc.nasa.gov/planetary/factsheet/
-    diameter = c(4879, 12104, 12756, 6792, 142984, 120536, 51118, 49528, 2376),
+    diameter = c(4979, 12104, 12756, 6792, 142984, 120536, 51118, 49528, 2376),
     dist_sun = c(57.9, 108.2, 149.6, 228, 778.5, 1432, 2867, 4515, 5906.4)
   ) %>%
   mutate(
@@ -714,7 +714,7 @@ planets_diameter <-
     <strong style='color: #f3ce88;'>Saturn</strong>,
     <strong style='color: #95bbbe;'>Uranus</strong> and 
     <strong style='color: #657ba5;'>Neptune</strong> are gas giants.",
-    caption = "**Source**: NSSDCA | **Data visualization:** Peder Braadland <img src='../../logo_gray_png.png' width='6'/>"
+    caption = "**Source**: NSSDCA | **Data visualization:** Peder Braadland <img src='../../images/logo_gray_png.png' width='6'/>"
   )
 
 # showtext_auto()
@@ -734,7 +734,7 @@ font_add_google("Bebas Neue")
 
 # contents <- threadr::list_files_ftp("ftp://sidads.colorado.edu/DATASETS/NOAA/G02135")
 # We identify the path to the daily data sea ice extent csv for north (i.e. Arctic)
-# url <- "ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v3.0.csv"
+# url <- "ftp://sidads.colorado.edu/DATASETS/NOAA/G02135/north/daily/data/N_seaice_extent_daily_v4.0.csv"
 # We can download the file to a directory in the project folder
 # download_ftp_file(url, "ice/noaa_download/noaa_data.csv", verbose = TRUE)
 noaa_arctic <- read_csv("ice/noaa_download/noaa_data.csv")
@@ -823,7 +823,7 @@ arctic_ice_min <-
     aes(x = day, y = roll, label = yr_lab),
     size = 3, family = "IBM Plex Sans", box.padding = 0.3, segment.size = 0.15
   ) +
-  scale_color_manual(values = color_palette(48)) +
+  scale_color_manual(values = color_palette(49)) +
   theme_void() +
   theme(
     panel.background = element_rect(color = NA, fill = "#222222"),
@@ -841,7 +841,7 @@ arctic_ice_min <-
   labs(
     title = "Arctic sea ice minimums",
     subtitle = "The Arctic sea ice minimum normally occurs in mid-to-late September. The 2024 sea ice extent was **42.5%** lower than in 1980. The lowest sea ice minimum ever recorded was in 2012.",
-    caption = "**Source**: NOAA G02135 (N_seaice_extent_daily_v3.0.csv)<br>**Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+    caption = "**Source**: NOAA G02135 (N_seaice_extent_daily_v4.0.csv)<br>**Data visualization:** Peder Braadland <img src='../../images/images/logo_red_png.png' width='6'/>"
   )
 
 # Create a legend
@@ -852,8 +852,8 @@ leg <-
   ) %>%
   ggplot(aes(x = x, y = 0.6, fill = as.factor(x), color = as.factor(x))) +
   geom_col(color = NA, alpha = 0.75) +
-  scale_fill_manual(values = color_palette(48)) +
-  scale_color_manual(values = color_palette(48)) +
+  scale_fill_manual(values = color_palette(49)) +
+  scale_color_manual(values = color_palette(49)) +
   annotate("text", size = 3, family = "IBM Plex Sans", label = "Earlier years", x = 0.5, hjust = 0, y = 1.1, color = "#313695", fontface = "bold", alpha = 0.95) +
   annotate("text", size = 3, family = "IBM Plex Sans", label = "Recent years", x = num_years + 0.5, hjust = 1, y = 1.1, color = "#A50026", fontface = "bold", alpha = 0.95) +
   theme_void() +
@@ -1055,7 +1055,7 @@ ggplot()+
   labs(
     title = "Distribution of run lengths by year",
     subtitle = "The triangle indicates the median run length. The horizontal lines indicate the interquartile range, i.e. the middle 50% of runs fall within this distance range. Over time my runs have become shorter and somewhat less variable.",
-    caption = "**Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+    caption = "**Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
   ) +
     annotate(geom = "text", label = paste0("Before 2020\n", n_runs[[1,2]], " runs"), lineheight = 0.8, x = 16, y = 1.5, family = "IBM Plex Sans", color = "#444444", size = 2.5, face = "bold", hjust = 0, vjust = 1)+
     annotate(geom = "text", label = paste0("After 2020\n", n_runs[[2,2]], " runs"), lineheight = 0.8, x = 16, y = 0.7, family = "IBM Plex Sans", color = "#444444", size = 2.5, face = "bold", hjust = 0, vjust = 1)
@@ -1290,7 +1290,7 @@ ggplot(repeat_res, aes(x = n_subjects, y = perc_success)) +
         x = "Number of people in the room",
         y = "P(two or more shared birthdays)",
         subtitle = "Imagine you place *nn* random people in a room. What is the chance that *at least* two of them will **share the same birthday**? This is the birthday problem. The counter-intuitive **paradox is that only 23** people are needed in a room for this probability to exceed 50%. The simulated data used to produce this figure support this surprising fact.",
-        caption = "Each dot represents the probability of two or more people having the same birthday in rooms with various number of people. The probabilities were calculated as the fraction of simulated cases where two or more people shared a birthday. The simulation was repeated 10 times for each room size, giving the distribution of probabilities. The qbirthday() function was used to calculate the *true* number of people needed in a room for the probability to exceed 50%.<br>**Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>",
+        caption = "Each dot represents the probability of two or more people having the same birthday in rooms with various number of people. The probabilities were calculated as the fraction of simulated cases where two or more people shared a birthday. The simulation was repeated 10 times for each room size, giving the distribution of probabilities. The qbirthday() function was used to calculate the *true* number of people needed in a room for the probability to exceed 50%.<br>**Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>",
         title = "The birthday paradox"
     )
 
@@ -1442,7 +1442,7 @@ bird %>%
     theme_bird()+
     labs(
         x = "Number of birds killed",
-        caption = "**Source**: fws.gov/library/collections/threats-birds | **Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+        caption = "**Source**: fws.gov/library/collections/threats-birds | **Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
     ) +
     geom_text(aes(x = chunk_estimate, label = total), hjust = 0, position = position_nudge(x = 2e6), family = "IBM Plex Sans", size = 2.5, color = c("#736d67", "#736d67", "#736d67", "#ff85a5", "#736d67", "#736d67"))
 
@@ -1565,7 +1565,7 @@ pollofpolls_p <-
   labs(
     title = "Long-Term Polling Trends for Norwegian Political Parties (Parliamentary Elections)",
     subtitle = "Smoothed lines (span = 0.20) summarize monthly polling data. Note that recent shifts in voter support may not be fully captured by the smoother, including a strong uptick in support for <strong style='color: #e81502;'>AP</strong>  and a downward trend for <strong style='color: #0c366c;'>FrP</strong>.",
-    caption = "**Source:** PollOfPolls.no | **Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+    caption = "**Source:** PollOfPolls.no | **Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
   ) +
   geom_text_repel(
     data = smooth_labeled,
@@ -1639,7 +1639,7 @@ ggplot(km_data, aes(x = time, y = surv, color = group_labels)) +
     labs(
         title = "UDCA and the *risk* of treatment failure in PBC",
         subtitle = "Kaplan Meier plot showing the **probability of treatment failure** for treatment groups from a trial testing the efficacy of <strong style='color: #f27b5f;'>ursodeoxycholic acid (UDCA)</strong> *vs* <strong style='color: #95bbbe;'>placebo</strong> in the cholestatic liver disease primary biliary cholangitis (PBC). For more detail see Lindor et al., Gastroenterology **1994**;106:1284-1290.",
-        caption = "**Source:** survival::udca1 | **Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/>"
+        caption = "**Source:** survival::udca1 | **Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/>"
     ) +
     geom_label(family = "IBM Plex Sans", color = "#444444", size = 2.2, x = 2.6, y = 0.25, lineheight = 0.9, hjust = 1, label.size = NA, 
                fill = "#fdfbf7",
@@ -1813,7 +1813,7 @@ title_p <-
     labs(
         title = "**Predicted *vs* actual** election results",
         subtitle = "Every four years, parliamentary elections are held in Norway. This plot visualizes how well the predictions (polls) from the final two weeks leading up to the elections in 2013, 2017 and 2021 corresponded with the actual vote shares from election day. Points falling along the diagonal line indicate concordance between predicted and actual vote shares.<br><br>The predictions were calculated as unweighted averages of polls. The horizontal error bars indicate the standard deviation. Note that polling and reporting of poll numbers reflect what happened a while back...",
-            caption = "**Source:** PollOfPolls.no<br>**Data visualization:** Peder Braadland <img src='../../logo_red_png.png' width='6'/><br><br><br><br>"
+            caption = "**Source:** PollOfPolls.no<br>**Data visualization:** Peder Braadland <img src='../../images/logo_red_png.png' width='6'/><br><br><br><br>"
         )
 plots[[1]] <- 
 plots[[1]] +
@@ -2019,7 +2019,7 @@ plot_container[[as.character(i)]] <-
         labels = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"),
         trans = "reverse" 
         ) +
-    scale_x_continuous(expand = c(0,0), breaks = seq(0, 48, length.out = 12), labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+    scale_x_continuous(expand = c(0,0), breaks = seq(0, 49, length.out = 12), labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
     theme(
         legend.position = "none",
         panel.grid = element_blank(),
@@ -2039,121 +2039,6 @@ ggsave("p.jpg",
                  ggarrange(plotlist = plot_container, nrow = length(plot_container),  heights = c(5, 5, 5, 5, 5, 5, 2)), 
        width = 180, height = 205, unit = "mm", dpi = 500)
 ```
-
-```{r fig.width = 12, fig.height = 4, include = FALSE, eval = FALSE}
-# Heatmap of runs
-# ----------------------------------------------------------------------------->
-
-library(sf)
-library(lubridate)
-library(leaflet)      # for interactive maps
-library(ggmap)        # if you want static basemaps
-library(osmdata)      # to get your municipality borders
-library(geosphere)    # for distances
-library(XML)          # to parse GPX
-
-# We need to load all the activity files from the Strava data export
-# We load all the .gpx files
-
-gpx_files <- list.files("../../strava_export/activities", pattern = "\\.gpx$", full.names = TRUE)
-length(gpx_files) #727 files
-# It seems Strava also saved many activities as .fit files
-library(FITfileR); library(R.utils)
-read_fit <- function(file) {
-  fit_data <- readFitFile(file)
-  # Extract relevant data from fit_data as needed
-  # This will depend on the structure of your FIT files
-  # For example:
-  records <- records(fit_data)
-  # Convert records to a tibble or data frame
-  # ...
-  return(records)
-}
-fit_gz_files <- list.files("../../strava_export/activities", pattern = "\\.fit.gz$", full.names = TRUE)
-# Decompress the gz 
-# Function to decompress and read a .fit file
-read_fit_gz <- function(gz_file) {
-  # Decompress the .gz file (without removing the original)
-  fit_file <- gunzip(gz_file, remove = FALSE, overwrite = TRUE)
-  
-  # Read the .fit file
-  fit_data <- readFitFile(fit_file)
-  
-  return(fit_data)
-}
-
-# Apply the function to all .fit.gz files
-fit_data_list <- lapply(fit_gz_files, read_fit_gz)
-
-# Test with a few
-#gpx_files <- sample(gpx_files, 50)
-
-# We define a function to extract GPS data 
-read_gpx <- function(file) {
-  trkpts <- xmlParse(file) %>%
-    xmlToList() %>%
-    purrr::pluck("trk", "trkseg") %>%
-    map_dfr(~ tibble(
-      lat = as.numeric(.x$.attrs["lat"]),
-      lon = as.numeric(.x$.attrs["lon"]),
-      ele = as.numeric(.x$ele),
-      time = as.POSIXct(.x$time, format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")
-    ))
-  trkpts$source_file <- basename(file)
-  return(trkpts)
-}
-
-# Load all GPX tracks (takes a while)
-# all_tracks <- map_dfr(gpx_files, read_gpx) #727 unique source files
-#save(all_tracks, file = "all_tracks.RData")
-load(file = "all_tracks.RData")
-
-# Filter all_tracks based on whether they can be found in the meta data
-# We first collect the file names for all runs in the meta data
-metadata_filenames <- strava %>%
-               mutate(filename = gsub("activities/", "", filename),
-                      filename = gsub(".tcx.gz", "", filename),
-                      filename = gsub(".fit.gz", "", filename),
-                      filename = gsub(".gpx", "", filename)) %>%
-               pull(filename)
-
-
-
-# Then we filter the gpx data file for these file names
-all_tracks_runs <- 
-all_tracks %>% # Has 727 unique runs, but for some reason I cant match all of them (see Isi-run)
-    mutate(source_file = gsub(".gpx", "", source_file)) %>%
-    filter(source_file %in% metadata_filenames)
-```
-
-
-```{r fig.width = 12, fig.height = 4, include = FALSE, eval = FALSE}
-# We only want to look at a heatmap of Bærum, where I live
-baerum <- opq("Baerum, Norway") # Collect coordinates
-
-# Convert into sf object
-tracks_sf <- all_tracks_runs %>%
-  drop_na(lat, lon) %>%
-  st_as_sf(coords = c("lon", "lat"), crs = 4326)
-
-tracks_lines <- tracks_sf %>%
-  group_by(source_file) %>%
-  summarise(do_union = FALSE) %>%  # important for multiple disjoint paths
-  st_cast("LINESTRING")
-
-p <-
-ggplot(tracks_lines) +
-  geom_sf(color = "#6a8782", alpha = 0.1, linewidth = 1) +
-    ylim(59.90, 60.05)+xlim(10.3480241, 11.7580825)+
-    coord_sf() +
-    theme_void()
-
-ggsave("test.jpg", p, width = 600, height = 600, unit = "mm", dpi = 500)
-
-
-
-```
-
 
 ## Extras
 

@@ -2,9 +2,9 @@ project:
   type: website
 website:
   title: "communicating insights"
-  favicon: "logo_red.svg"
+  favicon: "images/logo_red.svg"
   navbar:
-    logo: "logo.svg"
+    logo: "images/logo.svg"
     background: "#f18f85"
     right:
       - text: "{{< iconify uis graph-bar >}} portfolio"
@@ -15,8 +15,6 @@ website:
         href: presentations/index.qmd
       - text: "{{< iconify mdi face-man-outline >}} About me"
         href: about.qmd
-      - text: "{{< iconify ph read-cv-logo-fill >}} CV and publications"
-        href: cv.qmd
       - text: "{{< ai google-scholar-square >}}"
         href: https://scholar.google.com/citations?user=ut-ZrT0AAAAJ&hl=no
       - text: "{{< iconify ri bluesky-fill >}}"
