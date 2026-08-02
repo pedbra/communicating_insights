@@ -17,7 +17,7 @@ title-block-banner: "images/header_edit.jpg"
 :::
 
 ::: {.g-col-12 .g-col-md-8}
-Hi, I'm Peder. I'm a trained molecular biologist with a great interest in biostatistics, data visualisation and `rstats`. Currently I'm employed as a postdoc in the [Genomics and Metagenomics in Inflammatory Disorders group](https://www.ous-research.no/hov/) at the Norwegian PSC Research Center in Oslo. <br></br> I've made this blog primarily as a repository for my data visualizations and code, which can come in handy when colleagues ask me for help with `rstats`, coding and biostatistics, or if they simply need inspiration for how they can visualize/tell stories with their data. In fact I sometimes visit the blog to remind myself of how to perform particular tasks in `rstats`. This blog is also a place where I can rant about various work-related frustrations.
+Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest in biostatistics, data visualisation and `rstats`. Currently I'm employed as a postdoc in the [Genomics and Metagenomics in Inflammatory Disorders group](https://www.ous-research.no/hov/) at the Norwegian PSC Research Center in Oslo. <br></br> I've made this blog primarily as a repository for my data visualizations and code, which can come in handy when colleagues ask me for help with `rstats`, coding and biostatistics, or if they simply need inspiration for how they can visualize/tell stories with their data. In fact I sometimes visit the blog to remind myself of how to perform particular tasks in `rstats`. This blog is also a place where I can rant about various work-related frustrations.
 :::
 :::
 
