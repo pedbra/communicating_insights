@@ -7,13 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
 
-/* formating of R */
-p code:not(.sourceCode),
-li code:not(.sourceCode),
-td code:not(.sourceCode) {
-    background-color: #f5f5f5 !important;
-    padding: .2em;
-}
 
 /* Headers */
 
