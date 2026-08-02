@@ -11,7 +11,7 @@
 p code:not(.sourceCode),
 li code:not(.sourceCode),
 td code:not(.sourceCode) {
-    background-color: #F9F9F9;
+    background-color: #f5f5f5 !important;
     padding: .2em;
 }
 
