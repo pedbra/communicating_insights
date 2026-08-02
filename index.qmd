@@ -32,7 +32,7 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 <!-- <p style="text-align: center;"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p> -->
 :::
 ::: box
-[![](images/articles/jhep_2023.jpg)](https://linkinghub.elsevier.com/retrieve/pii/S0168-8278(23)00415-4)
+[![](images/articles/jhep_2023.png)](https://linkinghub.elsevier.com/retrieve/pii/S0168-8278(23)00415-4)
 <p>[Journal of Hepatology, 2024]{.journal-name}</p>
 <p>[Clinical and biochemical impact of vitamin B6 deficiency in primary sclerosing cholangitis before and after liver transplantation]{.article-name}</p>
 <p>[We show that vitamin B6 deficiency is prevalent among people with primary sclerosing cholangitis both before and after liver transplantation. Low vitamin B6 associates with altered flux of B6-dependent biochemical pathways and reduced survival both before and after liver transplantation.]{.article-desc}</p>
