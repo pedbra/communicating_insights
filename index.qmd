@@ -25,11 +25,18 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 ## Selected research <iconify-icon icon="material-symbols:article-rounded">
 ::: scroll-container
 ::: box
+[![](images/articles/natmetab_2026.png)](https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext)
+<p>[Nature Metabolism, 2026]{.journal-name}</p>
+<p>[Gut microbiota-derived imidazole propionate promotes primary sclerosing cholangitis via p38 signaling]{.article-name}</p>
+<p>[We aimed to identify microbial drivers of PSC using large, human cohorts and identified imidazole propionate as associated with poor outcomes. In patient-derived cholangiocytes and mice, we show that imidazole propionate drives fibrosis and liver injury in a p38-dependent manner, opening for treatments targeting this metabolite or axis.]{.article-desc}</p>
+<!-- <p style="text-align: center;"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p> -->
+:::
+::: box
 [![](images/articles/jhep_2026.jpg)](https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext)
 <p>[Journal of Hepatology, 2026]{.journal-name}</p>
 <p>[Vitamin B6 predicts poor outcomes in geographically distinct populations with primary sclerosing cholangitis]{.article-name}</p>
 <p>[We expand on our previous findings by investigating vitamin B6's prognostic value in >1,200 people from three geographically independent PSC cohorts. We verify PLP's value to predict liver transplant-free survival, and also show that it has prognostic value to predict hepatic decompensation - often considered a more objective endpoint.]{.article-desc}</p>
-<!-- <p style="text-align: center;"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p> -->
+<p style="text-align: center;"><a href="linkinghub.elsevier.com/retrieve/pii/S0168-8278(26)00203-5" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
 :::
 ::: box
 [![](images/articles/jhep_2023.png)](https://linkinghub.elsevier.com/retrieve/pii/S0168-8278(23)00415-4)
