@@ -8,14 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
 
 
-body p code:not(.sourceCode),
-body li code:not(.sourceCode),
-body td code:not(.sourceCode) {
-    background-color: #f5f5f5 !important;
-    color: #333333 !important;
-    padding: .2em !important;
-}
-
 /* Headers */
 
 /* Container for the banner */
@@ -111,6 +103,14 @@ a    {
 }
 a:hover {
   color: #444444;
+}
+
+body p code:not(.sourceCode),
+body li code:not(.sourceCode),
+body td code:not(.sourceCode) {
+    background-color: #f5f5f5 !important;
+    color: #333333 !important;
+    padding: .2em !important;
 }
 
 /* Header block background color */
