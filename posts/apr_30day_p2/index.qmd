@@ -11,12 +11,7 @@ format:
     code-overflow: wrap
     toc: true
     toc-title: "Quick navigation"
-filters:
-   - lightbox
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 ---
 
 Here I will post my first `rstats` visualisations as part of the #30DayChartChallenge where anyone can contribute with their own visualisations on whatever data they like.

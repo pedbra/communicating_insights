@@ -4,14 +4,7 @@ date: "2024-05-02"
 categories: [rstats, dataviz, ggplot2]
 image: "thumb2.jpg"
 title: "Hierarchical clustering heatmap from scratch with ggplot2"
-format:
-  html:
-    toc: true
-    toc-title: "Quick navigation"
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 ---
 
 My colleagues *love* heatmaps (at least most of them). Especially when they have these interesting trees in them. (And worth to note that the resulting clusters are not necessarily meaningful.) And when they google *hierarchical clustering heatmaps in r* they find many different packages. And although they do get the job done, there's often a wish to customize the heatmaps a bit beyond changing colors and annotations. Unfortunately, this is not for the faint of heart.

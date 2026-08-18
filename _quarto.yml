@@ -11,8 +11,6 @@ website:
         href: portfolio/index.qmd
       - text: "{{< iconify fluent weather-cloudy-20-filled >}} Climate viz"
         href: climate/index.qmd
-      - text: "{{< iconify ri presentation-fill >}} Presentations"
-        href: presentations/index.qmd
       - text: "{{< iconify mdi face-man-outline >}} About me"
         href: about.qmd
       - text: "{{< ai google-scholar-square >}}"

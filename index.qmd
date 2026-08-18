@@ -1,5 +1,4 @@
 ---
-title: "Communicating Insights"
 listing:
   contents: posts
   sort: "date desc"
@@ -8,7 +7,6 @@ listing:
   sort-ui: false
   filter-ui: false
 page-layout: full
-title-block-banner: "images/header_edit.jpg"
 ---
 
 ::: grid
@@ -22,13 +20,13 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 :::
 
 
-## Selected research <iconify-icon icon="material-symbols:article-rounded">
+## Key research output <iconify-icon icon="material-symbols:article-rounded">
 ::: scroll-container
 ::: box
 [![](images/articles/natmetab_2026.png)](https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext)
 <p>[Nature Metabolism, 2026]{.journal-name}</p>
 <p>[Gut microbiota-derived imidazole propionate promotes primary sclerosing cholangitis via p38 signaling]{.article-name}</p>
-<p>[We aimed to identify microbial drivers of PSC using large, human cohorts and identified imidazole propionate as associated with poor outcomes. In patient-derived cholangiocytes and mice, we show that imidazole propionate drives fibrosis and liver injury in a p38-dependent manner, opening for treatments targeting this metabolite or axis.]{.article-desc}</p>
+<p>[We aimed to identify microbial drivers of human PSC and identified imidazole propionate (ImP) as increased in PSC and associated with poor outcomes. Experimentally we show that ImP activates mTORC1 and drives liver injury in a p38-dependent manner, suggesting a potential benefit of targeting this axis or ImP production directly.]{.article-desc}</p>
 <!-- <p style="text-align: center;"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p> -->
 :::
 ::: box
@@ -42,7 +40,7 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 [![](images/articles/jhep_2023.png)](https://linkinghub.elsevier.com/retrieve/pii/S0168-8278(23)00415-4)
 <p>[Journal of Hepatology, 2024]{.journal-name}</p>
 <p>[Clinical and biochemical impact of vitamin B6 deficiency in primary sclerosing cholangitis before and after liver transplantation]{.article-name}</p>
-<p>[We show that vitamin B6 deficiency is prevalent among people with primary sclerosing cholangitis both before and after liver transplantation. Low vitamin B6 associates with altered flux of B6-dependent biochemical pathways and reduced survival both before and after liver transplantation.]{.article-desc}</p>
+<p>[We show that vitamin B6 deficiency is prevalent among people with primary sclerosing cholangitis both before and after liver transplantation. Low vitamin B6 associates with altered flux of B6-dependent biochemical pathways and reduced survival both before and after liver transplantation. <br></br>]{.article-desc}</p>
 <p style="text-align: center;"><a href="https://linkinghub.elsevier.com/retrieve/pii/S0168-8278(23)00415-4" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
 :::
 ::: box
@@ -56,7 +54,7 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 [![](images/articles/bjc_2017.jpg)](https://www.nature.com/images/articles/bjc2017346)
 <p>[British Journal of Cancer, 2018]{.journal-name}</p>
 <p>[Ex vivo metabolic fingerprinting identifies biomarkers predictive of prostate cancer recurrence following radical prostatectomy]{.article-name}</p>
-<p>[Using ex vivo magnetic resonance spectroscopy, we find reduced levels of citrate and spermine in prostate cancer tumors. Low spermine and high levels of the ratio of choline and creatine to spermine in primary tumors were associated with reduced recurrence-free survival after radical prostatectomy.]{.article-desc}</p>
+<p>[Using ex vivo magnetic resonance spectroscopy, we find reduced levels of citrate and spermine in prostate cancer tumors. Low spermine and high levels of the ratio of choline and creatine to spermine in primary tumors were associated with reduced recurrence-free survival after radical prostatectomy.<br></br>]{.article-desc}</p>
 <p style="text-align: center;"><a href="https://www.nature.com/images/articles/bjc2017346" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
 :::
 ::: box
@@ -70,7 +68,7 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 :::
 :::
 
-### Blog
+### Blog posts
 
 <hr>
 

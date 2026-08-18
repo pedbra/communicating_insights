@@ -1,12 +1,7 @@
 ---
 title-block-banner: true
 title: "{{< iconify material-symbols weather-mix >}} Climate data"
-filters:
-   - lightbox
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 format:
   html:
     code-fold: true

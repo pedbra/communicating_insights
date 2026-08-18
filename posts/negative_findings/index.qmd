@@ -4,12 +4,7 @@ author: "Peder Braadland"
 date: "2025-01-07"
 categories: [academia, rants]
 image: "p005.jpg"
-filters:
-   - lightbox
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 ---
 
 In this post I discuss the challenges that scientists face in publishing studies with negative and/or contradictory findings and how this relates to our tendency to favor information that aligns with our existing beliefs. I will exemplify this phenomenon with a study from our lab that has struggled to make it into print.

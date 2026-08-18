@@ -9,12 +9,7 @@ format:
     toc: true
     toc-title: "Quick navigation"
     callout-appearance: simple
-filters:
-   - lightbox
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 ---
 
 ```{r setup, include = FALSE}

@@ -1,11 +1,6 @@
 ---
 title-block-banner: true
-filters:
-   - lightbox
-lightbox:
-    match: auto
-    effect: fade
-    loop: true
+lightbox: true
 title: "{{< iconify uis graph-bar >}} Portfolio"
 format:
   html:
