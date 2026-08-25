@@ -1921,125 +1921,189 @@ strava %>%
 ```
 
 
-```{r fig.width = 12, fig.height = 4, include = FALSE, eval = FALSE}
-# Github-like dashboard
-# ----------------------------------------------------------------------------->
+## Extras
 
-# We loop over a few years to create a plot composite
+### Github-like dashboard
+
+```{r warning = FALSE, message = FALSE}
+# --- Github-like dashboard using strava data ----------------------------------
+# Good way to emphasize which days are most used
+library(forcats)
+library(ggplot2)
+library(ggtext)
+library(ggpubr)
+
+# Years of interest
 yrs_of_int <- 2020:2025
-# We create a plot container
-plot_container <- list()
 
-# We can use cut to give say 10 distance ranges that will make out the fill color
-# We can also use these same cuts as breakpoints in a histogram legend
+# --- Distance categories for tile colors --------------------------------------
+
+distance_breaks <- c(0, 3, 6, 8, 10, 15, Inf)
+
+distance_labels <- c(
+    "<3 km",
+    "3–6 km",
+    "6–8 km",
+    "8–10 km",
+    "10–15 km",
+    "15+ km"
+    )
+# --- Create distance categories -----------------------------------------------
+
 strava_dashboard_df <- strava %>%
-    filter(yr %in% yrs_of_int) %>%
-    mutate(distance_breaks = cut(distance_km, breaks = 10),
-           distance_breaks = as.factor(distance_breaks),
-           distance_breaks = fct_rev(distance_breaks))
-# We can create a palette by creating a sequence of alphas (lighter means shorter run)
-alphas <- seq(1, 0.2, length.out = 10) 
-palette <- scales::alpha("#6a8782", alphas)
-
-# We make the legend, which is based on the years of interest (now 2020:2025)
-leg <- 
-    tibble(distance_breaks = "Rest day") %>%
-    bind_rows(strava_dashboard_df %>%
-                  group_by(distance_breaks) %>%
-                  slice(1)) %>%
-    mutate(distance_breaks = as.factor(distance_breaks)) %>%
-    ggplot(aes(x = distance_breaks, y = "", fill = distance_breaks))+
-    geom_tile(size = 1.5, color = "white") +
-    theme_minimal(base_size = 6, base_family = "IBM Plex Sans")+
-    theme(
-        axis.title = element_blank(),
-        axis.text.y = element_blank(),
-        legend.position = "none",
-        panel.grid = element_blank(),
-        axis.text.x = element_text(angle = 40, hjust = 1, vjust = 1),
-        plot.margin = unit(c(0, 70, 0, 70), "mm")
-    ) +
-    scale_fill_manual(values = c(palette, "#f9f9f9"))+
-    scale_x_discrete(limits = rev)
-
-for(i in yrs_of_int){
-yr_of_int <- i
-
-strava_calendar <- 
-strava_dashboard_df %>%
-    # Collect weekday from date
-    mutate(
-        week = lubridate::isoweek(date),
-        weekday = lubridate::wday(date, label = TRUE)) %>%
-    filter(yr == yr_of_int) %>%
-    select(date, yr, week, weekday, distance_breaks) %>%
-    mutate(trained = "yes") %>%
-     mutate(date = as.Date(date))
-
-# Now we "fill" in empty days
-full_dates <- tibble(date = seq.Date(from = as.Date(paste0(yr_of_int, "-01-01")),
-                                     to = as.Date(paste0(yr_of_int, "-12-31")),
-                                     by = "day")) %>%
+  filter(yr %in% yrs_of_int) %>%
   mutate(
-    yr = isoyear(date),
-    day = yday(date),
-    week = isoweek(date),
-    month = month(date), 
-    weekday = wday(date, label = TRUE, abbr = TRUE, week_start = 7)
+    distance_breaks = cut(
+        distance_km,
+        breaks = distance_breaks,
+        labels = distance_labels,
+        include.lowest = TRUE,
+        right = FALSE
+        ),
+    distance_breaks = as.character(distance_breaks)
+    )
+
+# --- Color palette ------------------------------------------------------------
+
+alphas <- seq(0.25, 1, length.out = length(distance_labels))
+palette <- scales::alpha("#6a8782", alphas)
+names(palette) <- distance_labels
+
+# Colour for days without a run
+palette <- c("No run" = "#f9f9f9", palette)
+
+# --- Create legend ------------------------------------------------------------
+legend_df <- tibble(
+  distance_breaks = c("No run", distance_labels)
+  ) %>%
+  mutate(
+    distance_breaks = factor(
+      distance_breaks,
+      levels = c("No run", distance_labels)
+      )
+    )
+
+leg <- legend_df %>%
+  ggplot(aes(x = distance_breaks, y = "", fill = distance_breaks)) +
+  geom_tile(lwd = 1.5, color = "white") +
+  scale_fill_manual(values = palette, drop = FALSE) +
+  scale_x_discrete(limits = c("No run", distance_labels)) +
+  theme_minimal(base_size = 6, base_family = "IBM Plex Sans") +
+  theme(
+    axis.title = element_blank(),
+    axis.text.y = element_blank(),
+    axis.text.x = element_text(angle = 40, hjust = 1, vjust = 1),
+    axis.ticks = element_blank(),
+    legend.position = "none",
+    panel.grid = element_blank(),
+    plot.margin = unit(c(0, 70, 0, 70), "mm")
   )
 
-# Join and fill in missing dates with "no"
-strava_calendar <- full_dates %>%
-  left_join(strava_calendar %>% select(date, trained, distance_breaks), by = "date") %>%
-    mutate(trained = replace_na(trained, replace = "no"))
+# --- Create calendar plots ----------------------------------------------------
 
-# We now need to create a kind of grid layout to ensure that the upper-left-most
-# tile has the first day of the year, and so on. We create a weekday_index and a
-# week_index which is calculated using the weekday_index. The week_index is 0 for
-# the week that contains January 1st.
+plot_container <- list()
+for (i in yrs_of_int) {
+  yr_of_int <- i
+   # --- Running data for this year
+  strava_calendar <-
+      strava_dashboard_df %>%
+      mutate(
+          week = isoweek(date),
+          weekday = wday(date, label = TRUE)) %>%
+      filter(yr == yr_of_int) %>%
+      select(date, yr, week, weekday, distance_breaks) %>%
+      mutate(trained = "yes", date = as.Date(date))
+
+  # --- Create complete sequence of dates
+  full_dates <- tibble(
+      date = seq.Date(
+          from = as.Date(
+          paste0(yr_of_int, "-01-01")),
+          to = as.Date(
+              paste0(yr_of_int, "-12-31")),
+          by = "day"
+          )
+      ) %>%
+    mutate(
+        yr = isoyear(date),
+        day = yday(date),
+        week = isoweek(date),
+        month = month(date),
+        weekday = wday(
+            date, label = TRUE, abbr = TRUE, week_start = 7))
+
+
+  # --- Complete github-like dashboard
+  strava_github <- full_dates %>%
+      left_join(
+          strava_calendar %>%
+              select(date, trained, distance_breaks),
+          by = "date") %>%
+      mutate(
+          trained = replace_na(trained, "no"),
+          distance_breaks = replace_na(distance_breaks, "No run"),
+          distance_breaks = factor(distance_breaks, levels = c("No run", distance_labels)
+                                   )
+          )
 
 plot_container[[as.character(i)]] <-
-    strava_calendar %>%
-  arrange(date) %>%
-  mutate(
-    weekday_index = wday(date, week_start = 1) - 1,  # 0 = Monday, 6 = Sunday
-    week_index = as.integer((as.integer(date - min(date)) + weekday_index[1]) / 7)
-  ) %>%
-    ggplot(aes(x = week_index, y = weekday_index, fill = distance_breaks, label = day))+
-    geom_tile(color = "white", linejoin = "mitre", size = 1)+
-    theme_minimal(base_size = 7)+
-    scale_fill_manual(values = palette, na.value = "#f9f9f9")+
-    scale_y_continuous(
-        breaks = 0:6,
-        labels = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"),
-        trans = "reverse" 
-        ) +
-    scale_x_continuous(expand = c(0,0), breaks = seq(0, 49, length.out = 12), labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))+
+    strava_github  %>%
+    arrange(date) %>%
+    mutate(
+        # 0 = Monday, 6 = Sunday
+        weekday_index = wday(date, week_start = 1) - 1,
+        # Position each date in the calendar grid
+        week_index = as.integer((as.integer(date - min(date)) +
+                                     weekday_index[1]) / 7
+                                )
+        ) %>%
+    ggplot(aes(x = week_index, y = weekday_index, fill = distance_breaks)) +
+    geom_tile(color = "white", linejoin = "mitre", linewidth = 1) +
+    scale_fill_manual(values = palette, drop = FALSE) +
+    scale_y_continuous(breaks = 0:6, labels = c("Mon", "Tue","Wed", "Thu", "Fri", "Sat", "Sun"),
+                       trans = "reverse") +
+    scale_x_continuous(expand = c(0, 0), breaks = seq(0, 49, length.out = 12),
+                       labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")) +
+    theme_minimal(
+        base_size = 7,
+        base_family = "IBM Plex Sans"
+      ) +
     theme(
         legend.position = "none",
         panel.grid = element_blank(),
         axis.ticks = element_blank(),
         axis.title = element_blank(),
-        plot.title = element_textbox_simple(size = 7, color = "#444444", margin = margin(b = 0, t = 0), padding = margin(5, 5, 2, 2), fill = "#F9F9F9"),
+        plot.title = element_textbox_simple(size = 7, color = "#222222", face = "bold", 
+                                            margin = margin(b = 0, t = 0), 
+                                            padding = margin(5, 5, 2, 2), 
+                                            fill = "#f9f9f9"), 
         plot.title.position = "plot"
-    )+
-    labs(title = yr_of_int)+
+        ) +
+    labs(
+        title = yr_of_int
+        ) +
     coord_fixed()
 }
 
+# --- Add legend ---------------------------------------------------------------
 plot_container[["legend"]] <- leg
 
-library(ggpubr)
-ggsave("p.jpg", 
-                 ggarrange(plotlist = plot_container, nrow = length(plot_container),  heights = c(5, 5, 5, 5, 5, 5, 2)), 
-       width = 180, height = 205, unit = "mm", dpi = 500)
+# --- Save composite -----------------------------------------------------------
+
+ggsave("strava_github.png",
+  ggarrange(plotlist = plot_container, nrow = length(plot_container),
+            heights = c(5, 5, 5, 5, 5, 5, 2)), 
+  width = 180, height = 170, units = "mm", dpi = 500)
 ```
 
-## Extras
+
+![](strava_github.png){group="apr30daygallery"}
+
 
 ### Remake of FT US policy uncertainty data
 
-```{r warning = FALSE, message = FALSE}
+```{r warning = FALSE, message = FALSE, fig.width = 8, fig.height = 6.5}
 # Remake of @jburnmurdoch.ft.com's viz
 library(tidyverse); library(showtext)
 df <- read_delim("US_Policy_Uncertainty_Data.txt")
@@ -2064,14 +2128,15 @@ df %>%
         axis.line.x = element_line(color="#5e5250", size = 0.4),
         axis.ticks.x =  element_line(color="#5e5250", size = 0.4),
         axis.text = element_text(color = "#5e5250"),
-        axis.title = element_blank(),
         plot.title = element_text(vjust = -21, color = "#332f2c", size = 13),
         plot.subtitle = element_text(vjust = -40, color = "#5e5250", size = 7),
         plot.title.position = "plot",
         plot.background = element_rect(fill = "#fff1e6", color = NA),
         plot.caption = element_text(size = 5, color = "#5e5250", hjust = 0),
         plot.caption.position = "plot",
-        plot.margin = unit(c(-7, 1, 1, 1), "mm")
+        plot.margin = unit(c(-7, 1, 1, 1), "mm"),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank()
     ) +
     scale_y_continuous(breaks = seq(0, 600, 200))+
     labs(title = "Uncertainty has exploded under Trump",
@@ -2081,16 +2146,17 @@ df %>%
     annotate(geom = "text", label = "Trump", x = as.Date("2024-10-01"), y = 1000, vjust = 0.5, size = 2, color = "#5e5250", hjust = 1, family = "Roboto")+
     annotate(geom = "text", label = "Covid-19\npandemic", x = as.Date("2019-11-01"), y = 460, vjust = 0.5, lineheight = 0.85, size = 2, color = "#5e5250", hjust = 1, family = "Roboto")
 
-showtext_auto()
-showtext_opts(dpi = 500)
-ggsave("jburnmurdoch.jpg", p, width = 90, height = 65, unit = "mm", dpi = 500)
+p
+
+#showtext_auto()
+#showtext_opts(dpi = 500)
+#ggsave("jburnmurdoch.png", p, width = 90, height = 75, unit = "mm", dpi = 500)
 ```
 
-![](jburnmurdoch.jpg){group="apr30daygallery"}
+![](jburnmurdoch.png){group="apr30daygallery"}
 
-### ???
 
-```{r warning = FALSE, message = FALSE}
+```{r warning = FALSE, message = FALSE, include=FALSE, echo=FALSE}
 library(tidyverse); library(ggrepel); library(ggpubr); library(showtext); library(ggtext); library(ggforce)
 stemmer <- read_delim("stemmer.csv")
 inntekt <- read_delim("inntekt.csv")
@@ -2162,9 +2228,7 @@ ggsave("stemmer.pdf",p_detail, width = 100, height = 90, unit = "mm", dpi = 500,
 ```
 
 
-### Polling data
-
-```{r}
+```{r include=FALSE, echo=FALSE}
 library(sysfonts)
 library(showtext)
 library(tidyverse)
@@ -2253,7 +2317,7 @@ ggsave("mdg.pdf", mdg, width = 90, height = 120, unit = "mm", dpi = 500, device 
 
 ```
 
-```{r}
+```{r include=FALSE, echo=FALSE}
 polls_raw <- read_delim("votes_aug_sep.csv") %>%
   mutate(date = dmy(date))  # adjust if format differs (dmy vs mdy)
 
@@ -2543,3 +2607,131 @@ ggsave("day6/out/running_lines.pdf",
 
 
 ```
+
+```{r include = FALSE, echo = FALSE}
+# Alternative 3: with gghighlight!
+# I downloaded the data manually from Strava since this seems to be the fastest option.
+strava <- read_csv("day6/strava_activities.csv") %>%
+  filter(`Activity Type` == "Run") %>%
+  select(name = `Activity Name`, date = `Activity Date`, duration_s = `Elapsed Time...6`, distance_km = `Distance...7`, avg_hr = `Average Heart Rate`, avg_gap = `Average Grade Adjusted Pace`, max_hr = `Max Heart Rate...8`, elev_gain = `Elevation Gain`) %>%
+  mutate(date = mdy_hms(date)) %>%
+  arrange(date) %>%
+  mutate(cum_distance = cumsum(distance_km)) %>%
+  mutate(yr = year(date)) %>%
+  # Remove really quick runs
+  filter(duration_s > 500)
+
+strava_df <-
+  strava %>%
+  group_by(yr) %>%
+  mutate(
+    day_of_year = yday(date),
+    cum_distance_yr = cumsum(distance_km)
+  ) %>%
+  filter(yr >= 2014) %>%
+  # Describe the years
+  mutate(desc = case_when(
+    yr == 2014 ~ "It's something",
+    yr == 2015 ~ "Steady but short",
+    yr == 2016 ~ "2015 repeat",
+    yr == 2017 ~ "Rough start but overall great",
+    yr == 2018 ~ "Not bad not great",
+    yr == 2019 ~ "Winter depression",
+    yr == 2020 ~ "Covid shutdown = top year",
+    yr == 2021 ~ "Nothing special",
+    yr == 2022 ~ "The beginning of the end?",
+    yr == 2023 ~ "It's definitely over",
+    yr == 2024 ~ "Renewed energy",
+    yr == 2025 ~ "Go!"
+  )) %>%
+  ungroup()
+# Ensure that every year has a row where day_of_year == 365 (except for 2025)
+
+# Identify which years are missing day_of_year == 365
+missing_365 <- strava_df %>%
+  group_by(yr) %>%
+  summarise(has_365 = any(day_of_year == 365)) %>%
+  filter(!has_365)
+
+last_per_year <- strava_df %>%
+  semi_join(missing_365, by = "yr") %>%
+  group_by(yr) %>%
+  slice_tail(n = 1) %>%
+  ungroup() %>%
+  mutate(
+    date = ymd(paste0(yr, "-12-31")),
+    day_of_year = 365
+  )
+
+# Combine with original
+strava_complete <- bind_rows(strava_df, last_per_year) %>%
+  arrange(date)
+
+# To annotate the facets by total distance per year (the max cumulative distance for a year)
+# we need to create a new df and join it with the original one
+
+total_distance <- strava_complete %>%
+  group_by(yr) %>%
+  summarize(total_km = sum(distance_km, na.rm = TRUE)) %>%
+  mutate(facet_lab = glue("<span style='color:#530600'><strong>{yr}</strong></span><br>Total: {round(total_km)} km"))
+
+# Step 3: Join back
+strava_final <- strava_complete %>%
+  left_join(total_distance, by = "yr") %>%
+  # Remove last date of 2025
+  filter(!(yr == 2025 & day_of_year == 365))
+
+
+gradient_fill <- grid::linearGradient(
+  c("#fffbf3", "#fdf6ed", "#fcf9ef", "#fef7ec"),
+  stops = c(0, 0.30, 0.6, 1),
+  x2 = unit(0, "npc")
+)
+
+strava_final <- strava_final %>%
+  arrange(yr, day_of_year, date)
+library(gghighlight)
+p_strava <-
+  strava_final %>%
+  ggplot(aes(x = day_of_year, y = cum_distance_yr, group = yr)) +
+  geom_line(color = "#f17367", linewidth = 0.6) +
+    gghighlight(use_direct_label = FALSE,
+                unhighlighted_params = list(linewidth = 0.15, colour = alpha("#999", 0.4)))+
+  scale_y_continuous(
+    limits = c(0, 1200),
+    breaks = seq(0, 1200, 200),
+    labels = c("0", "200", "400", "600", "800", "1000", "1200 km"),
+    expand = expansion(mult = c(0.08, 0))
+  ) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 365, length.out = 12)) +
+  facet_wrap(~facet_lab, nrow = 2) +
+  theme_minimal(base_family = "Inconsolata", base_size = 9) +
+  theme(
+    panel.grid.major.x = element_line(color = "#f9f9f9", size = 0.1),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_line(color = "#f9f9f9", size = 0.1),
+    axis.ticks.y = element_line(color = "#08060b", size = 0.15),
+    #plot.background = element_rect(fill = gradient_fill, color = NA),
+    strip.text = element_markdown(hjust = 0, lineheight = 1.1, margin = margin(l = 0)),
+    panel.spacing.y = unit(4, "mm"),
+    axis.title = element_blank(),
+    axis.text.x = element_blank(),
+    plot.title = element_text(size = 16, color = "#444444", margin = margin(l = -28, t = 5)),
+    plot.subtitle = element_textbox_simple(size = 8, color = "#444444", lineheight = 0.9, margin = margin(l = -28, t = 10, b = 15))
+  ) +
+  geom_segment(aes(x = 0, xend = 0, y = 0, yend = 1200), color = "#08060b", size = 0.15) +
+  geom_segment(aes(x = Inf, xend = Inf, y = 0, yend = 1200), color = "#08060b", size = 0.15) +
+  geom_segment(aes(x = 0, xend = Inf, y = 0, yend = 0), color = "#08060b", size = 0.15) +
+  geom_segment(aes(x = 0, xend = Inf, y = 1200, yend = 1200), color = "#08060b", size = 0.15) +
+  labs(
+    title = "One facet per year",
+    subtitle =
+      "Running data shown as <strong>cumulative length of runs per year</strong> for the past ~12 years."
+  )
+
+showtext_auto()
+showtext_opts(dpi = 500)
+ggsave("day6/out/running_facet_highlight.pdf", p_strava, width = 180, height = 90, unit = "mm", dpi = 500, device = cairo_pdf)
+
+```
+

@@ -1090,7 +1090,7 @@ p <-
   )
 
 # Now some modifications in Illustrator
-#ggsave("carwidth_ruler.pdf", p, width = 140, height = 90, unit = "mm", dpi = 500, device = cairo_pdf)
+ggsave("carwidth_ruler.pdf", p, width = 140, height = 90, unit = "mm", dpi = 500, device = cairo_pdf)
 
 # Extra plot, looking at whether the increase in size is driven by more manufacturing of particular vehicle types, such as pickups
 # -------------------------->

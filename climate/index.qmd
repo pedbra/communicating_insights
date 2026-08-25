@@ -1081,6 +1081,174 @@ heatmap_northern
 #ggsave("../portfolio/climate/heatmap_northern.jpg", heatmap_northern, width = 12, height = 4.2, dpi = 300)
 ```
 
+## Global sea surface temperature (ERA5)
+
+```{r echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE}
+# Description: This file contains daily mean sea surface temperature (SST) data from
+#  ERA5 averaged over 60°S-60°N from 1979 to 2026 as well as daily temperature anomalies
+#  relative to the 1991-2020 reference period.
+# Data source: The original ERA5 gridded hourly data used to generate the time series can be
+#  downloaded from the C3S Climate Data Store (CDS) at the following link:
+#  https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
+# Data availability: The ERA5 data available in the CDS are updated with a 5-day delay (120 hours)
+#  behind real-time. Note that the time series below includes values based on ERA5 data not yet
+#  available in the CDS (for days 2 to 5 behind real-time).
+# Status: Can be preliminary or final. If preliminary, the values will likely change (slightly)
+#  once the final ERA5 data for the day are available (typically 3 days behind real-time).
+# Columns:
+#  sst: Daily mean absolute SST
+#  clim_91-20: Daily climatology for 1991-2020
+#  ano_91-20: Daily anomaly relative to the 1991-2020 daily climatology
+#  status: Preliminary or final
+# Units: deg. C
+# Last updated: 25 Aug 2026
+
+era5 <- read_csv(file = "temperature/era5_sst.csv") %>%
+    mutate(yr = as.factor(year(date)))
+
+# --- Using temperature --------------------------------------------------------
+library(tidyverse)
+library(ggtext)
+
+era5 <- read_csv("temperature/era5_sst.csv") %>%
+  mutate(
+    yr = year(date),
+    day = yday(date)
+  )
+
+clim <- era5 %>%
+  distinct(day, `clim_91-20`) %>%
+  arrange(day)
+
+era5_p <- 
+  era5 %>%
+  ggplot(aes(x = day, y = sst, group = yr)) +
+  
+  # Previous years
+geom_line(
+  data = ~ filter(.x, !yr %in% c(2024, 2025, 2026)),
+  aes(color = "1941–2023"),
+  linewidth = 0.1, alpha = 0.3
+) +
+  
+  # 2024, 2025 and 2026
+  geom_line(
+    data = ~ filter(.x, yr %in% c(2024, 2025, 2026)),
+    aes(color = factor(yr)),
+    linewidth = 0.3
+  ) +
+  
+  # 1991–2020 mean
+  geom_line(
+    data = clim,
+    aes(
+      x = day,
+      y = `clim_91-20`,
+      linetype = "dashed"
+    ),
+    color = "#333",
+    linewidth = 0.2,
+    inherit.aes = FALSE
+  ) +
+  
+scale_color_manual(
+  values = c(
+    "1941–2023" = "#f0f0f0",
+    "2024" = "#ffd38b",
+    "2025" = "#bd5099",
+    "2026" = "#bd3131"
+  )
+) +
+  
+  scale_linetype_identity(
+    guide = "legend",
+    name = NULL,
+    breaks = "dashed",
+    labels = "1991–2020 average"
+  ) +
+  
+  scale_x_continuous(
+    breaks = c(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335),
+    labels = month.abb,
+    expand = c(0, 0)
+  ) +
+  
+  labs(
+    x = NULL,
+     title = "Daily sea surface temperature for 60\u00B0S-60\u00B0N",
+    caption = "Source: ERA5 data, pulse.climate.copernicus.eu/",
+    subtitle = "Mean daily temperature (\u00B0C), 1940-2026",
+    color = NULL
+  ) +
+  
+  theme_minimal(base_size = 6) +
+  
+  theme(
+    legend.position = "bottom",
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    axis.title.y = element_blank(),
+    plot.title.position = "plot",
+    axis.text.y = element_text(color = "#999"),
+    plot.title = element_text(size = 10, face = "bold", color = "#666"),
+    plot.subtitle = element_text(size = 7, color = "#888"),
+    legend.key.width = unit(3.5, "mm"),
+    legend.text = element_text(color = "#444"),
+    plot.caption = element_text(size = 5, color = "#ccc")
+  ) +
+  
+  # Latest 2026 observation
+  geom_point(
+    data = era5 %>%
+      filter(yr == 2026) %>%
+      slice_max(date, n = 1),
+    aes(x = day, y = sst),
+    size = 1.8,
+    color = "#bd3131"
+  ) +
+  
+  # Latest 2026 label
+geom_richtext(
+  data = era5 %>%
+    filter(yr == 2026) %>%
+    slice_max(date, n = 1) %>%
+    mutate(
+      label = paste0(
+        month(date, label = TRUE, abbr = TRUE),
+        " ", day(date), ", ", yr,
+        ":<br><b>",
+        round(sst, 2), "\u00B0C",
+        "</b>"
+      )
+    ),
+  aes(
+    x = day,
+    y = sst,
+    label = label
+  ),
+  position = position_nudge(x = 5),
+  hjust = 0,
+  color = "#444",
+  size = 1.8,
+  fill = NA,
+  label.color = NA,
+  inherit.aes = FALSE
+) +
+    scale_y_continuous(
+        breaks = seq(19.6, 21.2, 0.2),
+        limits = c(19.6, 21.2),
+        labels = c(
+            seq(19.6, 21.0, 0.2),
+            "21.2 \u00B0C"
+        )
+    )
+
+#ggsave("../portfolio/climate/era5_p.png", era5_p, width = 80, height = 80, unit = "mm", dpi = 500)
+```
+
+![ERA5 average daily Sea Surface Temperature (-60 to 60deg). ERA5 data downloaded from pulse.climate.copernicus.eu/](../portfolio/climate/era5_p.png)
+
 # {{< iconify gridicons globe >}} General
 
 ## Why the road to net zero matters
@@ -1335,7 +1503,8 @@ p <-
 #| lightbox:
 #| group: r-graph
 
-library(sf)
+library(sf); library(tidyverse)
+font <- "Roboto"
 
 # Create the rectangle for the development region (10<U+00B0>N to 20<U+00B0>N, 85<U+00B0>W to 20<U+00B0>W)
 lat_min <- 10
