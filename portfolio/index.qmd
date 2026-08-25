@@ -22,9 +22,7 @@ lightbox: true
 ![](../posts/apr_30day_2025/day5/out/arctic_ice_min.jpg){.lightbox group="apr30daygallery"}
 ![](../posts/apr_30day_2025/day6/out/florence_strava.jpg){.lightbox group="apr30daygallery"}
 ![](../posts/apr_30day_2025/day8/out/hist.jpg){.lightbox group="apr30daygallery"}
-
 ![](../posts/apr_30day_2025/strava_github.png){.lightbox group="apr30daygallery"}
-
 ![](../posts/apr_30day_2025/day11/out/climate_stripes.jpg){.lightbox group="apr30daygallery"}
 ![](../posts/apr_30day_2025/day15/complicated.jpg){.lightbox group="apr30daygallery"}
 ![](../posts/apr_30day_2025/day17/out/birds_edit.jpg){.lightbox group="apr30daygallery"}
@@ -62,9 +60,7 @@ lightbox: true
 ::: {.responsive-grid}
 ![](climate/heatmap_northern.jpg){.lightbox group="climate"}
 ![](climate/sea_ice_anomaly.jpg){.lightbox group="climate"}
-
 ![](climate/era5_p.png){.lightbox group="climate"}
-
 ![](climate/ohc_mdr_plot.jpg){.lightbox group="climate"}
 ![](climate/ice_rel_1981_2010.jpg){.lightbox group="climate"}
 ![](climate/arctic_ice_group_by_yr.jpg){.lightbox group="climate"}
