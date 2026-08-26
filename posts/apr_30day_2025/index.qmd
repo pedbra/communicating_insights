@@ -2094,7 +2094,7 @@ plot_container[["legend"]] <- leg
 ggsave("strava_github.png",
   ggarrange(plotlist = plot_container, nrow = length(plot_container),
             heights = c(5, 5, 5, 5, 5, 5, 2)), 
-  width = 180, height = 170, units = "mm", dpi = 500)
+  width = 180, height = 170, units = "mm", dpi = 500, bg = "white")
 ```
 
 
