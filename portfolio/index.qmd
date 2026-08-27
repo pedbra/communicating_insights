@@ -16,20 +16,20 @@ lightbox: true
 
 ::: {.responsive-grid}
 ![](../posts/apr_30day_2025/day1/out/p_nor_protect.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day2/out/ua_aid_eu_us.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day3/out/ua_aid_country.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day4/out/planets_diameter.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day5/out/arctic_ice_min.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day6/out/florence_strava.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day8/out/hist.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/strava_github.png){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day11/out/climate_stripes.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day15/complicated.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day17/out/birds_edit.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day19/out/pollofpolls.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day25/out/km.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day27/out/calib_poll.jpg){.lightbox group="apr30daygallery"}
-![](../posts/apr_30day_2025/day1/out/p_fractions_wide.jpg){.lightbox group="apr30daygallery"}
+![](../posts/apr_30day_2025/day2/out/ua_aid_eu_us.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day3/out/ua_aid_country.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day4/out/planets_diameter.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day5/out/arctic_ice_min.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day6/out/florence_strava.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day8/out/hist.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/strava_github.png){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day11/out/climate_stripes.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day15/complicated.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day17/out/birds_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day19/out/pollofpolls.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day25/out/km.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day27/out/calib_poll.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](../posts/apr_30day_2025/day1/out/p_fractions_wide.jpg){.lightbox group="apr30daygallery" loading="lazy"}
 :::
 
 ### 2024
@@ -37,19 +37,19 @@ lightbox: true
 <p style="text-align: left;"><a href="../posts/apr_30day_p2/index.qmd" class="read-button">R code<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
 
 ::: {.responsive-grid}
-![](apr2024/temp_oslo_lin_edit.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/no_cn.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/carwidth_ruler.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/conflict_edit.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/snow_oslo.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/feature_ranks_p.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/denial_edit.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/temp_oslo.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/EVs_on_the_rise.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/meat_consumption.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/lyn_edit.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/nor_temp_rain.jpg){.lightbox group="apr30daygallery"}
-![](apr2024/temp_oslo_circ_edit.jpg){.lightbox group="apr30daygallery"}
+![](apr2024/temp_oslo_lin_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/no_cn.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/carwidth_ruler.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/conflict_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/snow_oslo.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/feature_ranks_p.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/denial_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/temp_oslo.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/EVs_on_the_rise.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/meat_consumption.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/lyn_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/nor_temp_rain.jpg){.lightbox group="apr30daygallery" loading="lazy"}
+![](apr2024/temp_oslo_circ_edit.jpg){.lightbox group="apr30daygallery" loading="lazy"}
 :::
 
 
@@ -58,20 +58,20 @@ lightbox: true
 <p style="text-align: left;"><a href="../climate/index.qmd" class="read-button">R code<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p>
 
 ::: {.responsive-grid}
-![](climate/heatmap_northern.jpg){.lightbox group="climate"}
-![](climate/sea_ice_anomaly.jpg){.lightbox group="climate"}
-![](climate/era5_p.png){.lightbox group="climate"}
-![](climate/ohc_mdr_plot.jpg){.lightbox group="climate"}
-![](climate/ice_rel_1981_2010.jpg){.lightbox group="climate"}
-![](climate/arctic_ice_group_by_yr.jpg){.lightbox group="climate"}
-![](climate/road_net_zero.jpg){.lightbox group="climate"}
-![](climate/world_temp.jpg){.lightbox group="climate"}
-![](climate/SST.jpg){.lightbox group="climate"}
-![](climate/forest_potential.png){.lightbox group="climate"}
-![](climate/decadal_means.jpg){.lightbox group="climate"}
-![](climate/hadcrut5_northern.jpg){.lightbox group="climate"}
-![](climate/noaa_arctic_apr_means.jpg){.lightbox group="climate"}
-![](climate/oslo_rain.jpg){.lightbox group="climate"}
+![](climate/heatmap_northern.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/sea_ice_anomaly.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/era5_p.png){.lightbox group="climate" loading="lazy"}
+![](climate/ohc_mdr_plot.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/ice_rel_1981_2010.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/arctic_ice_group_by_yr.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/road_net_zero.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/world_temp.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/SST.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/forest_potential.png){.lightbox group="climate" loading="lazy"}
+![](climate/decadal_means.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/hadcrut5_northern.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/noaa_arctic_apr_means.jpg){.lightbox group="climate" loading="lazy"}
+![](climate/oslo_rain.jpg){.lightbox group="climate" loading="lazy"}
 :::
 
 ## Illustrations
