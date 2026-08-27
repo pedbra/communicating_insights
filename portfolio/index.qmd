@@ -77,19 +77,19 @@ lightbox: true
 ## Illustrations
 
 ::: {.responsive-grid}
-![](illustrator/liver_research/gut_signals-08.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/gut_signals-02.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/fatvsbile.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/fatvsbile_2.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/gut_signals-01.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/liver_circ.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/gut_signals-04.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/gut_signals-09.jpg){.lightbox group="illustrator"}
-![](illustrator/liver_research/hofi.png){.lightbox group="illustrator"}
-![](illustrator/liver_research/jerh.png){.lightbox group="illustrator"}
-![](illustrator/liver_research/bugs.png){.lightbox group="illustrator"}
-![](illustrator/liver_research/gf_mice.png){.lightbox group="illustrator"}
-![](illustrator/liver_research/factory.png){.lightbox group="illustrator"}
+![](illustrator/liver_research/gut_signals-08.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/gut_signals-02.jpg){.lightbox group="illustrator"  loading="lazy"}
+![](illustrator/liver_research/fatvsbile.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/fatvsbile_2.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/gut_signals-01.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/liver_circ.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/gut_signals-04.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/gut_signals-09.jpg){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/hofi.png){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/jerh.png){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/bugs.png){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/gf_mice.png){.lightbox group="illustrator" loading="lazy"}
+![](illustrator/liver_research/factory.png){.lightbox group="illustrator" loading="lazy"}
 :::
 
 
