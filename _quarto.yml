@@ -13,13 +13,17 @@ website:
         href: climate/index.qmd
       - text: "{{< iconify mdi face-man-outline >}} About me"
         href: about.qmd
+      - text: "{{< iconify boxicons article >}} Publications"
+        href: cv/index.qmd    
       - text: "{{< ai google-scholar-square >}}"
         href: https://scholar.google.com/citations?user=ut-ZrT0AAAAJ&hl=no
       - text: "{{< iconify ri bluesky-fill >}}"
         href: https://bsky.app/profile/braadland.bsky.social
+
+        
   page-footer:
     background: "#f9f9f9"
-    left: "Created with R & Quarto | I don't store your data"
+    left: "Created with R & Quarto | This website does not use cookies for analytics, advertising, or visitor tracking."
     right: 
       - text: "Contact me {{< iconify ic outline-email >}}"
         href: "mailto:pbraadland@gmail.com"

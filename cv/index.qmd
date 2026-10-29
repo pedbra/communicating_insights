@@ -1,0 +1,17 @@
+---
+title-block-banner: true
+title: "{{< iconify boxicons article >}} Publications"
+
+format:
+  html:
+    toc: false
+    toc-title: "Quick navigation"
+
+lightbox: true
+bibliography: my_publications.bib
+csl: apa-cv.csl
+nocite: '@*'
+link-citations: true
+reference-section-title: Publications
+
+---

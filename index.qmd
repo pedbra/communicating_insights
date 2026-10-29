@@ -27,7 +27,26 @@ Hi, I'm Peder.<br></br> I'm a trained molecular biologist with a great interest 
 <p>[Nature Metabolism, 2026]{.journal-name}</p>
 <p>[Gut microbiota-derived imidazole propionate promotes primary sclerosing cholangitis via p38 signaling]{.article-name}</p>
 <p>[We aimed to identify microbial drivers of human PSC and identified imidazole propionate (ImP) as increased in PSC and associated with poor outcomes. Experimentally we show that ImP activates mTORC1 and drives liver injury in a p38-dependent manner, suggesting a potential benefit of targeting this axis or ImP production directly.]{.article-desc}</p>
-<!-- <p style="text-align: center;"><a href="https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext" class="read-button" target="_blank">Read<iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon> </a></p> -->
+<div style="text-align: center; display: flex; justify-content: center; gap: 10px;">
+  <a
+    href="https://www.nature.com/articles/s42255-026-01600-1?utm_source=researchgate.net&utm_medium=article"
+    class="read-button"
+    target="_blank"
+  >
+    Read
+    <iconify-icon icon="weui:arrow-filled" height="1.2em"></iconify-icon>
+  </a>
+
+  <a
+    href="https://doi.org/10.5281/zenodo.21531744"
+    class="code-button"
+    target="_blank"
+  >
+    Code
+    <iconify-icon icon="akar-icons:github-fill" height="1.2em"></iconify-icon>
+  </a>
+</div>
+
 :::
 ::: box
 [![](images/articles/jhep_2026.jpg)](https://www.journal-of-hepatology.eu/article/S0168-8278(26)00203-5/fulltext)
