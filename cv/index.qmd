@@ -8,58 +8,58 @@ format:
     toc-title: "Quick navigation"
 
 lightbox: true
-#bibliography: my_publications.bib
-#csl: apa-cv.csl
-#nocite: '@*'
-#link-citations: true
-#reference-section-title: Publications
+bibliography: my_publications.bib
+csl: apa-cv.csl
+nocite: '@*'
+link-citations: true
+reference-section-title: Publications
 
 ---
 
 ```{r}
 #| echo: false
 #| results: asis
-library(RefManageR)
-
-bib <- ReadBib("my_publications.bib", check = FALSE)
-
-years <- sort(unique(unlist(bib$year)), decreasing = TRUE)
-
-for (yr in years) {
-  cat(paste0("\n### ", yr, "\n\n"))
-
-  # Filter entries for this year
-  bib_yr <- bib[year = yr]
-
-  # Mark entries for inclusion
-  NoCite(bib_yr, "*")
-
-  # Capture output instead of printing it directly
-  entry_text <- capture.output(
-    PrintBibliography(
-      bib_yr,
-      .opts = list(
-        check.entries = FALSE,
-        max.names = 6,
-        style = "html",
-        bib.style = "authortitle",
-        first.inits = TRUE,
-        hyperlink = FALSE
-      )
-    )
-  )
-
-  # Bold your surname
-  entry_text <- gsub(
-    "Braadland",
-    "**Braadland**",
-    entry_text,
-    fixed = TRUE
-  )
-
-  # Print the modified result
-  cat(paste(entry_text, collapse = "\n"), "\n\n")
-}
+# library(RefManageR)
+# 
+# bib <- ReadBib("my_publications.bib", check = FALSE)
+# 
+# years <- sort(unique(unlist(bib$year)), decreasing = TRUE)
+# 
+# for (yr in years) {
+#   cat(paste0("\n### ", yr, "\n\n"))
+# 
+#   # Filter entries for this year
+#   bib_yr <- bib[year = yr]
+# 
+#   # Mark entries for inclusion
+#   NoCite(bib_yr, "*")
+# 
+#   # Capture output instead of printing it directly
+#   entry_text <- capture.output(
+#     PrintBibliography(
+#       bib_yr,
+#       .opts = list(
+#         check.entries = FALSE,
+#         max.names = 6,
+#         style = "html",
+#         bib.style = "authortitle",
+#         first.inits = TRUE,
+#         hyperlink = FALSE
+#       )
+#     )
+#   )
+# 
+#   # Bold your surname
+#   entry_text <- gsub(
+#     "Braadland",
+#     "**Braadland**",
+#     entry_text,
+#     fixed = TRUE
+#   )
+# 
+#   # Print the modified result
+#   cat(paste(entry_text, collapse = "\n"), "\n\n")
+# }
 
 
 ```
